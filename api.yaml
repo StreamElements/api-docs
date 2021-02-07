@@ -1164,14 +1164,6 @@ paths:
           schema:
             type: string
             example: application/json
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -1392,14 +1384,6 @@ paths:
           schema:
             type: string
             example: application/json
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -1526,14 +1510,6 @@ paths:
             type: string
             example: 5b2e2007760aeb7729487dab
         - name: Accept
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
-        - name: Content-Type
           in: header
           description: ''
           required: true
@@ -3425,14 +3401,6 @@ paths:
           schema:
             type: string
         - name: Accept
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
-        - name: Content-Type
           in: header
           description: ''
           required: true
@@ -5336,14 +5304,6 @@ paths:
           schema:
             type: string
             example: application/json; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -9732,14 +9692,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '204':
           description: ''
@@ -10015,14 +9967,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -10059,14 +10003,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '201':
           description: ''
@@ -10609,14 +10545,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -10734,14 +10662,6 @@ paths:
           schema:
             type: string
             example: application/json; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -10822,14 +10742,6 @@ paths:
           schema:
             type: string
             example: application/json; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -10880,14 +10792,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '201':
           description: ''
@@ -10956,14 +10860,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '201':
           description: ''
@@ -11032,14 +10928,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '201':
           description: ''
@@ -11108,14 +10996,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '201':
           description: ''
@@ -12317,14 +12197,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -12404,14 +12276,6 @@ paths:
           schema:
             type: string
             example: application/json; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -12502,14 +12366,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -12730,14 +12586,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -16201,14 +16049,6 @@ paths:
           schema:
             type: string
             example: text/plain; charset=utf-8
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
