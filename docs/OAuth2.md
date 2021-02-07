@@ -111,6 +111,7 @@ Each event processed via the websockets can be seen
 documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCode.md)
 <details>
 <summary>JSON Schema</summary>
+<p>
 
 ```json
 {
@@ -248,6 +249,7 @@ documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCo
 }
 ```
 
+</p>
 </details>
 
 ### Code snippet for connecting to Websocket with OAuth2:
