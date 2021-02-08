@@ -1178,7 +1178,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success4'
+                  $ref: '#/components/schemas/BotCommand'
                 example:
                   - cooldown:
                       user: 15
@@ -1292,7 +1292,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success4'
+                $ref: '#/components/schemas/BotCommand'
               example:
                 cooldown:
                   user: 15
@@ -1399,7 +1399,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success4'
+                  $ref: '#/components/schemas/BotCommand'
                 example:
                   - cooldown:
                       user: 15
@@ -3424,7 +3424,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success4'
+                $ref: '#/components/schemas/BotCommand'
               example:
                 cooldown:
                   user: 15
@@ -3533,7 +3533,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success4'
+                $ref: '#/components/schemas/BotCommand'
               example:
                 cooldown:
                   user: 15
@@ -3742,7 +3742,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success4'
+                $ref: '#/components/schemas/BotCommand'
               example:
                 cooldown:
                   user: 15
@@ -4364,7 +4364,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success17'
+                $ref: '#/components/schemas/BotFilters'
               example:
                 activitySettings:
                   enabled: false
@@ -4780,7 +4780,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success19'
+                $ref: '#/components/schemas/BotJoinResponse'
               example:
                 status: 200
                 channel: 5b2e2007760aeb7729487dab
@@ -4853,7 +4853,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success19'
+                $ref: '#/components/schemas/BotJoinResponse'
               example:
                 status: 200
                 channel: 5b2e2007760aeb7729487dab
@@ -4916,7 +4916,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success19'
+                $ref: '#/components/schemas/BotJoinResponse'
               example:
                 status: 200
                 channel: 5b2e2007760aeb7729487dab
@@ -4989,7 +4989,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success19'
+                $ref: '#/components/schemas/BotJoinResponse'
               example:
                 status: 200
                 channel: 5b2e2007760aeb7729487dab
@@ -5063,7 +5063,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success19'
+                $ref: '#/components/schemas/BotJoinResponse'
               example:
                 status: 200
                 channel: 5b2e2007760aeb7729487dab
@@ -10687,7 +10687,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success37'
+                $ref: '#/components/schemas/Giveaway'
               example:
                 subscriberLuck: 1
                 subscriberOnly: false
@@ -11397,7 +11397,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success42'
+                $ref: '#/components/schemas/OverlaysList'
               example:
                 total: 1
                 docs:
@@ -11457,7 +11457,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success43'
+                $ref: '#/components/schemas/OverlayData'
               example:
                 settings:
                   width: 1920
@@ -12640,7 +12640,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success45'
+                $ref: '#/components/schemas/SessionDataInfo'
               example:
                 data:
                   follower-latest:
@@ -15062,7 +15062,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success49'
+                  $ref: '#/components/schemas/Song'
                 example:
                   - duration: 213
                     tags: []
@@ -15145,7 +15145,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success50'
+                $ref: '#/components/schemas/Song'
               example:
                 videoId: dQw4w9WgXcQ
                 title: Rick Astley - Never Gonna Give You Up (Video)
@@ -15273,7 +15273,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success51'
+                  $ref: '#/components/schemas/Song'
                 example:
                   - duration: 213
                     _id: 5c0ba7b3de9a4c7036a15040
@@ -15369,7 +15369,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success52'
+                $ref: '#/components/schemas/MediaRequestQueue'
               example:
                 limit: 25
                 nextPage: CDIQAA
@@ -15657,7 +15657,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success49'
+                $ref: '#/components/schemas/Song'
               example:
                 user:
                   username: leeeeex
@@ -16345,7 +16345,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success58'
+                $ref: '#/components/schemas/LoyaltyItem'
               example:
                 cooldown:
                   user: 10
@@ -16447,7 +16447,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success58'
+                $ref: '#/components/schemas/LoyaltyItem'
               example:
                 bot:
                   enabled: true
@@ -16563,7 +16563,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success58'
+                $ref: '#/components/schemas/LoyaltyItem'
               example:
                 bot:
                   enabled: true
@@ -16783,7 +16783,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success62'
+                $ref: '#/components/schemas/OverlayData'
               example:
                 published: true
                 provider: twitch
@@ -16978,7 +16978,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success63'
+                $ref: '#/components/schemas/TipData'
               example:
                 docs:
                   - donation:
@@ -17096,7 +17096,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success66'
+                $ref: '#/components/schemas/TipData'
               example:
                 donation:
                   user:
@@ -17249,7 +17249,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1moderation'
+                $ref: '#/components/schemas/TipData'
               example:
                 recent:
                   - donation:
@@ -17313,7 +17313,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success65'
+                $ref: '#/components/schemas/TipData'
               example:
                 donation:
                   user:
@@ -17361,7 +17361,7 @@ paths:
       tags:
         - users
       summary: /current
-      description: 'TODO: Add Description'
+      description: Current user channel
       operationId: /current
       parameters:
         - name: Accept
@@ -17502,7 +17502,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success68'
+                  $ref: '#/components/schemas/ChannelUsers'
                 example:
                   - channelId: 5b2e2007760aeb7729487dab
                     username: leeeeex
@@ -17623,8 +17623,8 @@ components:
           type: boolean
       example:
         success: true
-    Success4:
-      title: Success4
+    BotCommand:
+      title: BotCommand
       required:
         - cooldown
         - aliases
@@ -19262,139 +19262,6 @@ components:
         lastUpdatedBy: 5b2e2007760aeb7729487dab
         createdAt: '2018-12-08T10:06:12.342Z'
         updatedAt: '2018-12-08T10:06:12.342Z'
-    Success17:
-      title: Success17
-      required:
-        - activitySettings
-        - botFilters
-        - banphrases
-        - _id
-        - channel
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        activitySettings:
-          $ref: '#/components/schemas/ActivitySettings'
-        botFilters:
-          $ref: '#/components/schemas/BotFilters'
-        banphrases:
-          type: array
-          items:
-            type: string
-          description: ''
-        _id:
-          type: string
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        activitySettings:
-          enabled: false
-          enableDefaultPhrases: true
-          enableCustomPhrases: false
-          mode: 3
-          replaceWords:
-            - bunnies
-            - butterfly
-            - kitten
-            - love
-            - gingerly
-            - flowers
-            - puppy
-            - joyful
-            - rainbows
-            - unicorn
-        botFilters:
-          caps:
-            timeout:
-              length: 300
-            settings:
-              limit: 50
-              min: 8
-              percent: 60
-            enabled: false
-            exclude: 300
-          links:
-            timeout:
-              length: 300
-            enabled: false
-            exclude: 300
-            whitelist: []
-            blacklist: []
-          banphrases:
-            enabled: false
-          emotes:
-            timeout:
-              length: 300
-            settings:
-              limit: 20
-            enabled: false
-            exclude: 300
-          symbols:
-            timeout:
-              length: 300
-            settings:
-              limit: 50
-              min: 15
-              percent: 40
-            enabled: false
-            exclude: 300
-          paragraph:
-            timeout:
-              length: 300
-            settings:
-              limit: 250
-            enabled: false
-            exclude: 300
-        banphrases: []
-        _id: 5b2e2007760aeb6949487daf
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-06-23T10:25:11.768Z'
-        updatedAt: '2018-06-23T10:25:11.768Z'
-    ActivitySettings:
-      title: ActivitySettings
-      required:
-        - enabled
-        - enableDefaultPhrases
-        - enableCustomPhrases
-        - mode
-        - replaceWords
-      type: object
-      properties:
-        enabled:
-          type: boolean
-        enableDefaultPhrases:
-          type: boolean
-        enableCustomPhrases:
-          type: boolean
-        mode:
-          type: integer
-          format: int32
-        replaceWords:
-          type: array
-          items:
-            type: string
-          description: ''
-      example:
-        enabled: false
-        enableDefaultPhrases: true
-        enableCustomPhrases: false
-        mode: 3
-        replaceWords:
-          - bunnies
-          - butterfly
-          - kitten
-          - love
-          - gingerly
-          - flowers
-          - puppy
-          - joyful
-          - rainbows
-          - unicorn
     BotFilters:
       title: BotFilters
       required:
@@ -19766,8 +19633,8 @@ components:
         language: en
         channel: 5b2e2007760aeb7729487dab
         logs: []
-    Success19:
-      title: Success19
+    BotJoinResponse:
+      title: BotJoinResponse
       required:
         - status
         - channel
@@ -27958,73 +27825,6 @@ components:
         tickets: 0
         username: leeeeex
         subscriber: false
-    Success37:
-      title: Success37
-      required:
-        - subscriberLuck
-        - subscriberOnly
-        - totalAmount
-        - totalUsers
-        - botResponses
-        - _id
-        - entrants
-        - winners
-        - channel
-        - createdAt
-        - updatedAt
-        - startedAt
-        - state
-      type: object
-      properties:
-        subscriberLuck:
-          type: integer
-          format: int32
-        subscriberOnly:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        botResponses:
-          type: boolean
-        _id:
-          type: string
-        entrants:
-          type: array
-          items:
-            type: string
-          description: ''
-        winners:
-          type: array
-          items:
-            type: string
-          description: ''
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-        startedAt:
-          type: string
-        state:
-          type: string
-      example:
-        subscriberLuck: 1
-        subscriberOnly: false
-        totalAmount: 0
-        totalUsers: 0
-        botResponses: false
-        _id: 5c0a89efde9a4c758ea14db9
-        entrants: []
-        winners: []
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-12-07T14:55:43.348Z'
-        updatedAt: '2018-12-07T14:59:25.051Z'
-        startedAt: '2018-12-07T14:59:25.049Z'
-        state: running
     400-badrequest:
       title: 400-badrequest
       required:
@@ -28182,8 +27982,8 @@ components:
         subscriber: 0
         cheer: 0
         host: 0
-    Success42:
-      title: Success42
+    OverlaysList:
+      title: OverlaysList
       required:
         - total
         - docs
@@ -28230,6 +28030,8 @@ components:
       properties:
         settings:
           $ref: '#/components/schemas/OverlaySettings'
+        widgets:
+          $ref: '#/components/schemas/Widget'
         type:
           type: string
         preview:
@@ -28283,622 +28085,6 @@ components:
         width: 1920
         height: 1080
         name: 1080p
-    Success43:
-      title: Success43
-      required:
-        - settings
-        - type
-        - preview
-        - widgets
-        - mobile
-        - _id
-        - game
-        - name
-        - channel
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        settings:
-          $ref: '#/components/schemas/OverlaySettings'
-        type:
-          type: string
-        preview:
-          type: string
-        widgets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Widget'
-          description: ''
-        mobile:
-          type: boolean
-        _id:
-          type: string
-        game:
-          type: string
-          nullable: true
-        name:
-          type: string
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        settings:
-          width: 1920
-          height: 1080
-          name: 1080p
-        type: regular
-        preview: 'https://static-cdn.jtvnw.net/ttv-static/404_boxart-272x380.jpg'
-        widgets:
-          - id: 1
-            type: se-widget-custom-event-list
-            visible: true
-            locked: false
-            listeners:
-              tip-latest: true
-              subscriber-latest: true
-              follower-latest: true
-              cheer-latest: true
-              host-latest: true
-              raid-latest: true
-              redemption-latest: true
-            css:
-              z-index: 2
-              top: '-8.00px'
-              left: '-9.00px'
-              width: 822.00px
-              height: 684.00px
-              opacity: 1
-            text:
-              type: text
-              enableShadow: true
-              scrolling:
-                direction: left
-                speed: 6
-              css:
-                position: relative
-                z-index: 1
-                font-family: Roboto
-                font-size: 24
-                color: '#fff'
-                font-weight: bold
-                text-shadow: 'rgb(0, 0, 0) 1px 1px 1px'
-                text-align: left
-                line-height: 1.3
-                message:
-                  enableShadow: false
-                  font-family: Roboto
-                  font-size: 16
-                  line-height: 1.3
-                  color: '#fff'
-                  text-align: center
-            image:
-              type: image
-              css:
-                max-width: 100%
-            video:
-              type: video
-              css:
-                widget: 320
-                height: 240
-            audio:
-              type: audio
-              volume: 1
-            animation:
-              in: fadeIn
-              out: fadeOut
-              timeout: 6
-            variables:
-              css: |
-                .main_canvas {
-                  border: 1px solid;
-                }
-              html: |-
-                <div class="wrapper">
-                  <div id="score">&nbsp;</div>
-                  <canvas class="main_canvas" width=600 height=600></canvas>
-                </div>
-              js: |-
-                /*
-                ReadMe:
-                1) create Custom Event list within your layer on StreamElements
-                2) replace content of each section with code provided below
-                3) Click done
-                4) Change multipliers to fit your needs,
-                5) This snake doesn't store its state, so the best way to use it is to create a new overlay just with it, add as new browser source and DON'T ENABLE "Shutdown source when not visible"
-                6) If you feel happy about it, you can buy me a beer at http://paypal.me/ThisIsLex
-                */
-
-                // Your channelname - to get list of emotes mostly used on your chan - makes it more personalised!
-                let channelName="twitch";
-                // How many points should we add for each type of event
-                let subValue = 3,
-                    cheerValue = 0.01,
-                    tipValue=1;
-
-                var feed=1; //Initial points to go
-                let pointIcon="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0"; //Initial point icon - Kappa
-
-                let useRandom=true; //If set to false, each event type will have its own image defined below
-                let subPoint="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0"; // Kappa
-                let cheerPoint="https://static-cdn.jtvnw.net/emoticons/v1/88/1.0"; // PogChamp
-                let tipPoint="https://static-cdn.jtvnw.net/emoticons/v1/425618/1.0"; // LUL
-
-                let dotSize=10; // Size of snake and points
-                //Snake Color RGBA
-                let snakeRed=99,
-                    snakeGreen=99,
-                    snakeBlue=99;
-
-                var _0x5ee5=['aXNDZWxsRnJlZQ==','Zm9sbG93VGFpbA==','YWRqYWNlbnRDZWxs','ZmluZFBhdGhUb0NlbGw=','cmV0dXJuIChmdW5jdGlvbigpIA==','e30uY29uc3RydWN0b3IoInJldHVybiB0aGlzIikoICk=','Y29uc29sZQ==','bG9n','ZGVidWc=','aW5mbw==','ZXJyb3I=','dHJhY2U=','d2Fybg==','ZXhjZXB0aW9u','Y21k','cGFyZW50','dHJhY2VDbWQ=','LCAn','cmVhZHk=','Z2V0Q29udGV4dA==','cGxheQ==','LzEuMA==','b25FdmVudFJlY2VpdmVk','ZGV0YWls','bGlzdGVuZXI=','c3Vic2NyaWJlci1sYXRlc3Q=','Y2hlZXItbGF0ZXN0','YW1vdW50','dGlwLWxhdGVzdA==','I3Njb3Jl','aHRtbA==','I3dyYXBwZXI=','d2lkdGg=','c3RyaW5n','d2hpbGUgKHRydWUpIHt9','Y29uc3RydWN0b3I=','ZGVidQ==','Z2dlcg==','Y2FsbA==','YWN0aW9u','c3RhdGVPYmplY3Q=','Z2V0SlNPTg==','aHR0cHM6Ly9hcGkuc3RyZWFtZWxlbWVudHMuY29tL2thcHBhL3YyL2NoYXRzdGF0cy8=','L3N0YXRzP2xpbWl0PTEw','dHdpdGNoRW1vdGVz','Lm1haW5fY2FudmFz','aGVpZ2h0','cmdiYSg=','Zmxvb3I=','cmFuZG9t','SW52YWxpZCBkaXJlY3Rpb24g','cHJvdG90eXBl','YWRk','ZXF1YWxz','dG9TdHJpbmc=','Ym9keQ==','ZGlyZWN0aW9u','aGVhZA==','dGFpbA==','bGVuZ3Ro','Zm9yaw==','c2xpY2U=','dW5zaGlmdA==','bW92ZQ==','YWR2YW5jZQ==','bW92ZVRhaWw=','cG9w','Ym9keUhpdA==','d2FsbEhpdA==','YXBwbHk=','ZnVuY3Rpb24gKlwoICpcKQ==','XCtcKyAqKD86XzB4KD86W2EtZjAtOV0pezQsNn18KD86XGJ8XGQpW2EtejAtOV17MSw0fSg/OlxifFxkKSk=','aW5pdA==','dGVzdA==','Y2hhaW4=','aW5wdXQ=','ZnBz','c2NvcmU=','Y29tbWFuZHM=','bWFw','cHVzaA==','bWFya3M=','ZHJhdw==','Y3R4','Y2xlYXJSZWN0','c25ha2U=','ZmlsbFN0eWxl','ZmlsbFJlY3Q=','c3Jj','b25sb2Fk','Y3JlYXRlUGF0dGVybg==','cmVwZWF0','ZHJhd0ltYWdl','Zm9vZA==','ZXZlcnk=','bGFzdEZvb2Q=','b25UaWNr','bWFrZU1vdmVz','c2hpZnQ=','dHJpZ2dlcg==','dXBkYXRlSW5mbw==','cGxhY2VGb29k','c3RvcA==','R0FNRSBPVkVS','VW5iZWxpZXZhYmxlIQ==','dGlja2Vy'];(function(_0x3bccaf,_0x37602a){var _0x388fb7=function(_0x4f0104){while(--_0x4f0104){_0x3bccaf['push'](_0x3bccaf['shift']());}};var _0x41e93a=function(){var _0x105001={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x55f5e9,_0x3555a4,_0xa8e881,_0x382bb0){_0x382bb0=_0x382bb0||{};var _0x518de6=_0x3555a4+'='+_0xa8e881;var _0x306604=0x0;for(var _0x306604=0x0,_0x4a0427=_0x55f5e9['length'];_0x306604<_0x4a0427;_0x306604++){var _0x2292e5=_0x55f5e9[_0x306604];_0x518de6+=';\x20'+_0x2292e5;var _0x29dd66=_0x55f5e9[_0x2292e5];_0x55f5e9['push'](_0x29dd66);_0x4a0427=_0x55f5e9['length'];if(_0x29dd66!==!![]){_0x518de6+='='+_0x29dd66;}}_0x382bb0['cookie']=_0x518de6;},'removeCookie':function(){return'dev';},'getCookie':function(_0xcef3db,_0x2155fa){_0xcef3db=_0xcef3db||function(_0x52966d){return _0x52966d;};var _0x1d80dc=_0xcef3db(new RegExp('(?:^|;\x20)'+_0x2155fa['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x41192b=function(_0x2f2067,_0x3149a7){_0x2f2067(++_0x3149a7);};_0x41192b(_0x388fb7,_0x37602a);return _0x1d80dc?decodeURIComponent(_0x1d80dc[0x1]):undefined;}};var _0x2ac408=function(){var _0x5ba171=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x5ba171['test'](_0x105001['removeCookie']['toString']());};_0x105001['updateCookie']=_0x2ac408;var _0x3ad1e2='';var _0x3d0c0e=_0x105001['updateCookie']();if(!_0x3d0c0e){_0x105001['setCookie'](['*'],'counter',0x1);}else if(_0x3d0c0e){_0x3ad1e2=_0x105001['getCookie'](null,'counter');}else{_0x105001['removeCookie']();}};_0x41e93a();}(_0x5ee5,0x1d1));var _0x331f=function(_0x2245a3,_0x55e20b){_0x2245a3=_0x2245a3-0x0;var _0x18ed7b=_0x5ee5[_0x2245a3];if(_0x331f['dKqWXk']===undefined){(function(){var _0x358e2a=function(){var _0xf8bb85;try{_0xf8bb85=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x33b321){_0xf8bb85=window;}return _0xf8bb85;};var _0x2e401e=_0x358e2a();var _0x56edf3='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x2e401e['atob']||(_0x2e401e['atob']=function(_0x4a7a72){var _0x19cfc0=String(_0x4a7a72)['replace'](/=+$/,'');for(var _0x1bf298=0x0,_0x277522,_0x1f6398,_0x544478=0x0,_0x1a3c2b='';_0x1f6398=_0x19cfc0['charAt'](_0x544478++);~_0x1f6398&&(_0x277522=_0x1bf298%0x4?_0x277522*0x40+_0x1f6398:_0x1f6398,_0x1bf298++%0x4)?_0x1a3c2b+=String['fromCharCode'](0xff&_0x277522>>(-0x2*_0x1bf298&0x6)):0x0){_0x1f6398=_0x56edf3['indexOf'](_0x1f6398);}return _0x1a3c2b;});}());_0x331f['nrRyEY']=function(_0x517005){var _0x51c65e=atob(_0x517005);var _0x59bbe8=[];for(var _0x6e54da=0x0,_0x2b2143=_0x51c65e['length'];_0x6e54da<_0x2b2143;_0x6e54da++){_0x59bbe8+='%'+('00'+_0x51c65e['charCodeAt'](_0x6e54da)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x59bbe8);};_0x331f['MsOjWS']={};_0x331f['dKqWXk']=!![];}var _0x357214=_0x331f['MsOjWS'][_0x2245a3];if(_0x357214===undefined){var _0x29cb45=function(_0x245ad3){this['kzebhe']=_0x245ad3;this['jBpbdc']=[0x1,0x0,0x0];this['fLmrfL']=function(){return'newState';};this['OggpLT']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*';this['GCdrZc']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x29cb45['prototype']['HAOOnN']=function(){var _0x4f9bff=new RegExp(this['OggpLT']+this['GCdrZc']);var _0x22193c=_0x4f9bff['test'](this['fLmrfL']['toString']())?--this['jBpbdc'][0x1]:--this['jBpbdc'][0x0];return this['acCDbd'](_0x22193c);};_0x29cb45['prototype']['acCDbd']=function(_0x20c8b3){if(!Boolean(~_0x20c8b3)){return _0x20c8b3;}return this['rnqMRL'](this['kzebhe']);};_0x29cb45['prototype']['rnqMRL']=function(_0x28a4cd){for(var _0x3eac32=0x0,_0x12799f=this['jBpbdc']['length'];_0x3eac32<_0x12799f;_0x3eac32++){this['jBpbdc']['push'](Math['round'](Math['random']()));_0x12799f=this['jBpbdc']['length'];}return _0x28a4cd(this['jBpbdc'][0x0]);};new _0x29cb45(_0x331f)['HAOOnN']();_0x18ed7b=_0x331f['nrRyEY'](_0x18ed7b);_0x331f['MsOjWS'][_0x2245a3]=_0x18ed7b;}else{_0x18ed7b=_0x357214;}return _0x18ed7b;};let emotes=[];let initialized=0x0;if(useRandom&&!initialized){$[_0x331f('0x0')](_0x331f('0x1')+channelName+_0x331f('0x2'),function(_0x30411c){emotes=_0x30411c[_0x331f('0x3')];initialized=0x1;});}var CANVAS_HEIGHT,CANVAS_WIDTH,DOWN,FIELD_AREA,Game,HEIGHT,H_SCALE,INIT_FPS,LEFT,PathNotFoundError,Point,RIGHT,SearchState,Snake,UP,WIDTH,W_SCALE,isOpposite,randInt,rgba,_ref;INIT_FPS=0x14;WIDTH=0x14;HEIGHT=0x14;CANVAS_WIDTH=$('.main_canvas')['width']();CANVAS_HEIGHT=$(_0x331f('0x4'))[_0x331f('0x5')]();FIELD_AREA=HEIGHT*WIDTH;W_SCALE=CANVAS_WIDTH/WIDTH;H_SCALE=CANVAS_HEIGHT/HEIGHT;_ref=['u','d','l','r'],UP=_ref[0x0],DOWN=_ref[0x1],LEFT=_ref[0x2],RIGHT=_ref[0x3];rgba=function(_0x5c6b42,_0x2970c1,_0x546970,_0x2cc8eb){return _0x331f('0x6')+_0x5c6b42+',\x20'+_0x2970c1+',\x20'+_0x546970+',\x20'+_0x2cc8eb+')';};randInt=function(_0x255527,_0x27ed18){return Math[_0x331f('0x7')](Math[_0x331f('0x8')]()*(_0x27ed18-_0x255527)+_0x255527);};isOpposite=function(_0x2c47ac,_0x497b8b){switch(_0x2c47ac){case UP:if(_0x497b8b===DOWN){return!![];}else{return![];}break;case DOWN:if(_0x497b8b===UP){return!![];}else{return![];}break;case LEFT:if(_0x497b8b===RIGHT){return!![];}else{return![];}break;case RIGHT:if(_0x497b8b===LEFT){return!![];}else{return![];}break;default:throw new Error(_0x331f('0x9')+_0x2c47ac);}};setInterval(function(){_0x618780();},0xfa0);Point=function(){var _0x59e441=function(){var _0x57406=!![];return function(_0xb0c9a4,_0x2ebd78){var _0x2f190f=_0x57406?function(){if(_0x2ebd78){var _0xb7e854=_0x2ebd78['apply'](_0xb0c9a4,arguments);_0x2ebd78=null;return _0xb7e854;}}:function(){};_0x57406=![];return _0x2f190f;};}();var _0x1f64b4=_0x59e441(this,function(){var _0x4d2341=function(){return'\x64\x65\x76';},_0x5c855e=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x6c0a8=function(){var _0x2a66be=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x2a66be['\x74\x65\x73\x74'](_0x4d2341['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x33fea8=function(){var _0x669312=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x669312['\x74\x65\x73\x74'](_0x5c855e['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x594e37=function(_0x3a8938){var _0x29ee3d=~-0x1>>0x1+0xff%0x0;if(_0x3a8938['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x29ee3d)){_0x4dfa53(_0x3a8938);}};var _0x4dfa53=function(_0x373f2b){var _0x58b0f6=~-0x4>>0x1+0xff%0x0;if(_0x373f2b['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x58b0f6){_0x594e37(_0x373f2b);}};if(!_0x6c0a8()){if(!_0x33fea8()){_0x594e37('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x594e37('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x594e37('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x1f64b4();function _0x349a0b(_0x484a74,_0x3eae30){this['x']=_0x484a74;this['y']=_0x3eae30;}_0x349a0b[_0x331f('0xa')][_0x331f('0xb')]=function(_0x32235e,_0x337c0c){return new _0x349a0b(this['x']+_0x32235e,this['y']+_0x337c0c);};_0x349a0b[_0x331f('0xa')][_0x331f('0xc')]=function(_0x4c1fb6){return this['x']===_0x4c1fb6['x']&&this['y']===_0x4c1fb6['y'];};_0x349a0b[_0x331f('0xa')][_0x331f('0xd')]=function(){return'('+this['x']+',\x20'+this['y']+')';};return _0x349a0b;}();Snake=function(){function _0x1c62ca(_0x18eb85){this[_0x331f('0xe')]=[_0x18eb85];this[_0x331f('0xf')]=RIGHT;}_0x1c62ca[_0x331f('0xa')][_0x331f('0x10')]=function(){return this[_0x331f('0xe')][0x0];};_0x1c62ca[_0x331f('0xa')][_0x331f('0x11')]=function(){return this[_0x331f('0xe')][this[_0x331f('0xe')][_0x331f('0x12')]-0x1];};_0x1c62ca[_0x331f('0xa')][_0x331f('0x13')]=function(){var _0x295c68;_0x295c68=new _0x1c62ca(new Point(0x0,0x0));_0x295c68[_0x331f('0xe')]=this[_0x331f('0xe')][_0x331f('0x14')](0x0);_0x295c68[_0x331f('0xf')]=this[_0x331f('0xf')];return _0x295c68;};_0x1c62ca[_0x331f('0xa')]['advance']=function(_0x57427f){var _0xdb64b8;if(isOpposite(_0x57427f,this[_0x331f('0xf')])){_0x57427f=this[_0x331f('0xf')];}_0xdb64b8=Game['adjacentCell'](_0x57427f,this[_0x331f('0x10')]());this[_0x331f('0xe')][_0x331f('0x15')](_0xdb64b8);return this['direction']=_0x57427f;};_0x1c62ca[_0x331f('0xa')][_0x331f('0x16')]=function(_0x4673ee){if(isOpposite(_0x4673ee,this[_0x331f('0xf')])){_0x4673ee=this[_0x331f('0xf')];}this[_0x331f('0x17')](_0x4673ee);return this[_0x331f('0x18')]();};_0x1c62ca[_0x331f('0xa')][_0x331f('0x18')]=function(){return this[_0x331f('0xe')][_0x331f('0x19')]();};_0x1c62ca[_0x331f('0xa')][_0x331f('0x1a')]=function(){var _0x6b6cd6,_0x4e182d,_0x5b22ce,_0x62a4d2;_0x62a4d2=this[_0x331f('0xe')][_0x331f('0x14')](0x1,this[_0x331f('0xe')][_0x331f('0x12')]);for(_0x4e182d=0x0,_0x5b22ce=_0x62a4d2[_0x331f('0x12')];_0x4e182d<_0x5b22ce;_0x4e182d++){_0x6b6cd6=_0x62a4d2[_0x4e182d];if(this[_0x331f('0x10')]()[_0x331f('0xc')](_0x6b6cd6)){return!![];}}return![];};_0x1c62ca['prototype'][_0x331f('0x1b')]=function(){var _0x5f4b31,_0xe9ad3d;return!(0x0<=(_0x5f4b31=this[_0x331f('0x10')]()['x'])&&_0x5f4b31<WIDTH&&(0x0<=(_0xe9ad3d=this[_0x331f('0x10')]()['y'])&&_0xe9ad3d<HEIGHT));};return _0x1c62ca;}();PathNotFoundError={};Game=function(){var _0x2f6122=function(){var _0x4ff973=!![];return function(_0x16c1af,_0x2b58c7){var _0x357ce3=_0x4ff973?function(){if(_0x2b58c7){var _0x1817c3=_0x2b58c7[_0x331f('0x1c')](_0x16c1af,arguments);_0x2b58c7=null;return _0x1817c3;}}:function(){};_0x4ff973=![];return _0x357ce3;};}();(function(){_0x2f6122(this,function(){var _0x5b2471=new RegExp(_0x331f('0x1d'));var _0x28eadc=new RegExp(_0x331f('0x1e'),'i');var _0x351ba6=_0x618780(_0x331f('0x1f'));if(!_0x5b2471[_0x331f('0x20')](_0x351ba6+_0x331f('0x21'))||!_0x28eadc['test'](_0x351ba6+_0x331f('0x22'))){_0x351ba6('0');}else{_0x618780();}})();}());_0x468947['adjacentCell']=function(_0x45751b,_0x21e8f4){switch(_0x45751b['toLowerCase']()){case'u':return _0x21e8f4[_0x331f('0xb')](0x0,-0x1);case'd':return _0x21e8f4[_0x331f('0xb')](0x0,0x1);case'l':return _0x21e8f4['add'](-0x1,0x0);case'r':return _0x21e8f4[_0x331f('0xb')](0x1,0x0);default:throw new Error(_0x331f('0x9')+_0x45751b);}};function _0x468947(_0x308a3f){var _0x10a44c,_0x2bd1d5;this['ctx']=_0x308a3f;this[_0x331f('0x23')]=INIT_FPS;this['food']=new Point(0x3,0x3);this[_0x331f('0x24')]=0x0;this['snake']=new Snake(new Point(0x1,0x1));this[_0x331f('0x25')]=[];this[_0x331f('0x26')]=function(){var _0x3af6d4,_0x671b16;_0x671b16=[];for(_0x2bd1d5=_0x3af6d4=0x0;0x0<=WIDTH?_0x3af6d4<WIDTH:_0x3af6d4>WIDTH;_0x2bd1d5=0x0<=WIDTH?++_0x3af6d4:--_0x3af6d4){_0x671b16[_0x331f('0x27')](function(){var _0x4c8d27,_0x2f8690;_0x2f8690=[];for(_0x10a44c=_0x4c8d27=0x0;0x0<=HEIGHT?_0x4c8d27<HEIGHT:_0x4c8d27>HEIGHT;_0x10a44c=0x0<=HEIGHT?++_0x4c8d27:--_0x4c8d27){_0x2f8690[_0x331f('0x27')](null);}return _0x2f8690;}());}return _0x671b16;}();this[_0x331f('0x28')]=function(){var _0x39f961,_0x2de02b;_0x2de02b=[];for(_0x2bd1d5=_0x39f961=0x0;0x0<=WIDTH?_0x39f961<WIDTH:_0x39f961>WIDTH;_0x2bd1d5=0x0<=WIDTH?++_0x39f961:--_0x39f961){_0x2de02b[_0x331f('0x27')](function(){var _0x41f4ec,_0x5d5e78;_0x5d5e78=[];for(_0x10a44c=_0x41f4ec=0x0;0x0<=HEIGHT?_0x41f4ec<HEIGHT:_0x41f4ec>HEIGHT;_0x10a44c=0x0<=HEIGHT?++_0x41f4ec:--_0x41f4ec){_0x5d5e78[_0x331f('0x27')](![]);}return _0x5d5e78;}());}return _0x2de02b;}();}_0x468947[_0x331f('0xa')][_0x331f('0x29')]=function(){var _0x4c544c,_0x24ac99,_0x5abec6,_0x5e3c59;this[_0x331f('0x2a')][_0x331f('0x2b')](0x0,0x0,CANVAS_WIDTH,CANVAS_HEIGHT);for(_0x4c544c=_0x5abec6=0x0,_0x5e3c59=this[_0x331f('0x2c')][_0x331f('0xe')][_0x331f('0x12')];0x0<=_0x5e3c59?_0x5abec6<_0x5e3c59:_0x5abec6>_0x5e3c59;_0x4c544c=0x0<=_0x5e3c59?++_0x5abec6:--_0x5abec6){_0x24ac99=this[_0x331f('0x2c')]['body'][_0x4c544c];this[_0x331f('0x2a')][_0x331f('0x2d')]=rgba(snakeRed,snakeGreen,snakeBlue,0x1-0.7*(_0x4c544c/this[_0x331f('0x2c')][_0x331f('0xe')][_0x331f('0x12')]));this['ctx'][_0x331f('0x2e')](_0x24ac99['x']*W_SCALE,_0x24ac99['y']*H_SCALE,W_SCALE,H_SCALE);}let _0xc51ff5=this;var _0x509ba0=new Image();_0x509ba0[_0x331f('0x2f')]=pointIcon;_0x509ba0[_0x331f('0x30')]=function(){var _0x38d0ba=_0xc51ff5[_0x331f('0x2a')][_0x331f('0x31')](_0x509ba0,_0x331f('0x32'));_0xc51ff5[_0x331f('0x2a')][_0x331f('0x2d')]=_0x38d0ba;return _0xc51ff5[_0x331f('0x2a')][_0x331f('0x33')](_0x509ba0,_0xc51ff5['food']['x']*W_SCALE,_0xc51ff5[_0x331f('0x34')]['y']*H_SCALE,W_SCALE,H_SCALE);};};_0x468947[_0x331f('0xa')]['placeFood']=function(){var _0x2010c8,_0x4cf365;_0x4cf365=[];while(!![]){_0x2010c8=new Point(randInt(0x0,WIDTH),randInt(0x0,HEIGHT));if(this['snake'][_0x331f('0xe')][_0x331f('0x35')](function(_0x3c2449){return!_0x3c2449[_0x331f('0xc')](_0x2010c8);})){if(useRandom&&initialized){pointIcon=randomEmote();}this[_0x331f('0x36')]=this[_0x331f('0x34')];this[_0x331f('0x34')]=_0x2010c8;break;}else{_0x4cf365[_0x331f('0x27')](void 0x0);}}return _0x4cf365;};_0x468947[_0x331f('0xa')][_0x331f('0x37')]=function(){var _0x3aa8f8=this;if(feed){if(this[_0x331f('0x25')][_0x331f('0x12')]===0x0){this[_0x331f('0x25')]=Array[_0x331f('0xa')][_0x331f('0x14')][_0x331f('0x1c')](this[_0x331f('0x38')]());}this['snake'][_0x331f('0x17')](this['commands'][_0x331f('0x39')]());$(this)[_0x331f('0x3a')](_0x331f('0x3b'),'Score:\x20'+this[_0x331f('0x24')]);if(this[_0x331f('0x2c')][_0x331f('0x10')]()[_0x331f('0xc')](this[_0x331f('0x34')])){this[_0x331f('0x3c')]();this[_0x331f('0x24')]++;feed--;}else{this['snake'][_0x331f('0x18')]();}if(this['snake'][_0x331f('0x1b')]()||this[_0x331f('0x2c')]['bodyHit']()){this[_0x331f('0x3d')]();$(this)[_0x331f('0x3a')](_0x331f('0x3b'),_0x331f('0x3e'));return;}if(this[_0x331f('0x2c')][_0x331f('0xe')]['length']>=WIDTH*HEIGHT-0x1){this[_0x331f('0x3d')]();$(this)[_0x331f('0x3a')](_0x331f('0x3b'),_0x331f('0x3f'));return;}this[_0x331f('0x29')]();}return this['ticker']=setTimeout(function(){return _0x3aa8f8[_0x331f('0x37')]();},0x3e8/this[_0x331f('0x23')]);};_0x468947[_0x331f('0xa')]['play']=function(){return this[_0x331f('0x37')]();};_0x468947[_0x331f('0xa')][_0x331f('0x3d')]=function(){return clearTimeout(this[_0x331f('0x40')]);};_0x468947[_0x331f('0xa')][_0x331f('0x41')]=function(_0x61b50e,_0x2b0680){var _0x320651,_0x17ca12;return 0x0<=(_0x320651=_0x61b50e['x'])&&_0x320651<WIDTH&&(0x0<=(_0x17ca12=_0x61b50e['y'])&&_0x17ca12<HEIGHT)&&_0x2b0680[_0x331f('0xe')][_0x331f('0x35')](function(_0x31f166){return!_0x31f166[_0x331f('0xc')](_0x61b50e);});};_0x468947[_0x331f('0xa')]['findPathToCell']=function(_0x97c7cc,_0x454eaa){var _0x25dbe9,_0x57efb8,_0x2948aa,_0x5993d9,_0x33a476,_0x16800e,_0x471e6f,_0xce21f9,_0x195fd0,_0x14f5a9,_0x49462a,_0x2edfc8;_0x2948aa=_0x97c7cc['head']();for(_0x33a476=_0xce21f9=0x0;0x0<=WIDTH?_0xce21f9<WIDTH:_0xce21f9>WIDTH;_0x33a476=0x0<=WIDTH?++_0xce21f9:--_0xce21f9){for(_0x5993d9=_0x195fd0=0x0;0x0<=HEIGHT?_0x195fd0<HEIGHT:_0x195fd0>HEIGHT;_0x5993d9=0x0<=HEIGHT?++_0x195fd0:--_0x195fd0){this[_0x331f('0x28')][_0x33a476][_0x5993d9]=![];}}_0x471e6f=[new SearchState(_0x2948aa)];while(_0x471e6f[_0x331f('0x12')]!==0x0){_0x16800e=_0x471e6f[_0x331f('0x39')]();if(this['marks'][_0x16800e['head']['x']][_0x16800e[_0x331f('0x10')]['y']]===!![]){continue;}this[_0x331f('0x28')][_0x16800e[_0x331f('0x10')]['x']][_0x16800e[_0x331f('0x10')]['y']]=!![];_0x2edfc8=[UP,DOWN,LEFT,RIGHT];for(_0x14f5a9=0x0,_0x49462a=_0x2edfc8[_0x331f('0x12')];_0x14f5a9<_0x49462a;_0x14f5a9++){_0x57efb8=_0x2edfc8[_0x14f5a9];_0x25dbe9=_0x468947['adjacentCell'](_0x57efb8,_0x16800e['head']);if(_0x25dbe9['equals'](_0x454eaa)){return _0x16800e['traceCmd']()+_0x57efb8;}if(this['isCellFree'](_0x25dbe9,_0x97c7cc)){_0x471e6f[_0x331f('0x27')](new SearchState(_0x25dbe9,_0x57efb8,_0x16800e));}}}throw PathNotFoundError;};_0x468947['prototype'][_0x331f('0x42')]=function(_0x1ccd9d){var _0xc97972,_0x55b337,_0x85848e,_0x57430a,_0x4d6311,_0x185a4f,_0x53ebdd,_0x2cd261,_0x18c893,_0x3296fe,_0x5735f6,_0x211ae3,_0x1d27ab,_0x1b456a,_0x3cbc2b,_0x467007,_0x27cc47,_0x5c5687,_0x2c69aa,_0x3cd178,_0x2eebe7,_0xa6c21a;_0x57430a=_0x1ccd9d[_0x331f('0x10')]();_0x211ae3=_0x1ccd9d[_0x331f('0x11')]();for(_0x185a4f=_0x1d27ab=0x0;0x0<=WIDTH?_0x1d27ab<WIDTH:_0x1d27ab>WIDTH;_0x185a4f=0x0<=WIDTH?++_0x1d27ab:--_0x1d27ab){for(_0x4d6311=_0x1b456a=0x0;0x0<=HEIGHT?_0x1b456a<HEIGHT:_0x1b456a>HEIGHT;_0x4d6311=0x0<=HEIGHT?++_0x1b456a:--_0x1b456a){this['map'][_0x185a4f][_0x4d6311]=null;}}this[_0x331f('0x26')][_0x211ae3['x']][_0x211ae3['y']]=0x0;for(_0x185a4f=_0x3cbc2b=0x0;0x0<=WIDTH?_0x3cbc2b<WIDTH:_0x3cbc2b>WIDTH;_0x185a4f=0x0<=WIDTH?++_0x3cbc2b:--_0x3cbc2b){for(_0x4d6311=_0x467007=0x0;0x0<=HEIGHT?_0x467007<HEIGHT:_0x467007>HEIGHT;_0x4d6311=0x0<=HEIGHT?++_0x467007:--_0x467007){this[_0x331f('0x28')][_0x185a4f][_0x4d6311]=![];}}_0x5735f6=[_0x211ae3];_0x85848e=![];while(_0x5735f6['length']!==0x0){_0x3296fe=_0x5735f6[_0x331f('0x39')]();if(this[_0x331f('0x28')][_0x3296fe['x']][_0x3296fe['y']]===!![]){continue;}this[_0x331f('0x28')][_0x3296fe['x']][_0x3296fe['y']]=!![];_0x2eebe7=[UP,DOWN,LEFT,RIGHT];for(_0x2c69aa=0x0,_0x27cc47=_0x2eebe7[_0x331f('0x12')];_0x2c69aa<_0x27cc47;_0x2c69aa++){_0x55b337=_0x2eebe7[_0x2c69aa];_0xc97972=_0x468947[_0x331f('0x43')](_0x55b337,_0x3296fe);if(_0xc97972[_0x331f('0xc')](_0x57430a)){_0x85848e=!![];}if(this['isCellFree'](_0xc97972,_0x1ccd9d)){if(this[_0x331f('0x26')][_0xc97972['x']][_0xc97972['y']]===null){this[_0x331f('0x26')][_0xc97972['x']][_0xc97972['y']]=this[_0x331f('0x26')][_0x3296fe['x']][_0x3296fe['y']]+0x1;}_0x5735f6[_0x331f('0x27')](_0xc97972);}}}if(_0x85848e){_0x53ebdd=-0x1;_0x2cd261=null;_0xa6c21a=[UP,DOWN,LEFT,RIGHT];for(_0x3cd178=0x0,_0x5c5687=_0xa6c21a['length'];_0x3cd178<_0x5c5687;_0x3cd178++){_0x55b337=_0xa6c21a[_0x3cd178];_0x18c893=_0x468947['adjacentCell'](_0x55b337,_0x57430a);if(this[_0x331f('0x41')](_0x18c893,_0x1ccd9d)||_0x18c893[_0x331f('0xc')](_0x211ae3)){if(this[_0x331f('0x26')][_0x18c893['x']][_0x18c893['y']]>_0x53ebdd&&this['map'][_0x18c893['x']][_0x18c893['y']]!==null){_0x53ebdd=this['map'][_0x18c893['x']][_0x18c893['y']];_0x2cd261=_0x55b337;}}}return _0x2cd261;}else{throw PathNotFoundError;}};_0x468947[_0x331f('0xa')][_0x331f('0x38')]=function(){var _0x2a7c26,_0x2c2585,_0x264da2,_0xc907e5,_0x30bb6c,_0x3fe241,_0x2658d8,_0x497d06,_0x26e262,_0x44958c,_0x7c1abd;try{_0x3fe241=this[_0x331f('0x44')](this[_0x331f('0x2c')],this[_0x331f('0x34')]);_0xc907e5=this[_0x331f('0x2c')][_0x331f('0x13')]();for(_0x2658d8=0x0,_0x26e262=_0x3fe241[_0x331f('0x12')];_0x2658d8<_0x26e262;_0x2658d8++){_0x2a7c26=_0x3fe241[_0x2658d8];_0xc907e5[_0x331f('0x17')](_0x2a7c26);if(!_0xc907e5[_0x331f('0x10')]()[_0x331f('0xc')](this[_0x331f('0x34')])){_0xc907e5[_0x331f('0x18')]();}}this['findPathToCell'](_0xc907e5,_0xc907e5[_0x331f('0x11')]());return _0x3fe241;}catch(_0x1a3a8d){_0x264da2=_0x1a3a8d;if(_0x264da2===PathNotFoundError){try{return this[_0x331f('0x42')](this[_0x331f('0x2c')]);}catch(_0x58487d){_0x264da2=_0x58487d;if(_0x264da2===PathNotFoundError){_0x7c1abd=[UP,DOWN,LEFT,RIGHT];for(_0x497d06=0x0,_0x44958c=_0x7c1abd[_0x331f('0x12')];_0x497d06<_0x44958c;_0x497d06++){_0x2c2585=_0x7c1abd[_0x497d06];_0x30bb6c=_0x468947[_0x331f('0x43')](_0x2c2585,this[_0x331f('0x2c')][_0x331f('0x10')]());if(this[_0x331f('0x41')](_0x30bb6c,this['snake'])){return _0x2c2585;}}return this[_0x331f('0x2c')][_0x331f('0xf')];}else{throw _0x264da2;}}}else{throw _0x264da2;}}};return _0x468947;}();SearchState=function(){var _0x51df40=function(){var _0x36dd12=!![];return function(_0x2481a7,_0x20df3e){var _0x90dac1=_0x36dd12?function(){if(_0x20df3e){var _0x20fae4=_0x20df3e[_0x331f('0x1c')](_0x2481a7,arguments);_0x20df3e=null;return _0x20fae4;}}:function(){};_0x36dd12=![];return _0x90dac1;};}();var _0x461e32=_0x51df40(this,function(){var _0x35c052=function(){};var _0x1860dd;try{var _0x415947=Function(_0x331f('0x45')+_0x331f('0x46')+');');_0x1860dd=_0x415947();}catch(_0x18a2b1){_0x1860dd=window;}if(!_0x1860dd[_0x331f('0x47')]){_0x1860dd[_0x331f('0x47')]=function(_0x4242c7){var _0x11cb0a={};_0x11cb0a[_0x331f('0x48')]=_0x4242c7;_0x11cb0a['warn']=_0x4242c7;_0x11cb0a[_0x331f('0x49')]=_0x4242c7;_0x11cb0a[_0x331f('0x4a')]=_0x4242c7;_0x11cb0a[_0x331f('0x4b')]=_0x4242c7;_0x11cb0a['exception']=_0x4242c7;_0x11cb0a[_0x331f('0x4c')]=_0x4242c7;return _0x11cb0a;}(_0x35c052);}else{_0x1860dd[_0x331f('0x47')][_0x331f('0x48')]=_0x35c052;_0x1860dd[_0x331f('0x47')][_0x331f('0x4d')]=_0x35c052;_0x1860dd['console'][_0x331f('0x49')]=_0x35c052;_0x1860dd['console']['info']=_0x35c052;_0x1860dd['console'][_0x331f('0x4b')]=_0x35c052;_0x1860dd[_0x331f('0x47')][_0x331f('0x4e')]=_0x35c052;_0x1860dd['console'][_0x331f('0x4c')]=_0x35c052;}});_0x461e32();function _0x3dcd71(_0xc8920c,_0x20a13f,_0x163874){this[_0x331f('0x10')]=_0xc8920c;this[_0x331f('0x4f')]=_0x20a13f!=null?_0x20a13f:'';this[_0x331f('0x50')]=_0x163874!=null?_0x163874:null;}_0x3dcd71[_0x331f('0xa')][_0x331f('0x51')]=function(){if(this[_0x331f('0x50')]===null){return this['cmd'];}else{return this['parent'][_0x331f('0x51')]()+this['cmd'];}};_0x3dcd71[_0x331f('0xa')][_0x331f('0xd')]=function(){return''+this[_0x331f('0x10')]+_0x331f('0x52')+this['traceCmd']()+'\x27';};return _0x3dcd71;}();$(document)[_0x331f('0x53')](function(){var _0x15041f,_0x44565e;_0x15041f=$(_0x331f('0x4'))[0x0][_0x331f('0x54')]('2d');_0x44565e=new Game(_0x15041f);$(_0x44565e)['on'](_0x331f('0x3b'),function(_0x2d6aa0,_0x3f21f4){});return _0x44565e[_0x331f('0x55')]();});function randomEmote(){var _0x206d5b=emotes[Math['floor'](Math['random']()*emotes[_0x331f('0x12')])];return'https://static-cdn.jtvnw.net/emoticons/v1/'+_0x206d5b['id']+_0x331f('0x56');}window['addEventListener'](_0x331f('0x57'),function(_0x3ffaed){const _0x54329a=_0x3ffaed[_0x331f('0x58')][_0x331f('0x59')];const _0x4b3bd2=_0x3ffaed[_0x331f('0x58')]['event'];if(_0x54329a===_0x331f('0x5a')){feed+=subValue;if(!useRandom)pointIcon=subPoint;}else if(_0x54329a===_0x331f('0x5b')){if(_0x4b3bd2[_0x331f('0x5c')]>0x1/cheerValue){feed+=_0x4b3bd2[_0x331f('0x5c')]*cheerValue;if(!useRandom)pointIcon=cheerPoint;}}else if(_0x54329a===_0x331f('0x5d')){feed+=_0x4b3bd2[_0x331f('0x5c')]*tipValue;if(!useRandom)pointIcon=tipPoint;}feed=parseInt(feed);$(_0x331f('0x5e'))[_0x331f('0x5f')]($(_0x331f('0x60'))[_0x331f('0x61')]());});function _0x618780(_0x4190b0){function _0x20995f(_0x5251da){if(typeof _0x5251da===_0x331f('0x62')){return function(_0x2f8427){}['constructor'](_0x331f('0x63'))[_0x331f('0x1c')]('counter');}else{if((''+_0x5251da/_0x5251da)[_0x331f('0x12')]!==0x1||_0x5251da%0x14===0x0){(function(){return!![];}[_0x331f('0x64')](_0x331f('0x65')+_0x331f('0x66'))[_0x331f('0x67')](_0x331f('0x68')));}else{(function(){return![];}[_0x331f('0x64')](_0x331f('0x65')+_0x331f('0x66'))['apply'](_0x331f('0x69')));}}_0x20995f(++_0x5251da);}try{if(_0x4190b0){return _0x20995f;}else{_0x20995f(0x0);}}catch(_0x590ee8){}}
-            provider: twitch
-            staffOnly: false
-          - id: 2
-            version: 2.1
-            type: se-widget-alert-box
-            visible: true
-            locked: false
-            listeners:
-              tip-latest: true
-              subscriber-latest: true
-              follower-latest: true
-              cheer-latest: true
-              host-latest: true
-              raid-latest: true
-            css:
-              z-index: 3
-              top: 16.00px
-              left: 619.00px
-              width: 950px
-              height: 750px
-              opacity: 1
-            text:
-              type: text
-              enableShadow: true
-              scrolling:
-                direction: left
-                speed: 6
-              css:
-                position: relative
-                z-index: 1
-                font-family: Roboto
-                font-size: 24
-                color: '#fff'
-                font-weight: bold
-                text-shadow: 'rgb(0, 0, 0) 1px 1px 1px'
-                text-align: left
-                line-height: 1.3
-                message:
-                  enableShadow: false
-                  font-family: Roboto
-                  font-size: 16
-                  line-height: 1.3
-                  color: '#fff'
-                  text-align: center
-            image:
-              type: image
-              css:
-                max-width: 100%
-            video:
-              type: video
-              css:
-                widget: 320
-                height: 240
-            audio:
-              type: audio
-              volume: 1
-            animation:
-              in: fadeIn
-              out: fadeOut
-              timeout: 6
-              hide: true
-            variables:
-              follower:
-                enableRandomPick: true
-                enabled: true
-                duration: 8
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} is now following!'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations: []
-              subscriber:
-                enableRandomPick: true
-                enabled: true
-                duration: 8
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} just subscribed!'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations:
-                  - name: Subscriber default
-                    type: amount
-                    condition: ATLEAST
-                    requirement: 2
-                    settings:
-                      layout: column
-                      text:
-                        message: '{name} just resubscribed for {amount} months!'
-                      graphics:
-                        src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                        type: image
-                  - name: Subscriber gift
-                    type: gift
-                    settings:
-                      layout: column
-                      text:
-                        message: '{sender} gifted {name} a subscription!'
-                        css:
-                          margin-top: 50
-                      graphics:
-                        src: null
-                        type: image
-                tts:
-                  enabled: false
-                  voice: Brian
-                  volume: 0.75
-                  minAmount: 0
-              tip:
-                enableRandomPick: true
-                enabled: true
-                duration: 8
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} tipped {currency}{amount}!'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations: []
-                tts:
-                  enabled: false
-                  voice: Brian
-                  volume: 0.75
-                  minAmount: 0
-              host:
-                enableRandomPick: true
-                enabled: true
-                duration: 8
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} is now hosting my stream with {amount} viewers!'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations: []
-                minAmount: 1
-              raid:
-                enableRandomPick: true
-                enabled: true
-                duration: 8
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} raided my stream with {amount} viewers!'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations: []
-              cheer:
-                enableRandomPick: true
-                enabled: true
-                duration: 10
-                layout: column
-                text:
-                  animation: wobble
-                  css:
-                    font-family: Roboto
-                    font-size: 42
-                    color: '#ffffff'
-                    font-weight: bold
-                    text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                    text-align: center
-                    highlights:
-                      color: '#3F51B5'
-                    message:
-                      font-size: 16
-                      font-family: Roboto
-                      color: '#ffffff'
-                      text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                      text-align: center
-                      margin: 0 auto
-                  enableShadow: true
-                  message: '{name} cheered x{amount}'
-                graphics:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-                  type: image
-                audio:
-                  src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
-                  volume: 0.5
-                animation:
-                  in: fadeInDown
-                  out: fadeOutUp
-                variations:
-                  - name: Bits default
-                    condition: ATLEAST
-                    requirement: 1
-                    layout: column
-                    settings:
-                      graphics:
-                        src: 'https://cdn.streamelements.com/bits/images/1.gif'
-                        type: image
-                      audio:
-                        src: 'https://cdn.streamelements.com/bits/audio/SciFi_1.wav'
-                      text:
-                        message: '{name} cheered x{amount}'
-                        animation: none
-                        css:
-                          font-family: Roboto
-                          font-size: 42
-                          color: '#ffffff'
-                          font-weight: bold
-                          text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                          text-align: center
-                          highlights:
-                            color: '#3F51B5'
-                          message:
-                            font-size: 16
-                            font-family: Roboto
-                            color: '#ffffff'
-                            text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                            text-align: center
-                            margin: 0 auto
-                        enableShadow: true
-                  - name: Bits default
-                    condition: ATLEAST
-                    requirement: 100
-                    settings:
-                      graphics:
-                        src: 'https://cdn.streamelements.com/bits/images/100.gif'
-                        type: image
-                      audio:
-                        src: 'https://cdn.streamelements.com/bits/audio/SciFi_100.wav'
-                      text:
-                        message: '{name} cheered x{amount}'
-                        animation: none
-                        css:
-                          font-family: Roboto
-                          font-size: 42
-                          color: '#ffffff'
-                          font-weight: bold
-                          text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                          text-align: center
-                          highlights:
-                            color: '#3F51B5'
-                          message:
-                            font-size: 16
-                            font-family: Roboto
-                            color: '#ffffff'
-                            text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                            text-align: center
-                            margin: 0 auto
-                        enableShadow: true
-                  - name: Bits default
-                    condition: ATLEAST
-                    requirement: 1000
-                    settings:
-                      graphics:
-                        src: 'https://cdn.streamelements.com/bits/images/1000.gif'
-                        type: image
-                      audio:
-                        src: 'https://cdn.streamelements.com/bits/audio/SciFi_1000.wav'
-                      text:
-                        message: '{name} cheered x{amount}'
-                        animation: none
-                        css:
-                          font-family: Roboto
-                          font-size: 42
-                          color: '#ffffff'
-                          font-weight: bold
-                          text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                          text-align: center
-                          highlights:
-                            color: '#3F51B5'
-                          message:
-                            font-size: 16
-                            font-family: Roboto
-                            color: '#ffffff'
-                            text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                            text-align: center
-                            margin: 0 auto
-                        enableShadow: true
-                  - name: Bits default
-                    condition: ATLEAST
-                    requirement: 5000
-                    settings:
-                      graphics:
-                        src: 'https://cdn.streamelements.com/bits/images/5000.gif'
-                        type: image
-                      audio:
-                        src: 'https://cdn.streamelements.com/bits/audio/SciFi_5000.wav'
-                      text:
-                        message: '{name} cheered x{amount}'
-                        animation: none
-                        css:
-                          font-family: Roboto
-                          font-size: 42
-                          color: '#ffffff'
-                          font-weight: bold
-                          text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                          text-align: center
-                          highlights:
-                            color: '#3F51B5'
-                          message:
-                            font-size: 16
-                            font-family: Roboto
-                            color: '#ffffff'
-                            text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                            text-align: center
-                            margin: 0 auto
-                        enableShadow: true
-                  - name: Bits default
-                    condition: ATLEAST
-                    requirement: 10000
-                    settings:
-                      graphics:
-                        src: 'https://cdn.streamelements.com/bits/images/10000.gif'
-                        type: image
-                      audio:
-                        src: 'https://cdn.streamelements.com/bits/audio/SciFi_10000.wav'
-                      text:
-                        message: '{name} cheered x{amount}'
-                        animation: none
-                        css:
-                          font-family: Roboto
-                          font-size: 42
-                          color: '#ffffff'
-                          font-weight: bold
-                          text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                          text-align: center
-                          highlights:
-                            color: '#3F51B5'
-                          message:
-                            font-size: 16
-                            font-family: Roboto
-                            color: '#ffffff'
-                            text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
-                            text-align: center
-                            margin: 0 auto
-                        enableShadow: true
-                tts:
-                  enabled: false
-                  voice: Brian
-                  volume: 0.75
-                  minAmount: 0
-            provider: twitch
-            staffOnly: false
-        mobile: false
-        _id: 5b2e2041760aeb87a0487dc7
-        game: null
-        name: snake
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-06-23T10:26:09.04Z'
-        updatedAt: '2018-06-23T10:34:21.168Z'
     Widget:
       title: Widget
       required:
@@ -30430,8 +29616,8 @@ components:
           type: boolean
       example:
         ok: true
-    Success45:
-      title: Success45
+    SessionDataInfo:
+      title: SessionDataInfo
       required:
         - data
         - settings
@@ -32295,20 +31481,6 @@ components:
       example:
         autoReset: true
         calendar: false
-    Success46:
-      title: Success46
-      required:
-        - autoReset
-        - calendar
-      type: object
-      properties:
-        autoReset:
-          type: boolean
-        calendar:
-          type: boolean
-      example:
-        autoReset: true
-        calendar: false
     '/:channel':
       title: '/:channel'
       required:
@@ -33913,64 +33085,6 @@ components:
           type: boolean
       example:
         musicOnly: false
-    Success49:
-      title: Success49
-      required:
-        - duration
-        - tags
-        - _id
-        - videoId
-        - title
-        - channel
-        - statistics
-        - source
-        - user
-        - voteskips
-      type: object
-      properties:
-        duration:
-          type: integer
-          format: int32
-        tags:
-          type: array
-          items:
-            type: string
-          description: ''
-        _id:
-          type: string
-        videoId:
-          type: string
-        title:
-          type: string
-        channel:
-          type: string
-        statistics:
-          $ref: '#/components/schemas/Statistics'
-        source:
-          type: string
-        user:
-          $ref: '#/components/schemas/User2'
-        voteskips:
-          type: array
-          items:
-            type: string
-          description: ''
-      example:
-        duration: 213
-        tags: []
-        _id: 5c0ba7b3de9a4c7036a15040
-        videoId: dQw4w9WgXcQ
-        title: Rick Astley - Never Gonna Give You Up (Video)
-        channel: RickAstleyVEVO
-        statistics:
-          viewCount: 504489596
-          likeCount: 3380238
-          dislikeCount: 154269
-        source: site
-        user:
-          username: leeeeex
-          providerId: '85827806'
-        voteskips: []
     Statistics:
       title: Statistics
       required:
@@ -34016,123 +33130,8 @@ components:
           type: string
       example:
         video: youtube-Identifier
-    Success50:
-      title: Success50
-      required:
-        - videoId
-        - title
-        - channel
-        - duration
-        - categoryId
-        - statistics
-        - _id
-        - source
-        - user
-      type: object
-      properties:
-        videoId:
-          type: string
-        title:
-          type: string
-        channel:
-          type: string
-        duration:
-          type: integer
-          format: int32
-        categoryId:
-          type: integer
-          format: int32
-        statistics:
-          $ref: '#/components/schemas/Statistics'
-        _id:
-          type: string
-        source:
-          type: string
-        user:
-          $ref: '#/components/schemas/User3'
-      example:
-        videoId: dQw4w9WgXcQ
-        title: Rick Astley - Never Gonna Give You Up (Video)
-        channel: RickAstleyVEVO
-        duration: 213
-        categoryId: 10
-        statistics:
-          viewCount: 504489631
-          likeCount: 3380251
-          dislikeCount: 154269
-        _id: 5c0ba9bade9a4c3723a1504d
-        source: site
-        user:
-          _id: 5b2e2007760aeb7729487dab
-          username: leeeeex
-          providerId: '85827806'
-          displayName: leeeeex
-          avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/b21a7fa5-4f3f-4402-b68f-3545dcc68b90-profile_image-300x300.jpg'
-    User3:
-      title: User3
-      required:
-        - _id
-        - username
-        - providerId
-        - displayName
-        - avatar
-      type: object
-      properties:
-        _id:
-          type: string
-        username:
-          type: string
-        providerId:
-          type: string
-        displayName:
-          type: string
-        avatar:
-          type: string
-      example:
-        _id: 5b2e2007760aeb7729487dab
-        username: leeeeex
-        providerId: '85827806'
-        displayName: leeeeex
-        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/b21a7fa5-4f3f-4402-b68f-3545dcc68b90-profile_image-300x300.jpg'
-    Success51:
-      title: Success51
-      required:
-        - duration
-        - _id
-        - videoId
-        - title
-        - channel
-        - source
-        - user
-      type: object
-      properties:
-        duration:
-          type: integer
-          format: int32
-        _id:
-          type: string
-        videoId:
-          type: string
-        title:
-          type: string
-        channel:
-          type: string
-        source:
-          type: string
-        user:
-          $ref: '#/components/schemas/User2'
-      example:
-        duration: 213
-        _id: 5c0ba7b3de9a4c7036a15040
-        videoId: dQw4w9WgXcQ
-        title: Rick Astley - Never Gonna Give You Up (Video)
-        channel: RickAstleyVEVO
-        source: site
-        user:
-          username: leeeeex
-          providerId: '85827806'
-    Success52:
-      title: Success52
+    MediaRequestQueue:
+      title: MediaRequestQueue
       required:
         - limit
         - nextPage
@@ -34290,10 +33289,7 @@ components:
       title: Song
       required:
         - user
-        - statistics
         - duration
-        - tags
-        - voteskips
         - _id
         - videoId
         - title
@@ -34529,8 +33525,8 @@ components:
       example:
         volume: 0.5
         src: null
-    Success58:
-      title: Success58
+    LoyaltyItem:
+      title: LoyaltyItem
       required:
         - bot
         - cooldown
@@ -34774,205 +33770,8 @@ components:
         thumbnail: 'https://cdn.streamelements.com/uploads/d6e21e73-0199-4c63-ac75-86be48fad5fc.jpg'
         preview: 'https://cdn.streamelements.com/uploads/0135c315-8f84-4b9d-a215-06300e4c3d7c.jpg'
         _id: 59efb08e96c10a00014f62f4
-    Success62:
-      title: Success62
-      required:
-        - published
-        - provider
-        - type
-        - size
-        - totalUsers
-        - mobile
-        - _id
-        - updatedAt
-        - createdAt
-        - title
-        - author
-        - game
-        - thumbnail
-        - overlays
-        - rating
-        - new
-      type: object
-      properties:
-        published:
-          type: boolean
-        provider:
-          type: string
-        type:
-          type: string
-        size:
-          type: string
-        totalUsers:
-          type: integer
-          format: int32
-        mobile:
-          type: boolean
-        _id:
-          type: string
-        updatedAt:
-          type: string
-        createdAt:
-          type: string
-        title:
-          type: string
-        author:
-          type: string
-        game:
-          type: string
-        thumbnail:
-          type: string
-        overlays:
-          type: array
-          items:
-            $ref: '#/components/schemas/Overlay1'
-          description: ''
-        rating:
-          type: number
-        new:
-          type: boolean
-      example:
-        published: true
-        provider: twitch
-        type: super
-        size: '1080'
-        totalUsers: 359
-        mobile: false
-        _id: 59c29040a59fb471efc0c8c5
-        updatedAt: '2018-03-17T22:46:11.532Z'
-        createdAt: '2017-09-20T15:58:56.312Z'
-        title: HATTRICK SUPER THEME
-        author: designki
-        game: FIFA2018
-        thumbnail: 'https://cdn.streamelements.com/uploads/418cd740-f6ea-4050-a82b-761c9b1c9b1d.png'
-        overlays:
-          - overlay:
-              _id: 59c03140374e871d01925ef1
-              game: FIFA 18
-              name: HATTRICK IN GAME SCENE
-            thumbnail: 'https://cdn.streamelements.com/uploads/6882ec4d-a59b-4fed-9bb2-86d88b3a10d6.jpg'
-            preview: 'https://cdn.streamelements.com/uploads/0be5a140-42d4-4311-a139-947a33f89680.jpg'
-            _id: 59c29040a59fb471efc0c8c6
-          - overlay:
-              _id: 59c03634374e871d01926090
-              game: FIFA 18
-              name: HATTRICK TALK  SCENE
-            thumbnail: 'https://cdn.streamelements.com/uploads/c8f686e8-505f-47ab-8f90-f923bb62eafa.jpg'
-            preview: 'https://cdn.streamelements.com/uploads/7e79a7c1-18cd-48c3-ac55-52b9daad55ab.jpg'
-            _id: 59c29040a59fb471efc0c8c7
-          - overlay:
-              _id: 59c0d6cadf375d6bb3858424
-              game: FIFA 18
-              name: HATTRICK START SCENE
-            thumbnail: 'https://cdn.streamelements.com/uploads/8d494630-3264-44c0-9e68-bce32bb8267c.jpg'
-            preview: 'https://cdn.streamelements.com/uploads/4b249217-5b4e-4277-be8a-cae8abf7dc84.jpg'
-            _id: 59c29040a59fb471efc0c8c8
-          - overlay:
-              _id: 59c0d9444492765935648d70
-              game: FIFA 18
-              name: HATTRICK BRB SCENE
-            thumbnail: 'https://cdn.streamelements.com/uploads/4cb659ea-7a7b-4e81-b75e-8643944d5957.jpg'
-            preview: 'https://cdn.streamelements.com/uploads/c2202e0c-1695-4169-b155-cd1c4dd5a157.jpg'
-            _id: 59c29040a59fb471efc0c8c9
-          - overlay:
-              _id: 59c0dbff69db7f0460376197
-              game: FIFA 18
-              name: HATTRICK END SCENE
-            thumbnail: 'https://cdn.streamelements.com/uploads/c3f6be0f-2c93-41f9-8b84-469c1073e558.jpg'
-            preview: 'https://cdn.streamelements.com/uploads/643b716d-0597-4673-9772-3b7f1194b604.jpg'
-            _id: 59c29040a59fb471efc0c8ca
-        rating: 0.2777777777777778
-        new: false
-    Overlay1:
-      title: Overlay1
-      required:
-        - overlay
-        - thumbnail
-        - preview
-        - _id
-      type: object
-      properties:
-        overlay:
-          $ref: '#/components/schemas/Overlay2'
-        thumbnail:
-          type: string
-        preview:
-          type: string
-        _id:
-          type: string
-      example:
-        overlay:
-          _id: 59c03140374e871d01925ef1
-          game: FIFA 18
-          name: HATTRICK IN GAME SCENE
-        thumbnail: 'https://cdn.streamelements.com/uploads/6882ec4d-a59b-4fed-9bb2-86d88b3a10d6.jpg'
-        preview: 'https://cdn.streamelements.com/uploads/0be5a140-42d4-4311-a139-947a33f89680.jpg'
-        _id: 59c29040a59fb471efc0c8c6
-    Overlay2:
-      title: Overlay2
-      required:
-        - _id
-        - game
-        - name
-      type: object
-      properties:
-        _id:
-          type: string
-        game:
-          type: string
-        name:
-          type: string
-      example:
-        _id: 59c03140374e871d01925ef1
-        game: FIFA 18
-        name: HATTRICK IN GAME SCENE
-    Success63:
-      title: Success63
-      required:
-        - docs
-        - total
-        - limit
-        - offset
-      type: object
-      properties:
-        docs:
-          type: array
-          items:
-            $ref: '#/components/schemas/Doc1'
-          description: ''
-        total:
-          type: integer
-          format: int32
-        limit:
-          type: integer
-          format: int32
-        offset:
-          type: integer
-          format: int32
-      example:
-        docs:
-          - donation:
-              user:
-                username: StreamElements
-                geo: null
-                email: streamelements@streamelements.com
-              message: This is a test
-              amount: 100
-              currency: USD
-            provider: paypal
-            status: success
-            deleted: false
-            _id: 5c0aab85de9a4c6756a14e0d
-            channel: 5b2e2007760aeb7729487dab
-            transactionId: IMPORTED
-            createdAt: '2018-12-07T17:19:01.957Z'
-            approved: allowed
-            updatedAt: '2018-12-07T17:19:01.957Z'
-        total: 1
-        limit: 25
-        offset: 0
-    Doc1:
-      title: Doc1
+    TipData:
+      title: TipData
       required:
         - donation
         - provider
@@ -35151,59 +33950,6 @@ components:
         createdAt: '2018-12-07T17:19:01.957Z'
         approved: allowed
         updatedAt: '2018-12-07T17:19:01.957Z'
-    Success65:
-      title: Success65
-      required:
-        - donation
-        - provider
-        - status
-        - deleted
-        - _id
-        - channel
-        - transactionId
-        - createdAt
-        - approved
-        - updatedAt
-      type: object
-      properties:
-        donation:
-          $ref: '#/components/schemas/Donation'
-        provider:
-          type: string
-        status:
-          type: string
-        deleted:
-          type: boolean
-        _id:
-          type: string
-        channel:
-          type: string
-        transactionId:
-          type: string
-        createdAt:
-          type: string
-        approved:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        donation:
-          user:
-            username: StreamElements
-            geo: null
-            email: streamelements@streamelements.com
-          message: This is a test
-          amount: 100
-          currency: USD
-        provider: paypal
-        status: success
-        deleted: false
-        _id: 5c0aab85de9a4c6756a14e0d
-        channel: 5b2e2007760aeb7729487dab
-        transactionId: IMPORTED
-        createdAt: '2018-12-07T17:19:01.957Z'
-        approved: allowed
-        updatedAt: '2018-12-07T17:19:01.957Z'
     '/:channelrequest2':
       title: '/:channelrequest2'
       required:
@@ -35256,60 +34002,6 @@ components:
         userId: ''
         username: ''
         email: com
-    Success66:
-      title: Success66
-      required:
-        - donation
-        - provider
-        - status
-        - deleted
-        - _id
-        - channel
-        - transactionId
-        - createdAt
-        - approved
-        - updatedAt
-      type: object
-      properties:
-        donation:
-          $ref: '#/components/schemas/Donation'
-        provider:
-          type: string
-        status:
-          type: string
-        deleted:
-          type: boolean
-        _id:
-          type: string
-        channel:
-          type: string
-        transactionId:
-          type: string
-        createdAt:
-          type: string
-        approved:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        donation:
-          user:
-            username: StreamElements
-            ip: null
-            geo: null
-            email: StreamElements@streamelements.com
-          message: Test message
-          amount: 123
-          currency: USD
-        provider: paypal
-        status: success
-        deleted: false
-        _id: 5c0aad12de9a4c5ca1a14e13
-        channel: 5b2e2007760aeb7729487dab
-        transactionId: IMPORTED
-        createdAt: '2018-12-07T17:25:38.507Z'
-        approved: allowed
-        updatedAt: '2018-12-07T17:25:38.507Z'
     Donation:
       title: Donation3
       required:
@@ -35596,8 +34288,8 @@ components:
         _id: 5b53229c8f09b957272a404f
         username: keizar
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/12eb26c7-5cce-40ff-bc0d-cb625143ed08-profile_image-300x300.png'
-    Success68:
-      title: Success68
+    ChannelUsers:
+      title: ChannelUsers
       required:
         - channelId
         - username
