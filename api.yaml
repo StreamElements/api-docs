@@ -1,22 +1,14 @@
 openapi: 3.0.0
 info:
   title: SE API Docs
-  description: >2-
-
+  description: |-
     ## Custom Variable types
-
     `guid` - string that matches pattern: `/^[0-9a-fA-F]{24}$/` (24 character hexadecimal string)
-
     `datetime` - either timestamp in miliseconds (unix timestamp*1000) or string in ISO 8061 format
-
     ## Global variables
-
     `Authorization` - string:  JWT Token you can obtain here: https://streamelements.com/dashboard/account/channels (click "Show secrets")
-
     `channelId` - guid: obtained by requesting `/channels/me` endpoint with provided JWT token
-
     `channelName` - string: lowercase channel name
-
     `timezone` - integer: timezone index
   contact: {}
   version: '1.0'
@@ -1144,6 +1136,7 @@ paths:
     get:
       tags:
         - commands
+        - bot
       summary: '/:channel'
       description: List custom commands
       operationId: 'Get/:channel'
@@ -1364,6 +1357,7 @@ paths:
     get:
       tags:
         - commands
+        - bot
       summary: '/:channel/public'
       description: List channel's public commands
       operationId: '/:channel/public'
@@ -1489,6 +1483,7 @@ paths:
     get:
       tags:
         - commands
+        - bot
       summary: '/:channel/default'
       description: Lists default commands
       operationId: '/:channel/default'
@@ -3318,11 +3313,13 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json:
+          application/json; charset=utf-8:
             schema:
               type: object
               example: {}
-            example: {}
+            examples:
+              example-1:
+                value: {}
         required: true
       responses:
         '200':
@@ -4006,7 +4003,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success15'
+                $ref: '#/components/schemas/BotModules'
               example:
                 roulette:
                   cooldown:
@@ -4713,7 +4710,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success18'
+                $ref: '#/components/schemas/BotSettings'
               example:
                 bot:
                   enabled: true
@@ -5193,7 +5190,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success24'
+                  $ref: '#/components/schemas/UserLevel'
                 example:
                   - username: testuser
                     lastActive: '0001-01-01T00:00:00Z'
@@ -5265,7 +5262,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success24'
+                $ref: '#/components/schemas/UserLevel'
               example:
                 username: testuser
                 lastActive: '0001-01-01T00:00:00Z'
@@ -5418,7 +5415,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success28'
+                $ref: '#/components/schemas/LinkedChannels'
               example:
                 profile:
                   headerImage: 'https://cdn.streamelements.com/static/user/profile_header_default.png'
@@ -5497,7 +5494,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success29'
+                $ref: '#/components/schemas/SimpleChannelDetails'
               example:
                 profile:
                   headerImage: 'https://cdn.streamelements.com/static/user/profile_header_default.png'
@@ -5556,7 +5553,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success30'
+                $ref: '#/components/schemas/ChannelDetails'
               example:
                 profile:
                   headerImage: 'https://cdn.streamelements.com/static/user/profile_header_default.png'
@@ -5632,7 +5629,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success31'
+                $ref: '#/components/schemas/ChannelEmotes'
               example:
                 bttvChannelEmotes:
                   gachiBASS:
@@ -9536,6 +9533,7 @@ paths:
     get:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId'
       description: List contests
       operationId: '/:channel/:contestId'
@@ -9755,6 +9753,7 @@ paths:
     get:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId/bet'
       description: Get contests bets
       operationId: 'Get/:channel/:contestId/bet'
@@ -9791,6 +9790,7 @@ paths:
     put:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId/start'
       description: Start a contest
       operationId: '/:channel/:contestId/start'
@@ -9877,6 +9877,7 @@ paths:
     put:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId/winner'
       description: Draw a winner of contest
       operationId: '/:channel/:contestId/winner'
@@ -9940,6 +9941,7 @@ paths:
     delete:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId/refund'
       description: Refund users participating in contest
       operationId: '/:channel/:contestId/refund'
@@ -9976,6 +9978,7 @@ paths:
     delete:
       tags:
         - single contest
+        - contests
       summary: '/:channel/:contestId/close'
       description: Close contest
       operationId: '/:channel/:contestId/close'
@@ -10069,7 +10072,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success32'
+                $ref: '#/components/schemas/Contests'
               example:
                 active: null
                 contests:
@@ -10154,7 +10157,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success33'
+                $ref: '#/components/schemas/Contests'
               example:
                 botResponses: true
                 totalAmount: 0
@@ -10233,6 +10236,7 @@ paths:
     get:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId'
       description: Get giveaway details
       operationId: '/:channel/:giveawayId'
@@ -10287,7 +10291,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success34'
+                $ref: '#/components/schemas/Giveaways'
               example:
                 active: null
                 giveaways:
@@ -10403,7 +10407,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success36'
+                $ref: '#/components/schemas/Giveaway'
               example:
                 subscriberLuck: 1
                 subscriberOnly: false
@@ -10485,7 +10489,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success38'
+                $ref: '#/components/schemas/Giveaway'
               example:
                 subscriberLuck: 1
                 subscriberOnly: false
@@ -10564,6 +10568,7 @@ paths:
     get:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/joined'
       description: List giveaways
       operationId: '/:channel/:giveawayId/joined'
@@ -10610,7 +10615,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success35'
+                $ref: '#/components/schemas/GiveawayUserList'
               example:
                 entered: false
                 tickets: 0
@@ -10635,6 +10640,7 @@ paths:
     put:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/start'
       description: Start a giveaway
       operationId: '/:channel/:giveawayId/start'
@@ -10715,6 +10721,7 @@ paths:
     put:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/winner'
       description: Draw a giveaway winner
       operationId: '/:channel/:giveawayId/winner'
@@ -10765,6 +10772,7 @@ paths:
     put:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/complete'
       description: Mark giveaway as complete
       operationId: '/:channel/:giveawayId/complete'
@@ -10833,6 +10841,7 @@ paths:
     put:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/reopen'
       description: Reopen giveaway
       operationId: '/:channel/:giveawayId/reopen'
@@ -10901,6 +10910,7 @@ paths:
     delete:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/refund'
       description: Start a giveaway
       operationId: '/:channel/:giveawayId/refund'
@@ -10969,6 +10979,7 @@ paths:
     delete:
       tags:
         - single giveaway
+        - giveaways
       summary: '/:channel/:giveawayId/close'
       description: Close current giveaway
       operationId: '/:channel/:giveawayId/close'
@@ -11138,7 +11149,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success36'
+                $ref: '#/components/schemas/Giveaway'
               example:
                 subscriberLuck: 1
                 subscriberOnly: false
@@ -11515,7 +11526,6 @@ paths:
                       timeout: 6
                     variables:
                       css: |
-
                         .main_canvas {
                           border: 1px solid;
                         }
@@ -12135,6 +12145,7 @@ paths:
     get:
       tags:
         - single user
+        - points
       summary: '/:channel/:user'
       description: Get userpoints for specific username
       operationId: '/:channel/:user'
@@ -12206,6 +12217,7 @@ paths:
     get:
       tags:
         - single user
+        - points
       summary: '/:channel/:user/rank'
       description: Get current user rank by username
       operationId: '/:channel/:user/rank'
@@ -12242,6 +12254,7 @@ paths:
     put:
       tags:
         - single user
+        - points
       summary: '/:channel/:user/:amount'
       description: Add or remove points from user
       operationId: '/:channel/:user/:amount'
@@ -12285,6 +12298,7 @@ paths:
     put:
       tags:
         - single user
+        - points
       summary: '/:channel/alltime/:user/:amount'
       description: Update alltime points for user
       operationId: '/:channel/alltime/:user/:amount'
@@ -14092,7 +14106,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success46'
+                $ref: '#/components/schemas/SessionSettings'
               example:
                 autoReset: true
                 calendar: false
@@ -17534,7 +17548,7 @@ components:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/Data'
+          $ref: '#/components/schemas/SubscriberEvent'
         provider:
           type: string
         _id:
@@ -17557,8 +17571,8 @@ components:
         type: merch
         channel: 5b2e2007760aeb7729487dab
         createdAt: '2018-12-06T01:28:27.648Z'
-    Data:
-      title: Data
+    SubscriberEvent:
+      title: Subscriber Event
       required:
         - username
         - amount
@@ -18095,8 +18109,8 @@ components:
         chatLines: 5
         name: ''
         message: ''
-    Success15:
-      title: Success15
+    BotModules:
+      title: BotModules
       required:
         - roulette
         - raffle
@@ -18465,7 +18479,7 @@ components:
       type: object
       properties:
         messages:
-          $ref: '#/components/schemas/Messages1'
+          $ref: '#/components/schemas/SingleRaffleMessages'
         duration:
           type: integer
           format: int32
@@ -18479,8 +18493,8 @@ components:
           end: '/me The Raffle has ended and {winner} won {points} ${pointsname} FeelsGoodMan'
         duration: 30
         maxAmount: 3000
-    Messages1:
-      title: Messages1
+    SingleRaffleMessages:
+      title: SingleRaffleMessages
       required:
         - start
         - running
@@ -18506,7 +18520,7 @@ components:
       type: object
       properties:
         messages:
-          $ref: '#/components/schemas/Messages1'
+          $ref: '#/components/schemas/SingleRaffleMessages'
         duration:
           type: integer
           format: int32
@@ -18532,7 +18546,7 @@ components:
         messages:
           type: array
           items:
-            $ref: '#/components/schemas/Messages3'
+            $ref: '#/components/schemas/PyramidMessages'
           description: ''
       example:
         enabled: false
@@ -18552,8 +18566,8 @@ components:
           - _id: 5b2e2007760aeb6219487db1
             width: 25
             message: '/me WutFace {user} just finished a {width}-width {emote} pyramid!!! BUFFER OVERFLOW WutFace WutFace WutFace'
-    Messages3:
-      title: Messages3
+    PyramidMessages:
+      title: Pyramid Message
       required:
         - _id
         - width
@@ -18600,7 +18614,7 @@ components:
         cooldown:
           $ref: '#/components/schemas/Cooldown'
         messages:
-          $ref: '#/components/schemas/Messages4'
+          $ref: '#/components/schemas/SlotsMessages'
         enabled:
           type: boolean
         returnAmount:
@@ -18630,8 +18644,8 @@ components:
           - BibleThump
           - OpieOP
           - 4Head
-    Messages4:
-      title: Messages4
+    SlotsMessages:
+      title: SlotsMessages
       required:
         - win
         - lose
@@ -19561,7 +19575,7 @@ components:
         timeout:
           $ref: '#/components/schemas/Timeout'
         settings:
-          $ref: '#/components/schemas/Settings1'
+          $ref: '#/components/schemas/TimeoutSettings'
         enabled:
           type: boolean
         exclude:
@@ -19615,8 +19629,8 @@ components:
           '1': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0'
           '2': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0'
           '4': 'https://static-cdn.jtvnw.net/emoticons/v1/354/3.0'
-    Settings1:
-      title: Settings1
+    TimeoutSettings:
+      title: TimeoutSettings
       required:
         - limit
       type: object
@@ -19665,7 +19679,7 @@ components:
         timeout:
           $ref: '#/components/schemas/Timeout'
         settings:
-          $ref: '#/components/schemas/Settings1'
+          $ref: '#/components/schemas/TimeoutSettings'
         enabled:
           type: boolean
         exclude:
@@ -19688,8 +19702,8 @@ components:
           type: string
       example:
         name: ''
-    Success18:
-      title: Success18
+    BotSettings:
+      title: BotSettings
       required:
         - bot
       type: object
@@ -19791,8 +19805,8 @@ components:
           type: string
       example:
         language: en
-    Success24:
-      title: Success24
+    UserLevel:
+      title: UserLevel
       required:
         - username
         - lastActive
@@ -19863,8 +19877,8 @@ components:
       example:
         counter: testcounter
         value: 1
-    Success28:
-      title: Success28
+    LinkedChannels:
+      title: LinkedChannels
       required:
         - profile
         - provider
@@ -20033,8 +20047,8 @@ components:
           format: int32
       example:
         follower-total: 6
-    Success29:
-      title: Success29
+    SimpleChannelDetails:
+      title: SimpleChannelDetails
       required:
         - profile
         - provider
@@ -20085,8 +20099,8 @@ components:
         isPartner: false
         broadcasterType: ''
         inactive: false
-    Success30:
-      title: Success30
+    ChannelDetails:
+      title: ChannelDetails
       required:
         - profile
         - provider
@@ -20206,8 +20220,8 @@ components:
         lastLogin: '2018-12-07T10:43:42.281Z'
         country: US
         inactive: false
-    Success31:
-      title: Success31
+    ChannelEmotes:
+      title: ChannelEmotes
       required:
         - bttvChannelEmotes
         - bttvGlobalEmotes
@@ -27705,8 +27719,8 @@ components:
         createdAt: '2018-12-07T11:04:46.528Z'
         updatedAt: '2018-12-07T13:21:59.997Z'
         startedAt: '2018-12-07T13:21:59.996Z'
-    Success32:
-      title: Success32
+    Contests:
+      title: Contests
       required:
         - active
         - contests
@@ -27822,84 +27836,8 @@ components:
         state: created
         createdAt: '2018-12-07T11:04:46.528Z'
         updatedAt: '2018-12-07T11:04:46.528Z'
-    Success33:
-      title: Success33
-      required:
-        - botResponses
-        - totalAmount
-        - totalUsers
-        - _id
-        - title
-        - minBet
-        - maxBet
-        - duration
-        - options
-        - channel
-        - state
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        botResponses:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        _id:
-          type: string
-        title:
-          type: string
-        minBet:
-          type: integer
-          format: int32
-        maxBet:
-          type: integer
-          format: int32
-        duration:
-          type: integer
-          format: int32
-        options:
-          type: array
-          items:
-            $ref: '#/components/schemas/Option'
-          description: ''
-        channel:
-          type: string
-        state:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        botResponses: true
-        totalAmount: 0
-        totalUsers: 0
-        _id: 5c0a53cede9a4c207fa14d90
-        title: Will I win the next game?
-        minBet: 10
-        maxBet: 10000
-        duration: 5
-        options:
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4cc345a14d92
-            title: Win
-            command: win
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4c4b39a14d91
-            title: Lose
-            command: lose
-        channel: 5b2e2007760aeb7729487dab
-        state: created
-        createdAt: '2018-12-07T11:04:46.528Z'
-        updatedAt: '2018-12-07T11:04:46.528Z'
-    Success34:
-      title: Success34
+    Giveaways:
+      title: Giveaways
       required:
         - active
         - giveaways
@@ -27997,8 +27935,8 @@ components:
         channel: 5b2e2007760aeb7729487dab
         createdAt: '2018-12-07T12:48:00.133Z'
         updatedAt: '2018-12-07T12:48:00.133Z'
-    Success35:
-      title: Success35
+    GiveawayUserList:
+      title: GiveawayUserList
       required:
         - entered
         - tickets
@@ -28020,65 +27958,6 @@ components:
         tickets: 0
         username: leeeeex
         subscriber: false
-    Success36:
-      title: Success36
-      required:
-        - subscriberLuck
-        - subscriberOnly
-        - totalAmount
-        - totalUsers
-        - botResponses
-        - _id
-        - entrants
-        - winners
-        - channel
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        subscriberLuck:
-          type: integer
-          format: int32
-        subscriberOnly:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        botResponses:
-          type: boolean
-        _id:
-          type: string
-        entrants:
-          type: array
-          items:
-            type: string
-          description: ''
-        winners:
-          type: array
-          items:
-            type: string
-          description: ''
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        subscriberLuck: 1
-        subscriberOnly: false
-        totalAmount: 0
-        totalUsers: 0
-        botResponses: false
-        _id: 5c0a98fcde9a4c7372a14de8
-        entrants: []
-        winners: []
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-12-07T15:59:56.996Z'
-        updatedAt: '2018-12-07T15:59:56.996Z'
     Success37:
       title: Success37
       required:
@@ -28175,70 +28054,6 @@ components:
           - path:
               - giveawayId
             message: '"giveawayId" with value "5c10e383bd1e475b7c3d6eb" fails to match the required pattern: /^[0-9a-fA-F]{24}$/'
-    Success38:
-      title: Success38
-      required:
-        - subscriberLuck
-        - subscriberOnly
-        - totalAmount
-        - totalUsers
-        - botResponses
-        - _id
-        - winners
-        - channel
-        - createdAt
-        - updatedAt
-        - startedAt
-        - state
-        - endedAt
-      type: object
-      properties:
-        subscriberLuck:
-          type: integer
-          format: int32
-        subscriberOnly:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        botResponses:
-          type: boolean
-        _id:
-          type: string
-        winners:
-          type: array
-          items:
-            type: string
-          description: ''
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-        startedAt:
-          type: string
-        state:
-          type: string
-        endedAt:
-          type: string
-      example:
-        subscriberLuck: 1
-        subscriberOnly: false
-        totalAmount: 0
-        totalUsers: 0
-        botResponses: false
-        _id: 5c0a89efde9a4c758ea14db9
-        winners: []
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-12-07T14:55:43.348Z'
-        updatedAt: '2018-12-07T15:00:19.448Z'
-        startedAt: '2018-12-07T14:59:25.049Z'
-        state: completed
-        endedAt: '2018-12-07T15:00:19.447Z'
     Success-empty:
       title: Success-empty
       required:
@@ -28414,7 +28229,7 @@ components:
       type: object
       properties:
         settings:
-          $ref: '#/components/schemas/Settings4'
+          $ref: '#/components/schemas/OverlaySettings'
         type:
           type: string
         preview:
@@ -28448,8 +28263,8 @@ components:
         channel: 5b2e2007760aeb7729487dab
         createdAt: '2018-06-23T10:26:09.04Z'
         updatedAt: '2018-06-23T10:34:21.168Z'
-    Settings4:
-      title: Settings4
+    OverlaySettings:
+      title: OverlaySettings
       required:
         - width
         - height
@@ -28485,7 +28300,7 @@ components:
       type: object
       properties:
         settings:
-          $ref: '#/components/schemas/Settings4'
+          $ref: '#/components/schemas/OverlaySettings'
         type:
           type: string
         preview:
@@ -28578,7 +28393,6 @@ components:
               timeout: 6
             variables:
               css: |
-
                 .main_canvas {
                   border: 1px solid;
                 }
@@ -29196,7 +29010,6 @@ components:
           timeout: 6
         variables:
           css: |
-
             .main_canvas {
               border: 1px solid;
             }
@@ -29562,7 +29375,6 @@ components:
           $ref: '#/components/schemas/Cheer1'
       example:
         css: |
-
           .main_canvas {
             border: 1px solid;
           }
@@ -29687,7 +29499,7 @@ components:
         animation:
           type: string
         css:
-          $ref: '#/components/schemas/Css4'
+          $ref: '#/components/schemas/TextCSS'
         enableShadow:
           type: boolean
         message:
@@ -29712,8 +29524,8 @@ components:
             margin: 0 auto
         enableShadow: true
         message: '{name} is now following!'
-    Css4:
-      title: Css4
+    TextCSS:
+      title: Text CSS
       required:
         - font-family
         - font-size
@@ -29799,20 +29611,6 @@ components:
         text-shadow: 'rgba(0, 0, 0, 0.8) 1px 1px 1px'
         text-align: center
         margin: 0 auto
-    Graphics:
-      title: Graphics
-      required:
-        - src
-        - type
-      type: object
-      properties:
-        src:
-          type: string
-        type:
-          type: string
-      example:
-        src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
-        type: image
     Audio1:
       title: Audio1
       required:
@@ -29960,7 +29758,7 @@ components:
           type: integer
           format: int32
         settings:
-          $ref: '#/components/schemas/Settings6'
+          $ref: '#/components/schemas/SubVariationSettings'
       example:
         name: Subscriber default
         type: amount
@@ -29973,8 +29771,8 @@ components:
           graphics:
             src: 'https://cdn.streamelements.com/static/alertbox/default.gif'
             type: image
-    Settings6:
-      title: Settings6
+    SubVariationSettings:
+      title: SubVariationSettings
       required:
         - layout
         - text
@@ -29986,7 +29784,7 @@ components:
         text:
           $ref: '#/components/schemas/Text3'
         graphics:
-          $ref: '#/components/schemas/Graphics2'
+          $ref: '#/components/schemas/Graphics'
       example:
         layout: column
         text:
@@ -30017,8 +29815,8 @@ components:
           format: int32
       example:
         margin-top: 50
-    Graphics2:
-      title: Graphics2
+    Graphics:
+      title: Graphics
       required:
         - src
         - type
@@ -30525,7 +30323,7 @@ components:
         layout:
           type: string
         settings:
-          $ref: '#/components/schemas/Settings7'
+          $ref: '#/components/schemas/CheerAlertSettings'
       example:
         name: Bits default
         condition: ATLEAST
@@ -30557,8 +30355,8 @@ components:
                 text-align: center
                 margin: 0 auto
             enableShadow: true
-    Settings7:
-      title: Settings7
+    CheerAlertSettings:
+      title: CheerAlertSettings
       required:
         - graphics
         - audio
@@ -30647,9 +30445,9 @@ components:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/Data2'
+          $ref: '#/components/schemas/SessionData'
         settings:
-          $ref: '#/components/schemas/Settings8'
+          $ref: '#/components/schemas/SessionSettings'
         provider:
           type: string
         lastReset:
@@ -31357,8 +31155,8 @@ components:
         createdAt: '2018-06-23T10:25:11.767Z'
         updatedAt: '2018-12-06T15:54:48.768Z'
         __v: 1
-    Data2:
-      title: Data2
+    SessionData:
+      title: Session Data
       required:
         - follower-latest
         - follower-session
@@ -32350,36 +32148,6 @@ components:
         name: ''
         amount: 0
         message: ''
-    HostLatest:
-      title: HostLatest
-      required:
-        - name
-        - amount
-      type: object
-      properties:
-        name:
-          type: string
-        amount:
-          type: integer
-          format: int32
-      example:
-        name: Cathryn Wehner
-        amount: 2
-    RaidLatest:
-      title: RaidLatest
-      required:
-        - name
-        - amount
-      type: object
-      properties:
-        name:
-          type: string
-        amount:
-          type: integer
-          format: int32
-      example:
-        name: Velma Langosh
-        amount: 8
     Count:
       title: Count
       required:
@@ -32513,8 +32281,8 @@ components:
         name: Alysa Jast
         amount: 2
         createdAt: '2018-12-06T15:54:41.618Z'
-    Settings8:
-      title: Settings8
+    SessionSettings:
+      title: SessionSettings
       required:
         - autoReset
         - calendar
@@ -32556,9 +32324,9 @@ components:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/Data2'
+          $ref: '#/components/schemas/SessionData'
         settings:
-          $ref: '#/components/schemas/Settings8'
+          $ref: '#/components/schemas/SessionSettings'
         provider:
           type: string
         lastReset:
@@ -33295,9 +33063,9 @@ components:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/Data4'
+          $ref: '#/components/schemas/SessionData'
         settings:
-          $ref: '#/components/schemas/Settings8'
+          $ref: '#/components/schemas/SessionSettings'
         _id:
           type: string
         provider:
@@ -33851,745 +33619,6 @@ components:
         createdAt: '2018-12-07T17:09:04.055Z'
         updatedAt: '2018-12-07T17:09:04.055Z'
         __v: 0
-    Data4:
-      title: Data4
-      required:
-        - follower-latest
-        - follower-session
-        - follower-week
-        - follower-month
-        - follower-goal
-        - follower-total
-        - subscriber-latest
-        - subscriber-new-latest
-        - subscriber-resub-latest
-        - subscriber-gifted-latest
-        - subscriber-session
-        - subscriber-new-session
-        - subscriber-resub-session
-        - subscriber-gifted-session
-        - subscriber-week
-        - subscriber-month
-        - subscriber-goal
-        - subscriber-total
-        - subscriber-points
-        - subscriber-alltime-gifter
-        - host-latest
-        - raid-latest
-        - cheer-session
-        - cheer-week
-        - cheer-month
-        - cheer-total
-        - cheer-count
-        - cheer-goal
-        - cheer-latest
-        - cheer-session-top-donation
-        - cheer-weekly-top-donation
-        - cheer-monthly-top-donation
-        - cheer-alltime-top-donation
-        - cheer-session-top-donator
-        - cheer-weekly-top-donator
-        - cheer-monthly-top-donator
-        - cheer-alltime-top-donator
-        - tip-latest
-        - tip-session-top-donation
-        - tip-weekly-top-donation
-        - tip-monthly-top-donation
-        - tip-alltime-top-donation
-        - tip-session-top-donator
-        - tip-weekly-top-donator
-        - tip-monthly-top-donator
-        - tip-alltime-top-donator
-        - tip-session
-        - tip-week
-        - tip-month
-        - tip-total
-        - tip-count
-        - tip-goal
-        - merch-goal-orders
-        - merch-goal-items
-        - merch-goal-total
-        - follower-recent
-        - subscriber-recent
-        - host-recent
-        - raid-recent
-        - cheer-recent
-        - tip-recent
-        - merch-recent
-      type: object
-      properties:
-        follower-latest:
-          $ref: '#/components/schemas/FollowerLatest'
-        follower-session:
-          $ref: '#/components/schemas/Count'
-        follower-week:
-          $ref: '#/components/schemas/Count'
-        follower-month:
-          $ref: '#/components/schemas/Count'
-        follower-goal:
-          $ref: '#/components/schemas/Amount'
-        follower-total:
-          $ref: '#/components/schemas/Count'
-        subscriber-latest:
-          $ref: '#/components/schemas/SubscriberLatest'
-        subscriber-new-latest:
-          $ref: '#/components/schemas/SubscriberNewLatest'
-        subscriber-resub-latest:
-          $ref: '#/components/schemas/SubscriberResubLatest'
-        subscriber-gifted-latest:
-          $ref: '#/components/schemas/SubscriberGiftedLatest'
-        subscriber-session:
-          $ref: '#/components/schemas/Count'
-        subscriber-new-session:
-          $ref: '#/components/schemas/Count'
-        subscriber-resub-session:
-          $ref: '#/components/schemas/Count'
-        subscriber-gifted-session:
-          $ref: '#/components/schemas/Count'
-        subscriber-week:
-          $ref: '#/components/schemas/Count'
-        subscriber-month:
-          $ref: '#/components/schemas/Count'
-        subscriber-goal:
-          $ref: '#/components/schemas/Amount'
-        subscriber-total:
-          $ref: '#/components/schemas/Count'
-        subscriber-points:
-          $ref: '#/components/schemas/Amount'
-        subscriber-alltime-gifter:
-          $ref: '#/components/schemas/TopUserAmount'
-        host-latest:
-          $ref: '#/components/schemas/HostLatest'
-        raid-latest:
-          $ref: '#/components/schemas/RaidLatest'
-        cheer-session:
-          $ref: '#/components/schemas/Amount'
-        cheer-week:
-          $ref: '#/components/schemas/Amount'
-        cheer-month:
-          $ref: '#/components/schemas/Amount'
-        cheer-total:
-          $ref: '#/components/schemas/Amount'
-        cheer-count:
-          $ref: '#/components/schemas/Count'
-        cheer-goal:
-          $ref: '#/components/schemas/Amount'
-        cheer-latest:
-          $ref: '#/components/schemas/CheerLatest'
-        cheer-session-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-weekly-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-monthly-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-alltime-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-session-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-weekly-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-monthly-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        cheer-alltime-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-latest:
-          $ref: '#/components/schemas/TipLatest'
-        tip-session-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-weekly-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-monthly-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-alltime-top-donation:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-session-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-weekly-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-monthly-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-alltime-top-donator:
-          $ref: '#/components/schemas/TopUserAmount'
-        tip-session:
-          $ref: '#/components/schemas/Amount'
-        tip-week:
-          $ref: '#/components/schemas/Amount'
-        tip-month:
-          $ref: '#/components/schemas/Amount'
-        tip-total:
-          $ref: '#/components/schemas/Amount'
-        tip-count:
-          $ref: '#/components/schemas/Count'
-        tip-goal:
-          $ref: '#/components/schemas/Amount'
-        merch-goal-orders:
-          $ref: '#/components/schemas/Amount'
-        merch-goal-items:
-          $ref: '#/components/schemas/Amount'
-        merch-goal-total:
-          $ref: '#/components/schemas/Amount'
-        follower-recent:
-          type: array
-          items:
-            $ref: '#/components/schemas/FollowerRecent'
-          description: ''
-        subscriber-recent:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubscriberRecent'
-          description: ''
-        host-recent:
-          type: array
-          items:
-            $ref: '#/components/schemas/AmountRecent'
-          description: ''
-        raid-recent:
-          type: array
-          items:
-            type: string
-          description: ''
-        cheer-recent:
-          type: array
-          items:
-            $ref: '#/components/schemas/AmountRecent'
-          description: ''
-        tip-recent:
-          type: array
-          items:
-            $ref: '#/components/schemas/AmountRecent'
-          description: ''
-        merch-recent:
-          type: array
-          items:
-            type: string
-          description: ''
-      example:
-        follower-latest:
-          name: Emile Morissette
-        follower-session:
-          count: 0
-        follower-week:
-          count: 0
-        follower-month:
-          count: 0
-        follower-goal:
-          amount: 11
-        follower-total:
-          count: 6
-        subscriber-latest:
-          name: Marilyne Abshire
-          amount: 17
-          tier: '2000'
-          message: ''
-          sender: null
-          gifted: null
-        subscriber-new-latest:
-          name: ''
-          amount: 0
-          message: ''
-        subscriber-resub-latest:
-          name: ''
-          amount: 0
-          message: ''
-        subscriber-gifted-latest:
-          name: ''
-          amount: 0
-          message: ''
-        subscriber-session:
-          count: 0
-        subscriber-new-session:
-          count: 0
-        subscriber-resub-session:
-          count: 0
-        subscriber-gifted-session:
-          count: 0
-        subscriber-week:
-          count: 0
-        subscriber-month:
-          count: 0
-        subscriber-goal:
-          amount: 68
-        subscriber-total:
-          count: 0
-        subscriber-points:
-          amount: 0
-        subscriber-alltime-gifter:
-          name: ''
-          amount: 0
-        host-latest:
-          name: Cathryn Wehner
-          amount: 2
-        raid-latest:
-          name: ''
-          amount: 0
-        cheer-session:
-          amount: 0
-        cheer-week:
-          amount: 0
-        cheer-month:
-          amount: 0
-        cheer-total:
-          amount: 2759
-        cheer-count:
-          count: 0
-        cheer-goal:
-          amount: 246
-        cheer-latest:
-          name: Halle Koelpin
-          amount: 24
-          message: ''
-        cheer-session-top-donation:
-          name: ''
-          amount: 0
-        cheer-weekly-top-donation:
-          name: ''
-          amount: 0
-        cheer-monthly-top-donation:
-          name: ''
-          amount: 0
-        cheer-alltime-top-donation:
-          name: ''
-          amount: 0
-        cheer-session-top-donator:
-          name: ''
-          amount: 0
-        cheer-weekly-top-donator:
-          name: ''
-          amount: 0
-        cheer-monthly-top-donator:
-          name: ''
-          amount: 0
-        cheer-alltime-top-donator:
-          name: ''
-          amount: 0
-        tip-latest:
-          name: Ms. Aniyah Bernhard
-          amount: 41
-          message: ''
-        tip-session-top-donation:
-          name: ''
-          amount: 0
-        tip-weekly-top-donation:
-          name: ''
-          amount: 0
-        tip-monthly-top-donation:
-          name: ''
-          amount: 0
-        tip-alltime-top-donation:
-          name: ''
-          amount: 0
-        tip-session-top-donator:
-          name: ''
-          amount: 0
-        tip-weekly-top-donator:
-          name: ''
-          amount: 0
-        tip-monthly-top-donator:
-          name: ''
-          amount: 0
-        tip-alltime-top-donator:
-          name: ''
-          amount: 0
-        tip-session:
-          amount: 0
-        tip-week:
-          amount: 0
-        tip-month:
-          amount: 0
-        tip-total:
-          amount: 3415
-        tip-count:
-          count: 0
-        tip-goal:
-          amount: 279
-        merch-goal-orders:
-          amount: 0
-        merch-goal-items:
-          amount: 0
-        merch-goal-total:
-          amount: 0
-        follower-recent:
-          - name: Josiane Dietrich
-            createdAt: '2018-12-06T15:54:41.635Z'
-          - name: Noemi Powlowski
-            createdAt: '2018-12-06T15:54:41.639Z'
-          - name: Norbert Rolfson MD
-            createdAt: '2018-12-06T15:54:41.636Z'
-          - name: Christophe Connelly
-            createdAt: '2018-12-06T15:54:41.632Z'
-          - name: Dameon Herzog
-            createdAt: '2018-12-06T15:54:41.642Z'
-          - name: Ms. Damian Roob
-            createdAt: '2018-12-06T15:54:41.637Z'
-          - name: Mr. Daisha Ankunding
-            createdAt: '2018-12-06T15:54:41.622Z'
-          - name: Reva Padberg III
-            createdAt: '2018-12-06T15:54:41.623Z'
-          - name: Odell Macejkovic
-            createdAt: '2018-12-06T15:54:41.617Z'
-          - name: Clare Parisian
-            createdAt: '2018-12-06T15:54:41.619Z'
-          - name: Torrance Marvin
-            createdAt: '2018-12-06T15:54:41.61Z'
-          - name: Pat Schuster
-            createdAt: '2018-12-06T15:54:41.612Z'
-          - name: Gardner Thompson
-            createdAt: '2018-12-06T15:54:41.609Z'
-          - name: Emile Morissette
-            createdAt: '2018-12-06T15:54:41.604Z'
-          - name: Gustave Casper
-            createdAt: '2018-12-06T15:54:41.601Z'
-          - name: Demetris Emmerich
-            createdAt: '2018-12-06T15:54:41.599Z'
-          - name: Pedro Ziemann
-            createdAt: '2018-12-06T15:54:41.591Z'
-          - name: Hector Macejkovic
-            createdAt: '2018-12-06T15:54:41.597Z'
-          - name: Ludie Klocko
-            createdAt: '2018-12-06T15:54:41.586Z'
-          - name: Deven Kilback
-            createdAt: '2018-12-06T15:54:41.585Z'
-          - name: Alanis Kub
-            createdAt: '2018-12-06T15:54:41.594Z'
-          - name: Dr. Arturo Pagac
-            createdAt: '2018-12-06T15:54:40.077Z'
-          - name: Mrs. Isaias Halvorson
-            createdAt: '2018-12-06T15:54:40.089Z'
-          - name: Jerad Gottlieb
-            createdAt: '2018-12-06T15:54:40.093Z'
-          - name: Bud Kozey
-            createdAt: '2018-12-06T15:54:40.088Z'
-        subscriber-recent:
-          - name: Marilyne Abshire
-            tier: '2000'
-            amount: 17
-            createdAt: '2018-12-06T15:54:48.768Z'
-          - name: Verlie Nienow
-            tier: prime
-            amount: 22
-            createdAt: '2018-12-06T15:54:48.671Z'
-          - name: Ansel Willms
-            tier: prime
-            amount: 32
-            createdAt: '2018-12-06T15:54:48.335Z'
-          - name: Annetta D'Amore
-            tier: '2000'
-            amount: 46
-            createdAt: '2018-12-06T15:54:48.278Z'
-          - name: Korey Kreiger
-            tier: prime
-            amount: 35
-            createdAt: '2018-12-06T15:54:48.232Z'
-          - name: Krystal Schultz
-            tier: '3000'
-            amount: 20
-            createdAt: '2018-12-06T15:54:48.122Z'
-          - name: Shayna Mann
-            tier: '2000'
-            amount: 32
-            createdAt: '2018-12-06T15:54:47.865Z'
-          - name: Margarita Bode
-            tier: '2000'
-            amount: 10
-            createdAt: '2018-12-06T15:54:47.567Z'
-          - name: Shakira Heidenreich
-            tier: '2000'
-            amount: 38
-            createdAt: '2018-12-06T15:54:47.511Z'
-          - name: Pierre Hodkiewicz
-            tier: '2000'
-            amount: 26
-            createdAt: '2018-12-06T15:54:47.454Z'
-          - name: Mr. Maxine Dicki
-            tier: prime
-            amount: 43
-            createdAt: '2018-12-06T15:54:47.372Z'
-          - name: King Rempel
-            tier: '1000'
-            amount: 21
-            createdAt: '2018-12-06T15:54:47.215Z'
-          - name: Katelynn Runolfsson V
-            tier: '3000'
-            amount: 43
-            createdAt: '2018-12-06T15:54:47.101Z'
-          - name: Mike Hermiston
-            tier: prime
-            amount: 28
-            createdAt: '2018-12-06T15:54:47.069Z'
-          - name: Mr. Lilyan Lynch
-            tier: '2000'
-            amount: 8
-            createdAt: '2018-12-06T15:54:47.028Z'
-          - name: Keon Kuphal Jr.
-            tier: '1000'
-            amount: 17
-            createdAt: '2018-12-06T15:54:46.916Z'
-          - name: Florencio Stokes
-            tier: '3000'
-            amount: 2
-            createdAt: '2018-12-06T15:54:46.851Z'
-          - name: Sandra Wolf
-            tier: '1000'
-            amount: 25
-            createdAt: '2018-12-06T15:54:46.809Z'
-          - name: Aurelie Stark
-            tier: '1000'
-            amount: 3
-            createdAt: '2018-12-06T15:54:46.77Z'
-          - name: Vernon Mosciski
-            tier: prime
-            amount: 46
-            createdAt: '2018-12-06T15:54:46.725Z'
-          - name: Makenna Hyatt
-            tier: '1000'
-            amount: 46
-            createdAt: '2018-12-06T15:54:46.683Z'
-          - name: Jada Sipes
-            tier: '3000'
-            amount: 42
-            createdAt: '2018-12-06T15:54:46.635Z'
-          - name: Ibrahim Mante
-            tier: '2000'
-            amount: 47
-            createdAt: '2018-12-06T15:54:46.514Z'
-          - name: Kiera DuBuque
-            tier: '2000'
-            amount: 50
-            createdAt: '2018-12-06T15:54:46.461Z'
-          - name: Casimir Stamm
-            tier: '3000'
-            amount: 8
-            createdAt: '2018-12-06T15:54:46.417Z'
-        host-recent:
-          - name: Alysa Jast
-            amount: 2
-            createdAt: '2018-12-06T15:54:41.618Z'
-          - name: Billie Ankunding
-            amount: 40
-            createdAt: '2018-12-06T15:54:41.655Z'
-          - name: Emily Russel
-            amount: 21
-            createdAt: '2018-12-06T15:54:41.649Z'
-          - name: Rylee Larson
-            amount: 20
-            createdAt: '2018-12-06T15:54:41.649Z'
-          - name: Fanny Predovic
-            amount: 45
-            createdAt: '2018-12-06T15:54:41.638Z'
-          - name: Roma Fadel I
-            amount: 1
-            createdAt: '2018-12-06T15:54:41.641Z'
-          - name: Carolyn Hilll
-            amount: 15
-            createdAt: '2018-12-06T15:54:41.647Z'
-          - name: Otis Predovic
-            amount: 40
-            createdAt: '2018-12-06T15:54:41.635Z'
-          - name: Cathryn Wehner
-            amount: 2
-            createdAt: '2018-12-06T15:54:41.636Z'
-          - name: Marcelle Vandervort
-            amount: 21
-            createdAt: '2018-12-06T15:54:41.629Z'
-          - name: Makenna Upton
-            amount: 9
-            createdAt: '2018-12-06T15:54:41.614Z'
-          - name: Noe Carroll
-            amount: 40
-            createdAt: '2018-12-06T15:54:41.629Z'
-          - name: Nicolas Wilkinson
-            amount: 36
-            createdAt: '2018-12-06T15:54:41.607Z'
-          - name: Dr. Annetta Rolfson
-            amount: 31
-            createdAt: '2018-12-06T15:54:41.593Z'
-          - name: Freeda Frami
-            amount: 48
-            createdAt: '2018-12-06T15:54:41.595Z'
-          - name: Eleonore Hansen
-            amount: 45
-            createdAt: '2018-12-06T15:54:41.584Z'
-          - name: Mr. Rachael Bergstrom
-            amount: 45
-            createdAt: '2018-12-06T15:54:40.095Z'
-          - name: Lila Baumbach
-            amount: 13
-            createdAt: '2018-12-06T15:54:40.097Z'
-          - name: Ardith Parisian
-            amount: 37
-            createdAt: '2018-12-06T15:54:40.079Z'
-          - name: Ottilie Abernathy
-            amount: 4
-            createdAt: '2018-12-06T15:54:40.073Z'
-          - name: Manuela Will
-            amount: 28
-            createdAt: '2018-12-06T15:54:40.062Z'
-          - name: Norwood Lang I
-            amount: 46
-            createdAt: '2018-12-06T15:54:40.073Z'
-          - name: Francesca Kautzer
-            amount: 17
-            createdAt: '2018-12-06T15:54:40.068Z'
-          - name: Christ Donnelly
-            amount: 7
-            createdAt: '2018-12-06T15:54:40.072Z'
-          - name: Max Jakubowski
-            amount: 11
-            createdAt: '2018-12-06T15:54:40.061Z'
-        raid-recent: []
-        cheer-recent:
-          - name: Glenda Carter
-            amount: 39
-            createdAt: '2018-12-06T15:54:41.648Z'
-          - name: Liana Hettinger
-            amount: 16
-            createdAt: '2018-12-06T15:54:41.66Z'
-          - name: Paolo Tromp
-            amount: 10
-            createdAt: '2018-12-06T15:54:41.653Z'
-          - name: Sylvan Ward
-            amount: 29
-            createdAt: '2018-12-06T15:54:41.654Z'
-          - name: Cassidy Homenick
-            amount: 23
-            createdAt: '2018-12-06T15:54:41.652Z'
-          - name: Miss Dulce Koss
-            amount: 20
-            createdAt: '2018-12-06T15:54:41.657Z'
-          - name: Arlie DuBuque DVM
-            amount: 42
-            createdAt: '2018-12-06T15:54:41.64Z'
-          - name: Gustave Douglas
-            amount: 23
-            createdAt: '2018-12-06T15:54:41.647Z'
-          - name: Halle Koelpin
-            amount: 24
-            createdAt: '2018-12-06T15:54:41.641Z'
-          - name: Chester Beer
-            amount: 39
-            createdAt: '2018-12-06T15:54:41.638Z'
-          - name: Otis Reynolds
-            amount: 46
-            createdAt: '2018-12-06T15:54:41.632Z'
-          - name: Daphnee Streich
-            amount: 44
-            createdAt: '2018-12-06T15:54:41.63Z'
-          - name: Boris Rogahn
-            amount: 23
-            createdAt: '2018-12-06T15:54:41.617Z'
-          - name: Kole Grady
-            amount: 3
-            createdAt: '2018-12-06T15:54:41.603Z'
-          - name: Giles Nienow
-            amount: 4
-            createdAt: '2018-12-06T15:54:41.605Z'
-          - name: Iliana Windler
-            amount: 13
-            createdAt: '2018-12-06T15:54:41.6Z'
-          - name: Pamela Hartmann
-            amount: 3
-            createdAt: '2018-12-06T15:54:41.605Z'
-          - name: Kamryn Crooks
-            amount: 21
-            createdAt: '2018-12-06T15:54:41.602Z'
-          - name: Emil Braun
-            amount: 10
-            createdAt: '2018-12-06T15:54:41.603Z'
-          - name: Shyanne Brakus
-            amount: 15
-            createdAt: '2018-12-06T15:54:41.592Z'
-          - name: Miles Paucek
-            amount: 33
-            createdAt: '2018-12-06T15:54:41.592Z'
-          - name: Jennings Kuhic
-            amount: 13
-            createdAt: '2018-12-06T15:54:41.582Z'
-          - name: Karelle Strosin
-            amount: 18
-            createdAt: '2018-12-06T15:54:41.587Z'
-          - name: Trey Halvorson
-            amount: 42
-            createdAt: '2018-12-06T15:54:40.092Z'
-          - name: Dwight Hermiston PhD
-            amount: 22
-            createdAt: '2018-12-06T15:54:40.094Z'
-        tip-recent:
-          - name: Hank Grady
-            amount: 22
-            createdAt: '2018-12-06T15:54:41.651Z'
-          - name: Hobart Renner
-            amount: 27
-            createdAt: '2018-12-06T15:54:41.658Z'
-          - name: Sophie Goyette DVM
-            amount: 41
-            createdAt: '2018-12-06T15:54:41.64Z'
-          - name: Cecilia Upton
-            amount: 13
-            createdAt: '2018-12-06T15:54:41.646Z'
-          - name: Kristian Berge
-            amount: 33
-            createdAt: '2018-12-06T15:54:41.634Z'
-          - name: Leopold Schamberger DDS
-            amount: 9
-            createdAt: '2018-12-06T15:54:41.633Z'
-          - name: Madelyn Leffler MD
-            amount: 33
-            createdAt: '2018-12-06T15:54:41.628Z'
-          - name: Sydni Kemmer MD
-            amount: 19
-            createdAt: '2018-12-06T15:54:41.613Z'
-          - name: Verda Champlin
-            amount: 4
-            createdAt: '2018-12-06T15:54:41.63Z'
-          - name: Ms. Aniyah Bernhard
-            amount: 41
-            createdAt: '2018-12-06T15:54:41.621Z'
-          - name: Kristoffer Barton
-            amount: 9
-            createdAt: '2018-12-06T15:54:41.624Z'
-          - name: Aaron Bergstrom
-            amount: 4
-            createdAt: '2018-12-06T15:54:41.616Z'
-          - name: Jovan Hegmann
-            amount: 17
-            createdAt: '2018-12-06T15:54:41.618Z'
-          - name: Keely Hauck
-            amount: 44
-            createdAt: '2018-12-06T15:54:41.622Z'
-          - name: Demetrius Sauer
-            amount: 39
-            createdAt: '2018-12-06T15:54:41.614Z'
-          - name: Miss Stacy Dietrich
-            amount: 3
-            createdAt: '2018-12-06T15:54:41.6Z'
-          - name: Devon Reilly
-            amount: 33
-            createdAt: '2018-12-06T15:54:41.609Z'
-          - name: Johanna McDermott
-            amount: 35
-            createdAt: '2018-12-06T15:54:41.598Z'
-          - name: Russell Runolfsdottir PhD
-            amount: 39
-            createdAt: '2018-12-06T15:54:41.588Z'
-          - name: Mr. Pietro Torphy
-            amount: 43
-            createdAt: '2018-12-06T15:54:41.594Z'
-          - name: Samanta Jacobson
-            amount: 47
-            createdAt: '2018-12-06T15:54:41.58Z'
-          - name: Aaron Blanda
-            amount: 11
-            createdAt: '2018-12-06T15:54:41.596Z'
-          - name: Dameon Hickle
-            amount: 15
-            createdAt: '2018-12-06T15:54:41.596Z'
-          - name: Kali Swift
-            amount: 3
-            createdAt: '2018-12-06T15:54:41.58Z'
-          - name: Lamar Hills
-            amount: 4
-            createdAt: '2018-12-06T15:54:41.584Z'
-        merch-recent: []
     Success-searchbysongname:
       title: Success-searchbysongname
       required:
@@ -35995,51 +35024,6 @@ components:
         createdAt: '2018-12-07T17:19:01.957Z'
         approved: allowed
         updatedAt: '2018-12-07T17:19:01.957Z'
-    Donation:
-      title: Donation
-      required:
-        - user
-        - message
-        - amount
-        - currency
-      type: object
-      properties:
-        user:
-          $ref: '#/components/schemas/User8'
-        message:
-          type: string
-        amount:
-          type: integer
-          format: int32
-        currency:
-          type: string
-      example:
-        user:
-          username: StreamElements
-          geo: null
-          email: streamelements@streamelements.com
-        message: This is a test
-        amount: 100
-        currency: USD
-    User8:
-      title: User8
-      required:
-        - username
-        - geo
-        - email
-      type: object
-      properties:
-        username:
-          type: string
-        geo:
-          type: string
-          nullable: true
-        email:
-          type: string
-      example:
-        username: StreamElements
-        geo: null
-        email: streamelements@streamelements.com
     Success64:
       title: Success64
       required:
@@ -36288,7 +35272,7 @@ components:
       type: object
       properties:
         donation:
-          $ref: '#/components/schemas/Donation3'
+          $ref: '#/components/schemas/Donation'
         provider:
           type: string
         status:
@@ -36326,7 +35310,7 @@ components:
         createdAt: '2018-12-07T17:25:38.507Z'
         approved: allowed
         updatedAt: '2018-12-07T17:25:38.507Z'
-    Donation3:
+    Donation:
       title: Donation3
       required:
         - user
@@ -36336,7 +35320,7 @@ components:
       type: object
       properties:
         user:
-          $ref: '#/components/schemas/User12'
+          $ref: '#/components/schemas/DonationUser'
         message:
           type: string
         amount:
@@ -36353,11 +35337,10 @@ components:
         message: Test message
         amount: 123
         currency: USD
-    User12:
-      title: User12
+    DonationUser:
+      title: Donation user
       required:
         - username
-        - ip
         - geo
         - email
       type: object
