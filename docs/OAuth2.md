@@ -86,13 +86,19 @@ giveaway:write|    Ability to create and update giveaways
 
 ## Validating Requests
 
-Sample request
+<!--
+type: tab
+title: Sample request
+-->
 
 ```text
 curl -H "Authorization: OAuth <access token>" https://api.streamelements.com/oauth2/validate
 ```
 
-Sample Response
+<!--
+type: tab
+title: Sample response
+-->
 
 ```json
 {
@@ -102,6 +108,7 @@ Sample Response
   "scopes": []
 }
 ```
+<!-- type: tab-end -->
 
 ## Connecting via Websocket using OAuth2
 
@@ -109,11 +116,11 @@ After gaining the AccessToken make sure to pass it in the const in the JS bellow
 
 Each event processed via the websockets can be seen
 documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCode.md)
-<details>
-<summary>JSON Schema</summary>
-<p>
 
-```json
+### JSON Schema
+
+
+```json json_schema
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "StreamElements websocket widget schema",
@@ -249,8 +256,7 @@ documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCo
 }
 ```
 
-</p>
-</details>
+
 
 ### Code snippet for connecting to Websocket with OAuth2:
 
@@ -265,6 +271,10 @@ HTML:
 ```
 
 JS:
+<!--
+title: "Websocket connection example"
+lineNumbers: true
+-->
 
 ```js
 // AccessToken is grabbed from OAuth2 authentication of the account.
