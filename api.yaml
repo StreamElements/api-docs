@@ -3340,7 +3340,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success7'
+                $ref: '#/components/schemas/BotCommand'
               example:
                 command: chatstats
                 accessLevel: 100
@@ -3495,7 +3495,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1%3AcommandIdRequest'
+              $ref: '#/components/schemas/Command'
             example:
               cooldown:
                 user: 15
@@ -4496,7 +4496,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1banphrasesrequest'
+              $ref: '#/components/schemas/Banphrasesrequest'
             example:
               name: ''
         required: true
@@ -9580,7 +9580,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1%3AcontestId'
+                $ref: '#/components/schemas/Contest'
               example:
                 botResponses: true
                 totalAmount: 0
@@ -9846,7 +9846,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1%3AcontestId~1start'
+                $ref: '#/components/schemas/Contest'
               example:
                 botResponses: true
                 totalAmount: 0
@@ -13377,7 +13377,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel'
+                $ref: '#/components/schemas/channelData'
               example:
                 data:
                   follower-latest:
@@ -14935,7 +14935,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success47'
+                $ref: '#/components/schemas/MediaRequestData'
               example:
                 player:
                   delay: 0
@@ -15710,7 +15710,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Success56'
+                $ref: '#/components/schemas/Song'
               example:
                 song:
                   user:
@@ -16168,7 +16168,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success57'
+                  $ref: '#/components/schemas/LoyaltyItem'
                 example:
                   - bot:
                       enabled: true
@@ -16738,7 +16738,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Success61'
+                  $ref: '#/components/schemas/ThemesList'
       deprecated: false
   '/themes/{themeId}':
     get:
@@ -17059,7 +17059,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannelrequest2'
+              $ref: '#/components/schemas/NewTip'
             example:
               user:
                 userId: ''
@@ -17636,13 +17636,10 @@ components:
         - cost
         - type
         - accessLevel
-        - _id
         - regex
         - reply
         - command
         - channel
-        - createdAt
-        - updatedAt
       type: object
       properties:
         cooldown:
@@ -17791,64 +17788,6 @@ components:
         aliases: []
         regex: ''
         description: Join an active raffle
-    Success7:
-      title: Success7
-      required:
-        - command
-        - accessLevel
-        - enabled
-        - enabledOnline
-        - enabledOffline
-        - cost
-        - cooldown
-        - aliases
-        - regex
-        - channel
-        - commandId
-      type: object
-      properties:
-        command:
-          type: string
-        accessLevel:
-          type: integer
-          format: int32
-        enabled:
-          type: boolean
-        enabledOnline:
-          type: boolean
-        enabledOffline:
-          type: boolean
-        cost:
-          type: integer
-          format: int32
-        cooldown:
-          $ref: '#/components/schemas/Cooldown'
-        aliases:
-          type: array
-          items:
-            type: string
-          description: ''
-        regex:
-          type: string
-        channel:
-          type: string
-        commandId:
-          type: string
-      example:
-        command: chatstats
-        accessLevel: 100
-        enabled: true
-        enabledOnline: true
-        enabledOffline: true
-        cost: 0
-        cooldown:
-          user: 15
-          global: 5
-        aliases:
-          - twitchstats
-        regex: ''
-        channel: 5b2e2007760aeb7729487dab
-        commandId: chatstats
     '/:channelrequest':
       title: '/:channelrequest'
       required:
@@ -17921,8 +17860,8 @@ components:
         reply: test response
         command: test2
         channel: 5b2e2007760aeb7729487dab
-    '/:channel/:commandIdRequest':
-      title: '/:channel/:commandIdRequest'
+    Command:
+      title: Command
       required:
         - cooldown
         - aliases
@@ -19559,8 +19498,8 @@ components:
           limit: 250
         enabled: false
         exclude: 300
-    '/:channel/banphrasesrequest':
-      title: '/:channel/banphrasesrequest'
+    Banphrasesrequest:
+      title: New ban phrase
       required:
         - name
       type: object
@@ -20099,9 +20038,9 @@ components:
       type: object
       properties:
         bttvChannelEmotes:
-          $ref: '#/components/schemas/BttvChannelEmotes'
+          $ref: '#/components/schemas/BttvEmotes'
         bttvGlobalEmotes:
-          $ref: '#/components/schemas/BttvGlobalEmotes'
+          $ref: '#/components/schemas/BttvEmotes'
         ffzChannelEmotes:
           type: string
           nullable: true
@@ -23726,25 +23665,7 @@ components:
               '2': 'https://static-cdn.jtvnw.net/emoticons/v1/62836/1.0'
               '4': 'https://static-cdn.jtvnw.net/emoticons/v1/62836/3.0'
         twitchSubEmotes: null
-    BttvChannelEmotes:
-      title: BttvChannelEmotes
-      type: object
-      properties:
-        EmoteName:
-          $ref: '#/components/schemas/Emote'
-      example:
-        gachiBASS:
-          _id: 57719a9a6bdecd592c3ad59b
-          name: gachiBASS
-          type: bttv
-          width: 28
-          height: 28
-          gif: true
-          urls:
-            '1': 'https://cdn.betterttv.net/emote/57719a9a6bdecd592c3ad59b/1x'
-            '2': 'https://cdn.betterttv.net/emote/57719a9a6bdecd592c3ad59b/2x'
-            '4': 'https://cdn.betterttv.net/emote/57719a9a6bdecd592c3ad59b/3x'
-    BttvGlobalEmotes:
+    BttvEmotes:
       title: BttvGlobalEmotes
       type: object
       properties:
@@ -24875,21 +24796,6 @@ components:
             '4': 'https://cdn.betterttv.net/emote/566ca11a65dbbdab32ec0558/3x'
     FfzGlobalEmotes:
       title: FfzGlobalEmotes
-      required:
-        - AndKnuckles
-        - BORT
-        - BeanieHipster
-        - CatBag
-        - LaterSooner
-        - LilZ
-        - ManChicken
-        - OBOY
-        - OiMinna
-        - YellowFever
-        - YooHoo
-        - ZliL
-        - ZrehplaR
-        - ZreknarF
       type: object
       properties:
         AndKnuckles:
@@ -27402,82 +27308,6 @@ components:
             '1': 'https://static-cdn.jtvnw.net/emoticons/v1/62836/1.0'
             '2': 'https://static-cdn.jtvnw.net/emoticons/v1/62836/1.0'
             '4': 'https://static-cdn.jtvnw.net/emoticons/v1/62836/3.0'
-    '/:channel/:contestId':
-      title: '/:channel/:contestId'
-      required:
-        - botResponses
-        - totalAmount
-        - totalUsers
-        - _id
-        - title
-        - minBet
-        - maxBet
-        - duration
-        - options
-        - channel
-        - state
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        botResponses:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        _id:
-          type: string
-        title:
-          type: string
-        minBet:
-          type: integer
-          format: int32
-        maxBet:
-          type: integer
-          format: int32
-        duration:
-          type: integer
-          format: int32
-        options:
-          type: array
-          items:
-            $ref: '#/components/schemas/Option'
-          description: ''
-        channel:
-          type: string
-        state:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-      example:
-        botResponses: true
-        totalAmount: 0
-        totalUsers: 0
-        _id: 5c0a53cede9a4c207fa14d90
-        title: Will I win the next game?
-        minBet: 10
-        maxBet: 10000
-        duration: 5
-        options:
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4cc345a14d92
-            title: Win
-            command: win
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4c4b39a14d91
-            title: Lose
-            command: lose
-        channel: 5b2e2007760aeb7729487dab
-        state: created
-        createdAt: '2018-12-07T11:04:46.528Z'
-        updatedAt: '2018-12-07T11:04:46.528Z'
     Option:
       title: Option
       required:
@@ -27506,86 +27336,6 @@ components:
         _id: 5c0a53cede9a4cc345a14d92
         title: Win
         command: win
-    '/:channel/:contestId/start':
-      title: '/:channel/:contestId/start'
-      required:
-        - botResponses
-        - totalAmount
-        - totalUsers
-        - _id
-        - title
-        - minBet
-        - maxBet
-        - duration
-        - options
-        - channel
-        - state
-        - createdAt
-        - updatedAt
-        - startedAt
-      type: object
-      properties:
-        botResponses:
-          type: boolean
-        totalAmount:
-          type: integer
-          format: int32
-        totalUsers:
-          type: integer
-          format: int32
-        _id:
-          type: string
-        title:
-          type: string
-        minBet:
-          type: integer
-          format: int32
-        maxBet:
-          type: integer
-          format: int32
-        duration:
-          type: integer
-          format: int32
-        options:
-          type: array
-          items:
-            $ref: '#/components/schemas/Option'
-          description: ''
-        channel:
-          type: string
-        state:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-        startedAt:
-          type: string
-      example:
-        botResponses: true
-        totalAmount: 0
-        totalUsers: 0
-        _id: 5c0a53cede9a4c207fa14d90
-        title: Will I win the next game?
-        minBet: 10
-        maxBet: 10000
-        duration: 5
-        options:
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4cc345a14d92
-            title: Win
-            command: win
-          - totalAmount: 0
-            totalUsers: 0
-            _id: 5c0a53cede9a4c4b39a14d91
-            title: Lose
-            command: lose
-        channel: 5b2e2007760aeb7729487dab
-        state: running
-        createdAt: '2018-12-07T11:04:46.528Z'
-        updatedAt: '2018-12-07T13:21:59.997Z'
-        startedAt: '2018-12-07T13:21:59.996Z'
     Contests:
       title: Contests
       required:
@@ -28521,7 +28271,6 @@ components:
       required:
         - in
         - out
-        - timeout
       type: object
       properties:
         in:
@@ -28632,7 +28381,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -28801,30 +28550,16 @@ components:
       title: Audio1
       required:
         - src
-        - volume
       type: object
       properties:
         src:
           type: string
+          nullable: true
         volume:
           type: number
       example:
         src: 'https://cdn.streamelements.com/static/alertbox/default.ogg'
         volume: 0.5
-    Animation1:
-      title: Animation1
-      required:
-        - in
-        - out
-      type: object
-      properties:
-        in:
-          type: string
-        out:
-          type: string
-      example:
-        in: fadeInDown
-        out: fadeOutUp
     Subscriber1:
       title: Subscriber1
       required:
@@ -28856,7 +28591,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -29070,7 +28805,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -29149,7 +28884,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -29224,7 +28959,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -29296,7 +29031,7 @@ components:
         audio:
           $ref: '#/components/schemas/Audio1'
         animation:
-          $ref: '#/components/schemas/Animation1'
+          $ref: '#/components/schemas/Animation'
         variations:
           type: array
           items:
@@ -29552,7 +29287,7 @@ components:
         graphics:
           $ref: '#/components/schemas/Graphics'
         audio:
-          $ref: '#/components/schemas/Audio7'
+          $ref: '#/components/schemas/Audio1'
         text:
           $ref: '#/components/schemas/Text1'
       example:
@@ -29581,16 +29316,6 @@ components:
               text-align: center
               margin: 0 auto
           enableShadow: true
-    Audio7:
-      title: Audio7
-      required:
-        - src
-      type: object
-      properties:
-        src:
-          type: string
-      example:
-        src: 'https://cdn.streamelements.com/bits/audio/SciFi_1.wav'
     Notfound2:
       title: Notfound2
       required:
@@ -31481,7 +31206,7 @@ components:
       example:
         autoReset: true
         calendar: false
-    '/:channel':
+    channelData:
       title: '/:channel'
       required:
         - data
@@ -32809,8 +32534,8 @@ components:
         videoId: dQw4w9WgXcQ
         thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/default.jpg'
         title: Rick Astley - Never Gonna Give You Up (Video)
-    Success47:
-      title: Success47
+    MediaRequestData:
+      title: Media Request data
       required:
         - player
         - limits
@@ -33013,10 +32738,7 @@ components:
     Youtube:
       title: Youtube
       required:
-        - securityLevel
         - musicOnly
-        - bannedTags
-        - bannedVideos
       type: object
       properties:
         securityLevel:
@@ -33058,7 +32780,7 @@ components:
         tips:
           $ref: '#/components/schemas/Tips'
         youtube:
-          $ref: '#/components/schemas/Youtube1'
+          $ref: '#/components/schemas/Youtube'
       example:
         enabled: false
         limits:
@@ -33075,16 +32797,6 @@ components:
           prioritize: true
         youtube:
           musicOnly: false
-    Youtube1:
-      title: Youtube1
-      required:
-        - musicOnly
-      type: object
-      properties:
-        musicOnly:
-          type: boolean
-      example:
-        musicOnly: false
     Statistics:
       title: Statistics
       required:
@@ -33260,31 +32972,6 @@ components:
           type: string
       example:
         state: paused
-    Success56:
-      title: Success56
-      required:
-        - song
-      type: object
-      properties:
-        song:
-          $ref: '#/components/schemas/Song'
-      example:
-        song:
-          user:
-            username: leeeeex
-            providerId: '85827806'
-          statistics:
-            viewCount: 505416595
-            likeCount: 3387160
-            dislikeCount: 154477
-          duration: 213
-          tags: []
-          voteskips: []
-          _id: 5c0f9d54bd1e47cf2d3d6cac
-          videoId: dQw4w9WgXcQ
-          title: Rick Astley - Never Gonna Give You Up (Video)
-          channel: RickAstleyVEVO
-          source: site
     Song:
       title: Song
       required:
@@ -33359,97 +33046,7 @@ components:
         statusCode: 404
         error: Not Found
         message: Item not found
-    Success57:
-      title: Success57
-      required:
-        - bot
-        - cooldown
-        - quantity
-        - alert
-        - subscriberOnly
-        - userInput
-        - _id
-        - enabled
-        - featured
-        - name
-        - description
-        - type
-        - cost
-        - public
-        - channel
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        bot:
-          $ref: '#/components/schemas/Bot2'
-        cooldown:
-          $ref: '#/components/schemas/Cooldown'
-        quantity:
-          $ref: '#/components/schemas/Quantity'
-        alert:
-          $ref: '#/components/schemas/Alert'
-        subscriberOnly:
-          type: boolean
-        userInput:
-          type: array
-          items:
-            type: string
-          description: ''
-        _id:
-          type: string
-        enabled:
-          type: boolean
-        featured:
-          type: boolean
-        name:
-          type: string
-        description:
-          type: string
-        type:
-          type: string
-        cost:
-          type: integer
-          format: int32
-        public:
-          type: boolean
-        channel:
-          type: string
-        createdAt:
-          type: string
-        updatedAt:
-          type: string
-        preview:
-          type: string
-      example:
-        bot:
-          enabled: true
-          identifier: testitem
-        cooldown:
-          user: 5
-          global: 0
-        quantity:
-          total: -1
-        alert:
-          graphics:
-            duration: 8
-          audio:
-            volume: 0.5
-            src: null
-          enabled: true
-        subscriberOnly: false
-        userInput: []
-        _id: 5c0bb2aede9a4c4402a15056
-        enabled: true
-        featured: false
-        name: Test item
-        description: Test description
-        type: perk
-        cost: 1
-        public: false
-        channel: 5b2e2007760aeb7729487dab
-        createdAt: '2018-12-08T12:01:50.208Z'
-        updatedAt: '2018-12-08T12:02:47.902Z'
+
     Bot2:
       title: Bot2
       required:
@@ -33489,7 +33086,7 @@ components:
         graphics:
           $ref: '#/components/schemas/Graphics8'
         audio:
-          $ref: '#/components/schemas/Audio8'
+          $ref: '#/components/schemas/Audio1'
         enabled:
           type: boolean
       example:
@@ -33510,28 +33107,12 @@ components:
           format: int32
       example:
         duration: 8
-    Audio8:
-      title: Audio8
-      required:
-        - volume
-        - src
-      type: object
-      properties:
-        volume:
-          type: number
-        src:
-          type: string
-          nullable: true
-      example:
-        volume: 0.5
-        src: null
     LoyaltyItem:
       title: LoyaltyItem
       required:
         - bot
         - cooldown
         - quantity
-        - accessCodes
         - alert
         - subscriberOnly
         - userInput
@@ -33653,8 +33234,8 @@ components:
         keys: []
         mode: multi
         random: false
-    Success61:
-      title: Success61
+    ThemesList:
+      title: Themes List
       required:
         - published
         - provider
@@ -33950,8 +33531,8 @@ components:
         createdAt: '2018-12-07T17:19:01.957Z'
         approved: allowed
         updatedAt: '2018-12-07T17:19:01.957Z'
-    '/:channelrequest2':
-      title: '/:channelrequest2'
+    'NewTip':
+      title: 'New tip'
       required:
         - user
         - provider
