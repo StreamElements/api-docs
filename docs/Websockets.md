@@ -167,6 +167,8 @@ lineNumbers: true
 ```js
 // AccessToken is grabbed from OAuth2 authentication of the account.
 const accessToken = "";
+// JWT is available here: https://streamelements.com/dashboard/account/channels
+const jwt=""; 
 const socket = io('https://realtime.streamelements.com', {
     transports: ['websocket']
 });
@@ -196,6 +198,7 @@ socket.on('event:reset', (data) => {
 function onConnect() {
     console.log('Successfully connected to the websocket');
     socket.emit('authenticate', {method: 'oauth2', token: accessToken});
+    //socket.emit('authenticate', {method: 'jwt', token: jwt});
 }
 
 function onDisconnect() {
