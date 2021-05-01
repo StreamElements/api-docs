@@ -7,7 +7,6 @@ documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCo
 
 ### JSON Schema
 
-
 ```json json_schema
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -144,8 +143,6 @@ documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCo
 }
 ```
 
-
-
 ### Code snippet for connecting to Websocket with OAuth2:
 
 Make sure that after you obtain your Access Token, you use it in the "accessToken" constant in the JS part
@@ -168,7 +165,7 @@ lineNumbers: true
 // AccessToken is grabbed from OAuth2 authentication of the account.
 const accessToken = "";
 // JWT is available here: https://streamelements.com/dashboard/account/channels
-const jwt=""; 
+const jwt = "";
 const socket = io('https://realtime.streamelements.com', {
     transports: ['websocket']
 });
@@ -178,6 +175,7 @@ socket.on('connect', onConnect);
 socket.on('disconnect', onDisconnect);
 // Socket is authenticated
 socket.on('authenticated', onAuthenticated);
+socket.on('unauthorized', console.error);
 socket.on('event:test', (data) => {
     console.log(data);
     // Structure as on https://github.com/StreamElements/widgets/blob/master/CustomCode.md#on-event
@@ -194,6 +192,7 @@ socket.on('event:reset', (data) => {
     console.log(data);
     // Structure as on https://github.com/StreamElements/widgets/blob/master/CustomCode.md#on-session-update
 });
+
 
 function onConnect() {
     console.log('Successfully connected to the websocket');
