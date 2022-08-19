@@ -4,7 +4,7 @@ info:
   description: |-
     ## Custom Variable types
     `guid` - string that matches pattern: `/^[0-9a-fA-F]{24}$/` (24 character hexadecimal string)
-    `datetime` - either timestamp in miliseconds (unix timestamp*1000) or string in ISO 8061 format
+    `datetime` - either timestamp in milliseconds (unix timestamp*1000) or string in ISO 8061 format
     ## Global variables
     `Authorization` - string:  JWT Token you can obtain here: https://streamelements.com/dashboard/account/channels (click "Show secrets")
     `channelId` - guid: obtained by requesting `/channels/me` endpoint with provided JWT token
@@ -1248,7 +1248,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannelrequest'
+              $ref: '#/components/schemas/channelrequest'
             example:
               cooldown:
                 user: 15
@@ -1347,7 +1347,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 409
                 error: Conflict
@@ -3585,15 +3585,6 @@ paths:
           schema:
             type: string
             example: application/json
-      requestBody:
-        description: ''
-        content:
-          application/json:
-            schema:
-              type: string
-              example: '{"command":}'
-            example: '{"command":}'
-        required: true
       responses:
         '200':
           description: ''
@@ -3704,7 +3695,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannelrequest1'
+              $ref: '#/components/schemas/channelrequest1'
             example:
               online:
                 enabled: true
@@ -3768,7 +3759,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 409
                 error: Conflict
@@ -3946,15 +3937,6 @@ paths:
           schema:
             type: string
             example: application/json
-      requestBody:
-        description: ''
-        content:
-          application/json:
-            schema:
-              type: string
-              example: '{"command":}'
-            example: '{"command":}'
-        required: true
       responses:
         '200':
           description: ''
@@ -4790,7 +4772,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 400
                 error: Bad Request
@@ -4926,7 +4908,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 400
                 error: Bad Request
@@ -4999,7 +4981,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 400
                 error: Bad Request
@@ -5034,7 +5016,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1sayrequest'
+              $ref: '#/components/schemas/channel_sayrequest'
             example:
               message: '{{botMessage}}'
         required: true
@@ -5098,7 +5080,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1languagerequest'
+              $ref: '#/components/schemas/channel_languagerequest'
             example:
               language: en
         required: true
@@ -5232,7 +5214,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1levelsrequest'
+              $ref: '#/components/schemas/channel_levelsrequest'
             example:
               username: ''
               level: 500
@@ -9610,7 +9592,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 404
                 error: Not Found
@@ -10337,7 +10319,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 404
                 error: Not Found
@@ -10425,7 +10407,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 400
                 error: Bad Request
@@ -10558,7 +10540,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 400
                 error: Bad Request
@@ -14154,7 +14136,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1settings'
+                $ref: '#/components/schemas/channel_settings'
               example:
                 autoReset: true
                 calendar: false
@@ -14194,7 +14176,7 @@ paths:
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1reset'
+                $ref: '#/components/schemas/channel_reset'
               example:
                 data:
                   follower-latest:
@@ -15116,7 +15098,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/~1%3Achannel~1queuerequest'
+              $ref: '#/components/schemas/channel_queuerequest'
             example:
               video: youtube-Identifier
         required: true
@@ -15169,7 +15151,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/~1%3Achannel~1redemptions~1%3AitemId'
+                $ref: '#/components/schemas/channel_redemptions_itemId'
               example:
                 statusCode: 404
                 error: Not Found
@@ -17788,7 +17770,7 @@ components:
         aliases: []
         regex: ''
         description: Join an active raffle
-    '/:channelrequest':
+    channelrequest:
       title: '/:channelrequest'
       required:
         - cooldown
@@ -18013,7 +17995,7 @@ components:
       example:
         enabled: true
         interval: 30
-    '/:channelrequest1':
+    channelrequest1:
       title: '/:channelrequest1'
       required:
         - online
@@ -19591,7 +19573,7 @@ components:
         status: 200
         channel: 5b2e2007760aeb7729487dab
         message: successfully joined your channel
-    '/:channel/sayrequest':
+    'channel_sayrequest':
       title: '/:channel/sayrequest'
       required:
         - message
@@ -19601,7 +19583,7 @@ components:
           type: string
       example:
         message: '{{botMessage}}'
-    '/:channel/languagerequest':
+    'channel_languagerequest':
       title: '/:channel/languagerequest'
       required:
         - language
@@ -19638,7 +19620,7 @@ components:
         moderator: false
         subscriber: false
         level: 500
-    '/:channel/levelsrequest':
+    'channel_levelsrequest':
       title: '/:channel/levelsrequest'
       required:
         - username
@@ -31931,7 +31913,7 @@ components:
         createdAt: '2018-06-23T10:25:11.767Z'
         updatedAt: '2018-12-07T17:06:55.667Z'
         __v: 1
-    '/:channel/settings':
+    'channel_settings':
       title: '/:channel/settings'
       required:
         - autoReset
@@ -31945,7 +31927,7 @@ components:
       example:
         autoReset: true
         calendar: false
-    '/:channel/reset':
+    'channel_reset':
       title: '/:channel/reset'
       required:
         - data
@@ -32832,7 +32814,7 @@ components:
       example:
         username: leeeeex
         providerId: '85827806'
-    '/:channel/queuerequest':
+    'channel_queuerequest':
       title: '/:channel/queuerequest'
       required:
         - video
@@ -33027,7 +33009,7 @@ components:
         title: Rick Astley - Never Gonna Give You Up (Video)
         channel: RickAstleyVEVO
         source: site
-    '/:channel/redemptions/:itemId':
+    'channel_redemptions_itemId':
       title: '/:channel/redemptions/:itemId'
       required:
         - statusCode
@@ -33441,7 +33423,7 @@ components:
         total: 100
         email: streamelements@streamelements.com
         average: 100
-    '/:channel/moderation':
+    'channel_moderation':
       title: '/:channel/moderation'
       required:
         - recent
