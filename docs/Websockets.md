@@ -3,7 +3,7 @@
 After gaining the AccessToken make sure to pass it in the const in the JS bellow.
 
 Each event processed via the websockets can be seen
-documented [here](https://github.com/StreamElements/widgets/blob/master/CustomCode.md)
+documented [here](https://dev.streamelements.com/docs/widgets/6707a030af0b9-custom-widget-events)
 
 ### JSON Schema
 
