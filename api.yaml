@@ -10,11 +10,11 @@ info:
     `channelId` - guid: obtained by requesting `/channels/me` endpoint with provided JWT token
     `channelName` - string: lowercase channel name
     `timezone` - integer: timezone index
-  contact: {}
+  contact: { }
   version: '1.0'
 servers:
   - url: 'https://api.streamelements.com/kappa/v2'
-    variables: {}
+    variables: { }
 paths:
   '/activities/{channel}':
     get:
@@ -23,6 +23,9 @@ paths:
       summary: '/:channel'
       description: List channel activities
       operationId: '/:channel'
+      security:
+        - httpBearer: []
+        - OAuth2: ['activities:read']
       parameters:
         - name: after
           in: query
@@ -1041,7 +1044,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
         '400':
           description: Bad Request
           content:
@@ -1183,8 +1186,8 @@ paths:
                   - cooldown:
                       user: 15
                       global: 5
-                    aliases: []
-                    keywords: []
+                    aliases: [ ]
+                    keywords: [ ]
                     enabled: true
                     enabledOnline: true
                     enabledOffline: true
@@ -1203,8 +1206,8 @@ paths:
                 - cooldown:
                     user: 15
                     global: 5
-                  aliases: []
-                  keywords: []
+                  aliases: [ ]
+                  keywords: [ ]
                   enabled: true
                   enabledOnline: true
                   enabledOffline: true
@@ -1253,8 +1256,8 @@ paths:
               cooldown:
                 user: 15
                 global: 5
-              aliases: []
-              keywords: []
+              aliases: [ ]
+              keywords: [ ]
               enabled: true
               enabledOnline: true
               enabledOffline: true
@@ -1297,8 +1300,8 @@ paths:
                 cooldown:
                   user: 15
                   global: 5
-                aliases: []
-                keywords: []
+                aliases: [ ]
+                keywords: [ ]
                 enabled: true
                 enabledOnline: true
                 enabledOffline: true
@@ -1404,8 +1407,8 @@ paths:
                   - cooldown:
                       user: 15
                       global: 5
-                    aliases: []
-                    keywords: []
+                    aliases: [ ]
+                    keywords: [ ]
                     enabled: true
                     enabledOnline: true
                     enabledOffline: true
@@ -1423,8 +1426,8 @@ paths:
                   - cooldown:
                       user: 15
                       global: 5
-                    aliases: []
-                    keywords: []
+                    aliases: [ ]
+                    keywords: [ ]
                     enabled: true
                     enabledOnline: true
                     enabledOffline: true
@@ -1443,8 +1446,8 @@ paths:
                 - cooldown:
                     user: 15
                     global: 5
-                  aliases: []
-                  keywords: []
+                  aliases: [ ]
+                  keywords: [ ]
                   enabled: true
                   enabledOnline: true
                   enabledOffline: true
@@ -1462,8 +1465,8 @@ paths:
                 - cooldown:
                     user: 15
                     global: 5
-                  aliases: []
-                  keywords: []
+                  aliases: [ ]
+                  keywords: [ ]
                   enabled: true
                   enabledOnline: true
                   enabledOffline: true
@@ -1546,7 +1549,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Join an active raffle
                   - commandId: emotes
@@ -1564,7 +1567,7 @@ paths:
                     cooldown:
                       user: 15
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: 'Active BTTV emotes in chat: Clap KKaper gachiBASS gachiGASM monkaS'
                   - commandId: srpause
@@ -1578,7 +1581,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Pause songrequest playback.
                   - commandId: leaderboard
@@ -1637,7 +1640,7 @@ paths:
                     cooldown:
                       user: 15
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Set a viewers access level. Reset with !level <username> reset.
                   - commandId: givepoints
@@ -1702,7 +1705,7 @@ paths:
                     cooldown:
                       user: 1
                       global: 1
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Control the HypeCup.
                   - commandId: contest_bet
@@ -1716,7 +1719,7 @@ paths:
                     cooldown:
                       user: 5
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Bet on a contest.
                   - commandId: accountage
@@ -1781,7 +1784,7 @@ paths:
                     cooldown:
                       user: 5
                       global: 2
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Show the top of the leaderboard.
                   - commandId: giveaway
@@ -1795,7 +1798,7 @@ paths:
                     cooldown:
                       user: 15
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Show the currently active giveaway.
                   - commandId: followage
@@ -1887,7 +1890,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Prevent a viewer from getting timed out for 60 seconds.
                   - commandId: roulette
@@ -1932,7 +1935,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Enable or disable modules via chat.
                   - commandId: next
@@ -2007,7 +2010,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Change the songrequest volume.
                   - commandId: kappagen
@@ -2058,7 +2061,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 15
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: streamelements has been running for 13 hours 47 mins!
                   - commandId: duel_accept
@@ -2072,7 +2075,7 @@ paths:
                     cooldown:
                       user: 10
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Accept a duel request from another chatter
                   - commandId: bot
@@ -2090,7 +2093,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: 'Mute, unmute or remove the bot.'
                   - commandId: raffle_cancel
@@ -2125,7 +2128,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Play a game of emote-bingo
                   - commandId: pepes
@@ -2139,7 +2142,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Enable or disable pepes in bot responses.
                   - commandId: edit_counter
@@ -2168,7 +2171,7 @@ paths:
                     cooldown:
                       user: 10
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Vote to skip the current song
                   - commandId: raffle_multiraffle
@@ -2198,7 +2201,7 @@ paths:
                     cooldown:
                       user: 10
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Duel another chatter for points
                   - commandId: setpoints
@@ -2212,7 +2215,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Set the points of a viewer.
                   - commandId: watchtime
@@ -2241,7 +2244,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Cancel a duel request to another chatter
                   - commandId: quote
@@ -2258,7 +2261,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: 'Add, remove and show quotes.'
                   - commandId: points
@@ -2272,7 +2275,7 @@ paths:
                     cooldown:
                       user: 5
                       global: 1
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: $(user) has $(user.points) $(pointsname) and is rank $(user.points_rank) on the leaderboard.
                   - commandId: chatstats
@@ -2301,7 +2304,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 15
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: 'current song: harambe.waw - WE WON ZULUL [2m3s] requested by nuuls https://youtu.be/9OG-Qr1qAe4'
                   - commandId: settitle
@@ -2330,7 +2333,7 @@ paths:
                     cooldown:
                       user: 10
                       global: 0
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Deny a duel request from another chatter
                   - commandId: giveaway_enter
@@ -2374,7 +2377,7 @@ paths:
                     cooldown:
                       user: 15
                       global: 5
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Show the currently active contest.
                   - commandId: tip
@@ -2403,7 +2406,7 @@ paths:
                     cooldown:
                       user: 0
                       global: 15
-                    aliases: []
+                    aliases: [ ]
                     regex: ''
                     description: Update the channels game.
               example:
@@ -2418,7 +2421,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Join an active raffle
                 - commandId: emotes
@@ -2436,7 +2439,7 @@ paths:
                   cooldown:
                     user: 15
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: 'Active BTTV emotes in chat: Clap KKaper gachiBASS gachiGASM monkaS'
                 - commandId: srpause
@@ -2450,7 +2453,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Pause songrequest playback.
                 - commandId: leaderboard
@@ -2509,7 +2512,7 @@ paths:
                   cooldown:
                     user: 15
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Set a viewers access level. Reset with !level <username> reset.
                 - commandId: givepoints
@@ -2574,7 +2577,7 @@ paths:
                   cooldown:
                     user: 1
                     global: 1
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Control the HypeCup.
                 - commandId: contest_bet
@@ -2588,7 +2591,7 @@ paths:
                   cooldown:
                     user: 5
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Bet on a contest.
                 - commandId: accountage
@@ -2653,7 +2656,7 @@ paths:
                   cooldown:
                     user: 5
                     global: 2
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Show the top of the leaderboard.
                 - commandId: giveaway
@@ -2667,7 +2670,7 @@ paths:
                   cooldown:
                     user: 15
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Show the currently active giveaway.
                 - commandId: followage
@@ -2759,7 +2762,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Prevent a viewer from getting timed out for 60 seconds.
                 - commandId: roulette
@@ -2804,7 +2807,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Enable or disable modules via chat.
                 - commandId: next
@@ -2879,7 +2882,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Change the songrequest volume.
                 - commandId: kappagen
@@ -2930,7 +2933,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 15
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: streamelements has been running for 13 hours 47 mins!
                 - commandId: duel_accept
@@ -2944,7 +2947,7 @@ paths:
                   cooldown:
                     user: 10
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Accept a duel request from another chatter
                 - commandId: bot
@@ -2962,7 +2965,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: 'Mute, unmute or remove the bot.'
                 - commandId: raffle_cancel
@@ -2997,7 +3000,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Play a game of emote-bingo
                 - commandId: pepes
@@ -3011,7 +3014,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Enable or disable pepes in bot responses.
                 - commandId: edit_counter
@@ -3040,7 +3043,7 @@ paths:
                   cooldown:
                     user: 10
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Vote to skip the current song
                 - commandId: raffle_multiraffle
@@ -3070,7 +3073,7 @@ paths:
                   cooldown:
                     user: 10
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Duel another chatter for points
                 - commandId: setpoints
@@ -3084,7 +3087,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Set the points of a viewer.
                 - commandId: watchtime
@@ -3113,7 +3116,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Cancel a duel request to another chatter
                 - commandId: quote
@@ -3130,7 +3133,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: 'Add, remove and show quotes.'
                 - commandId: points
@@ -3144,7 +3147,7 @@ paths:
                   cooldown:
                     user: 5
                     global: 1
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: $(user) has $(user.points) $(pointsname) and is rank $(user.points_rank) on the leaderboard.
                 - commandId: chatstats
@@ -3173,7 +3176,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 15
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: 'current song: harambe.waw - WE WON ZULUL [2m3s] requested by nuuls https://youtu.be/9OG-Qr1qAe4'
                 - commandId: settitle
@@ -3202,7 +3205,7 @@ paths:
                   cooldown:
                     user: 10
                     global: 0
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Deny a duel request from another chatter
                 - commandId: giveaway_enter
@@ -3246,7 +3249,7 @@ paths:
                   cooldown:
                     user: 15
                     global: 5
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Show the currently active contest.
                 - commandId: tip
@@ -3275,7 +3278,7 @@ paths:
                   cooldown:
                     user: 0
                     global: 15
-                  aliases: []
+                  aliases: [ ]
                   regex: ''
                   description: Update the channels game.
       deprecated: false
@@ -3316,10 +3319,10 @@ paths:
           application/json; charset=utf-8:
             schema:
               type: object
-              example: {}
+              example: { }
             examples:
               example-1:
-                value: {}
+                value: { }
         required: true
       responses:
         '200':
@@ -3429,8 +3432,8 @@ paths:
                 cooldown:
                   user: 15
                   global: 5
-                aliases: []
-                keywords: []
+                aliases: [ ]
+                keywords: [ ]
                 enabled: true
                 enabledOnline: true
                 enabledOffline: true
@@ -3500,8 +3503,8 @@ paths:
               cooldown:
                 user: 15
                 global: 5
-              aliases: []
-              keywords: []
+              aliases: [ ]
+              keywords: [ ]
               enabled: true
               enabledOnline: true
               enabledOffline: true
@@ -3538,8 +3541,8 @@ paths:
                 cooldown:
                   user: 15
                   global: 5
-                aliases: []
-                keywords: []
+                aliases: [ ]
+                keywords: [ ]
                 enabled: true
                 enabledOnline: true
                 enabledOffline: true
@@ -3588,7 +3591,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/timers/{channel}':
     get:
@@ -3738,8 +3741,8 @@ paths:
                 cooldown:
                   user: 15
                   global: 5
-                aliases: []
-                keywords: []
+                aliases: [ ]
+                keywords: [ ]
                 enabled: true
                 enabledOnline: true
                 enabledOffline: true
@@ -3868,8 +3871,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '201':
@@ -3940,7 +3943,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/modules/{channel}':
     get:
@@ -4280,11 +4283,11 @@ paths:
                   - public: false
                     excludeLevel: 500
                     enabled: true
-                    appliesTo: []
-                    runsOn: []
+                    appliesTo: [ ]
+                    runsOn: [ ]
                     _id: 5c0b9794de9a4c1f3aa15034
                     name: someInsult
-                    phrases: []
+                    phrases: [ ]
                     channel: 5b2e2007760aeb7729487dab
                     lastUpdatedBy: 5b2e2007760aeb7729487dab
                     createdAt: '2018-12-08T10:06:12.342Z'
@@ -4293,11 +4296,11 @@ paths:
                 - public: false
                   excludeLevel: 500
                   enabled: true
-                  appliesTo: []
-                  runsOn: []
+                  appliesTo: [ ]
+                  runsOn: [ ]
                   _id: 5c0b9794de9a4c1f3aa15034
                   name: someInsult
-                  phrases: []
+                  phrases: [ ]
                   channel: 5b2e2007760aeb7729487dab
                   lastUpdatedBy: 5b2e2007760aeb7729487dab
                   createdAt: '2018-12-08T10:06:12.342Z'
@@ -4379,8 +4382,8 @@ paths:
                       length: 300
                     enabled: false
                     exclude: 300
-                    whitelist: []
-                    blacklist: []
+                    whitelist: [ ]
+                    blacklist: [ ]
                   banphrases:
                     enabled: false
                   emotes:
@@ -4406,7 +4409,7 @@ paths:
                       limit: 250
                     enabled: false
                     exclude: 300
-                banphrases: []
+                banphrases: [ ]
                 _id: 5b2e2007760aeb6949487daf
                 channel: 5b2e2007760aeb7729487dab
                 createdAt: '2018-06-23T10:25:11.768Z'
@@ -4447,7 +4450,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/filters/{channel}/banphrases':
     post:
@@ -4485,7 +4488,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/filters/{channel}/test':
     post:
@@ -4522,7 +4525,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/filters/{channel}/banphrases/{groupId}':
     put:
@@ -4561,13 +4564,13 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     delete:
       tags:
@@ -4602,7 +4605,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/filters/{channel}/{filter}':
     put:
@@ -4647,7 +4650,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/bot/{channel}':
     get:
@@ -4703,7 +4706,7 @@ paths:
                   allowCustomName: false
                   language: en
                   channel: 5b2e2007760aeb7729487dab
-                  logs: []
+                  logs: [ ]
       deprecated: false
   '/bot/{channel}/join':
     post:
@@ -5405,7 +5408,7 @@ paths:
                 provider: twitch
                 suspended: false
                 nullChannel: false
-                providerEmails: []
+                providerEmails: [ ]
                 lastJWTToken: null
                 _id: 5b2e2007760aeb7729487dab
                 email: email@streamelements.com
@@ -5423,14 +5426,14 @@ paths:
                   - user: 5b2e2007760aeb6677487daa
                     providerId: '85827806'
                     role: owner
-                ab: []
+                ab: [ ]
                 createdAt: '2018-06-23T10:25:11.733Z'
                 updatedAt: '2018-12-07T09:29:01.582Z'
                 lastLogin: '2018-12-07T09:29:01.58Z'
                 country: US
                 providerTotals:
                   follower-total: 6
-                features: []
+                features: [ ]
                 geo: US
       deprecated: false
   '/channels/{channel}':
@@ -5543,7 +5546,7 @@ paths:
                 provider: twitch
                 suspended: false
                 nullChannel: false
-                providerEmails: []
+                providerEmails: [ ]
                 lastJWTToken: null
                 _id: 5b2e2007760aeb7729487dab
                 email: email@streamelements.com
@@ -5561,7 +5564,7 @@ paths:
                   - user: 5b2e2007760aeb6677487daa
                     providerId: '85827806'
                     role: owner
-                ab: []
+                ab: [ ]
                 createdAt: '2018-06-23T10:25:11.733Z'
                 updatedAt: '2018-12-07T10:43:42.282Z'
                 lastLogin: '2018-12-07T10:43:42.281Z'
@@ -9261,7 +9264,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/channels/{channel}/accesstoken':
     delete:
@@ -9289,7 +9292,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   /chatstats:
     get:
@@ -9330,7 +9333,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   /chatstats/search:
     get:
@@ -9360,7 +9363,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/chatstats/{username}':
     get:
@@ -9389,7 +9392,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/chatstats/{username}/epm':
     get:
@@ -9427,7 +9430,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/chatstats/{username}/stats':
     get:
@@ -9466,7 +9469,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/chatstats/{username}/{category}/{item}':
     get:
@@ -9509,7 +9512,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/contests/{channel}/{contestId}':
     get:
@@ -9634,13 +9637,13 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     delete:
       tags:
@@ -9730,7 +9733,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     get:
       tags:
@@ -9766,7 +9769,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/contests/{channel}/{contestId}/start':
     put:
@@ -9806,8 +9809,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -9893,8 +9896,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '201':
@@ -9954,7 +9957,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/contests/{channel}/{contestId}/close':
     delete:
@@ -10111,8 +10114,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -10212,7 +10215,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/giveaways/{channel}/{giveawayId}':
     get:
@@ -10283,7 +10286,7 @@ paths:
                     totalUsers: 0
                     botResponses: false
                     _id: 5c0a6c00de9a4c3a70a14da6
-                    winners: []
+                    winners: [ ]
                     channel: 5b2e2007760aeb7729487dab
                     createdAt: '2018-12-07T12:48:00.133Z'
                     updatedAt: '2018-12-07T12:48:00.133Z'
@@ -10293,7 +10296,7 @@ paths:
                     totalUsers: 0
                     botResponses: false
                     _id: 5c0a6bdfde9a4c6faaa14da2
-                    winners: []
+                    winners: [ ]
                     channel: 5b2e2007760aeb7729487dab
                     createdAt: '2018-12-07T12:47:27.369Z'
                     updatedAt: '2018-12-07T12:49:10.109Z'
@@ -10361,8 +10364,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -10397,8 +10400,8 @@ paths:
                 totalUsers: 0
                 botResponses: false
                 _id: 5c0a98fcde9a4c7372a14de8
-                entrants: []
-                winners: []
+                entrants: [ ]
+                winners: [ ]
                 channel: 5b2e2007760aeb7729487dab
                 createdAt: '2018-12-07T15:59:56.996Z'
                 updatedAt: '2018-12-07T15:59:56.996Z'
@@ -10449,8 +10452,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -10479,7 +10482,7 @@ paths:
                 totalUsers: 0
                 botResponses: false
                 _id: 5c0a89efde9a4c758ea14db9
-                winners: []
+                winners: [ ]
                 channel: 5b2e2007760aeb7729487dab
                 createdAt: '2018-12-07T14:55:43.348Z'
                 updatedAt: '2018-12-07T15:00:19.448Z'
@@ -10534,7 +10537,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
         '400':
           description: Bad Request
           content:
@@ -10677,8 +10680,8 @@ paths:
                 totalUsers: 0
                 botResponses: false
                 _id: 5c0a89efde9a4c758ea14db9
-                entrants: []
-                winners: []
+                entrants: [ ]
+                winners: [ ]
                 channel: 5b2e2007760aeb7729487dab
                 createdAt: '2018-12-07T14:55:43.348Z'
                 updatedAt: '2018-12-07T14:59:25.051Z'
@@ -10734,7 +10737,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
         '400':
           description: Bad Request
           content:
@@ -11072,7 +11075,7 @@ paths:
                 $ref: '#/components/schemas/Success-empty'
               example:
                 active: null
-                giveaways: []
+                giveaways: [ ]
       deprecated: false
     post:
       tags:
@@ -11103,8 +11106,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -11139,8 +11142,8 @@ paths:
                 totalUsers: 0
                 botResponses: false
                 _id: 5c0a89efde9a4c758ea14db9
-                entrants: []
-                winners: []
+                entrants: [ ]
+                winners: [ ]
                 channel: 5b2e2007760aeb7729487dab
                 createdAt: '2018-12-07T14:55:43.348Z'
                 updatedAt: '2018-12-07T14:55:43.348Z'
@@ -11191,8 +11194,8 @@ paths:
                 type: array
                 items:
                   type: string
-                example: []
-              example: {}
+                example: [ ]
+              example: { }
       deprecated: false
   '/loyalty/{channel}':
     get:
@@ -11645,7 +11648,7 @@ paths:
                         animation:
                           in: fadeInDown
                           out: fadeOutUp
-                        variations: []
+                        variations: [ ]
                       subscriber:
                         enableRandomPick: true
                         enabled: true
@@ -11742,7 +11745,7 @@ paths:
                         animation:
                           in: fadeInDown
                           out: fadeOutUp
-                        variations: []
+                        variations: [ ]
                         tts:
                           enabled: false
                           voice: Brian
@@ -11782,7 +11785,7 @@ paths:
                         animation:
                           in: fadeInDown
                           out: fadeOutUp
-                        variations: []
+                        variations: [ ]
                         minAmount: 1
                       raid:
                         enableRandomPick: true
@@ -11818,7 +11821,7 @@ paths:
                         animation:
                           in: fadeInDown
                           out: fadeOutUp
-                        variations: []
+                        variations: [ ]
                       cheer:
                         enableRandomPick: true
                         enabled: true
@@ -12158,7 +12161,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     delete:
       tags:
@@ -12193,7 +12196,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/{user}/rank':
     get:
@@ -12230,7 +12233,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/{user}/{amount}':
     put:
@@ -12274,7 +12277,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/alltime/{user}/{amount}':
     put:
@@ -12324,13 +12327,13 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/alltime/{user}':
     delete:
@@ -12365,7 +12368,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/alltime':
     get:
@@ -12414,7 +12417,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/top':
     get:
@@ -12463,7 +12466,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/watchtime':
     get:
@@ -12512,14 +12515,14 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}':
     put:
       tags:
         - points
       summary: '/:channel'
-      description: Start a contest
+      description: Bulk add/set points to users
       operationId: 'Put/:channel1'
       parameters:
         - name: channel
@@ -12544,13 +12547,14 @@ paths:
           application/json:
             schema:
               type: string
-              example: '{"users":,"mode":}'
-            example: '{"users":,"mode":}'
+              example: >-
+                { "users": [ { "username": "testuser123", "current": 200 }, {
+                "username": "testuser456", "current": 150 } ], "mode": "add" }
         required: true
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/points/{channel}/reset/{context}':
     delete:
@@ -12585,7 +12589,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/sessions/{channel}':
     get:
@@ -13337,8 +13341,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -14114,8 +14118,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -14551,7 +14555,7 @@ paths:
                     - name: Max Jakubowski
                       amount: 11
                       createdAt: '2018-12-06T15:54:40.061Z'
-                  raid-recent: []
+                  raid-recent: [ ]
                   cheer-recent:
                     - name: Glenda Carter
                       amount: 39
@@ -14704,7 +14708,7 @@ paths:
                     - name: Lamar Hills
                       amount: 4
                       createdAt: '2018-12-06T15:54:41.584Z'
-                  merch-recent: []
+                  merch-recent: [ ]
                 settings:
                   autoReset: true
                   calendar: false
@@ -14773,7 +14777,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   /songrequest/playing:
     get:
@@ -14801,7 +14805,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   /songrequest/youtube:
     get:
@@ -14946,13 +14950,13 @@ paths:
                 youtube:
                   securityLevel: 0
                   musicOnly: false
-                  bannedTags: []
-                  bannedVideos: []
+                  bannedTags: [ ]
+                  bannedVideos: [ ]
                 enabled: false
                 mode: combined
                 moderation: false
                 _id: 5b2e2007760aeb82e8487dc4
-                bannedUsers: []
+                bannedUsers: [ ]
       deprecated: false
   '/songrequest/{channel}/settings/public':
     get:
@@ -15047,7 +15051,7 @@ paths:
                   $ref: '#/components/schemas/Song'
                 example:
                   - duration: 213
-                    tags: []
+                    tags: [ ]
                     _id: 5c0ba7b3de9a4c7036a15040
                     videoId: dQw4w9WgXcQ
                     title: Rick Astley - Never Gonna Give You Up (Video)
@@ -15060,10 +15064,10 @@ paths:
                     user:
                       username: leeeeex
                       providerId: '85827806'
-                    voteskips: []
+                    voteskips: [ ]
               example:
                 - duration: 213
-                  tags: []
+                  tags: [ ]
                   _id: 5c0ba7b3de9a4c7036a15040
                   videoId: dQw4w9WgXcQ
                   title: Rick Astley - Never Gonna Give You Up (Video)
@@ -15076,7 +15080,7 @@ paths:
                   user:
                     username: leeeeex
                     providerId: '85827806'
-                  voteskips: []
+                  voteskips: [ ]
       deprecated: false
     post:
       tags:
@@ -15296,7 +15300,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/songrequest/{channel}/playlist':
     get:
@@ -15602,7 +15606,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/songrequest/{channel}/playing':
     get:
@@ -15649,9 +15653,9 @@ paths:
                   likeCount: 3380238
                   dislikeCount: 154269
                 duration: 213
-                tags: []
+                tags: [ ]
                 _id: 5c0ba73fde9a4c1385a1503b
-                voteskips: []
+                voteskips: [ ]
                 videoId: dQw4w9WgXcQ
                 title: Rick Astley - Never Gonna Give You Up (Video)
                 channel: RickAstleyVEVO
@@ -15703,8 +15707,8 @@ paths:
                     likeCount: 3387160
                     dislikeCount: 154477
                   duration: 213
-                  tags: []
-                  voteskips: []
+                  tags: [ ]
+                  voteskips: [ ]
                   _id: 5c0f9d54bd1e47cf2d3d6cac
                   videoId: dQw4w9WgXcQ
                   title: Rick Astley - Never Gonna Give You Up (Video)
@@ -15766,7 +15770,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/store/{channel}/redemptions':
     get:
@@ -15823,7 +15827,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/store/{channel}/redemptions/search':
     get:
@@ -15919,7 +15923,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/store/{channel}/redemptions/me':
     get:
@@ -15968,7 +15972,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/store/{channel}/redemptions/{redemptionId}':
     put:
@@ -16007,13 +16011,13 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     delete:
       tags:
@@ -16048,7 +16052,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
     get:
       tags:
@@ -16083,7 +16087,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/store/{channel}/items':
     get:
@@ -16168,7 +16172,7 @@ paths:
                         src: null
                       enabled: true
                     subscriberOnly: false
-                    userInput: []
+                    userInput: [ ]
                     _id: 5c0bb2aede9a4c4402a15056
                     enabled: true
                     featured: false
@@ -16197,7 +16201,7 @@ paths:
                         src: 'https://cdn.streamelements.com/uploads/08e58dd8-b750-4113-a496-2b5817fd8031.mp3'
                       enabled: true
                     subscriberOnly: false
-                    userInput: []
+                    userInput: [ ]
                     _id: 5c0bb3b0de9a4c40a3a1505d
                     enabled: true
                     featured: false
@@ -16227,7 +16231,7 @@ paths:
                       src: null
                     enabled: true
                   subscriberOnly: false
-                  userInput: []
+                  userInput: [ ]
                   _id: 5c0bb2aede9a4c4402a15056
                   enabled: true
                   featured: false
@@ -16256,7 +16260,7 @@ paths:
                       src: 'https://cdn.streamelements.com/uploads/08e58dd8-b750-4113-a496-2b5817fd8031.mp3'
                     enabled: true
                   subscriberOnly: false
-                  userInput: []
+                  userInput: [ ]
                   _id: 5c0bb3b0de9a4c40a3a1505d
                   enabled: true
                   featured: false
@@ -16299,8 +16303,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -16333,7 +16337,7 @@ paths:
                   user: 10
                   global: 0
                 accessCodes:
-                  keys: []
+                  keys: [ ]
                   mode: multi
                   random: false
                 alert:
@@ -16344,7 +16348,7 @@ paths:
                     src: null
                   enabled: true
                 subscriberOnly: false
-                userInput: []
+                userInput: [ ]
                 _id: 5c0bb2aede9a4c4402a15056
                 enabled: true
                 featured: false
@@ -16440,7 +16444,7 @@ paths:
                 quantity:
                   total: -1
                 accessCodes:
-                  keys: []
+                  keys: [ ]
                   mode: multi
                   random: false
                 alert:
@@ -16451,7 +16455,7 @@ paths:
                     src: null
                   enabled: true
                 subscriberOnly: false
-                userInput: []
+                userInput: [ ]
                 _id: 5c0bb2aede9a4c4402a15056
                 enabled: true
                 featured: false
@@ -16523,8 +16527,8 @@ paths:
           application/json:
             schema:
               type: object
-              example: {}
-            example: {}
+              example: { }
+            example: { }
         required: true
       responses:
         '200':
@@ -16556,7 +16560,7 @@ paths:
                 quantity:
                   total: -1
                 accessCodes:
-                  keys: []
+                  keys: [ ]
                   mode: multi
                   random: false
                 alert:
@@ -16567,7 +16571,7 @@ paths:
                     src: null
                   enabled: true
                 subscriberOnly: false
-                userInput: []
+                userInput: [ ]
                 _id: 5c0bb2aede9a4c4402a15056
                 enabled: true
                 featured: false
@@ -17194,7 +17198,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   '/tips/{channel}/moderation':
     get:
@@ -17251,7 +17255,7 @@ paths:
                     createdAt: '2018-12-07T17:19:01.957Z'
                     approved: allowed
                     updatedAt: '2018-12-07T17:19:01.957Z'
-                pending: []
+                pending: [ ]
       deprecated: false
   '/tips/{channel}/{tipId}':
     get:
@@ -17376,7 +17380,7 @@ paths:
                 $ref: '#/components/schemas/Success67'
               example:
                 suspended: false
-                teams: []
+                teams: [ ]
                 channels:
                   - profile:
                       headerImage: 'https://cdn.streamelements.com/static/user/profile_header_default.png'
@@ -17384,7 +17388,7 @@ paths:
                     provider: twitch
                     suspended: false
                     nullChannel: false
-                    providerEmails: []
+                    providerEmails: [ ]
                     lastJWTToken: null
                     _id: 5b2e2007760aeb7729487dab
                     email: email@streamelements.com
@@ -17396,7 +17400,7 @@ paths:
                     providerId: '85827806'
                     isPartner: false
                     broadcasterType: ''
-                    ab: []
+                    ab: [ ]
                     createdAt: '2018-06-23T10:25:11.733Z'
                     updatedAt: '2018-12-07T17:26:23.792Z'
                     lastLogin: '2018-12-07T17:26:23.79Z'
@@ -17410,7 +17414,7 @@ paths:
                         role: administrator
                 _id: 5b2e2007760aeb6677487daa
                 lastLogin: '2018-06-23T10:25:11.728Z'
-                ab: []
+                ab: [ ]
                 primaryChannel: 5b2e2007760aeb7729487dab
                 username: leeeeex
                 avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/b21a7fa5-4f3f-4402-b68f-3545dcc68b90-profile_image-300x300.jpg'
@@ -17445,7 +17449,7 @@ paths:
       responses:
         '200':
           description: ''
-          headers: {}
+          headers: { }
       deprecated: false
   /users/access:
     get:
@@ -17670,8 +17674,8 @@ components:
         cooldown:
           user: 15
           global: 5
-        aliases: []
-        keywords: []
+        aliases: [ ]
+        keywords: [ ]
         enabled: true
         enabledOnline: true
         enabledOffline: true
@@ -17767,7 +17771,7 @@ components:
         cooldown:
           user: 0
           global: 0
-        aliases: []
+        aliases: [ ]
         regex: ''
         description: Join an active raffle
     channelrequest:
@@ -17829,8 +17833,8 @@ components:
         cooldown:
           user: 15
           global: 5
-        aliases: []
-        keywords: []
+        aliases: [ ]
+        keywords: [ ]
         enabled: true
         enabledOnline: true
         enabledOffline: true
@@ -17901,8 +17905,8 @@ components:
         cooldown:
           user: 15
           global: 5
-        aliases: []
-        keywords: []
+        aliases: [ ]
+        keywords: [ ]
         enabled: true
         enabledOnline: true
         enabledOffline: true
@@ -19174,11 +19178,11 @@ components:
         public: false
         excludeLevel: 500
         enabled: true
-        appliesTo: []
-        runsOn: []
+        appliesTo: [ ]
+        runsOn: [ ]
         _id: 5c0b9794de9a4c1f3aa15034
         name: someInsult
-        phrases: []
+        phrases: [ ]
         channel: 5b2e2007760aeb7729487dab
         lastUpdatedBy: 5b2e2007760aeb7729487dab
         createdAt: '2018-12-08T10:06:12.342Z'
@@ -19221,8 +19225,8 @@ components:
             length: 300
           enabled: false
           exclude: 300
-          whitelist: []
-          blacklist: []
+          whitelist: [ ]
+          blacklist: [ ]
         banphrases:
           enabled: false
         emotes:
@@ -19339,8 +19343,8 @@ components:
           length: 300
         enabled: false
         exclude: 300
-        whitelist: []
-        blacklist: []
+        whitelist: [ ]
+        blacklist: [ ]
     Banphrases:
       title: Banphrases
       required:
@@ -19508,7 +19512,7 @@ components:
           allowCustomName: false
           language: en
           channel: 5b2e2007760aeb7729487dab
-          logs: []
+          logs: [ ]
     Bot:
       title: Bot
       required:
@@ -19553,7 +19557,7 @@ components:
         allowCustomName: false
         language: en
         channel: 5b2e2007760aeb7729487dab
-        logs: []
+        logs: [ ]
     BotJoinResponse:
       title: BotJoinResponse
       required:
@@ -19765,7 +19769,7 @@ components:
         provider: twitch
         suspended: false
         nullChannel: false
-        providerEmails: []
+        providerEmails: [ ]
         lastJWTToken: null
         _id: 5b2e2007760aeb7729487dab
         email: email@streamelements.com
@@ -19783,14 +19787,14 @@ components:
           - user: 5b2e2007760aeb6677487daa
             providerId: '85827806'
             role: owner
-        ab: {}
+        ab: { }
         createdAt: '2018-06-23T10:25:11.733Z'
         updatedAt: '2018-12-07T09:29:01.582Z'
         lastLogin: '2018-12-07T09:29:01.58Z'
         country: US
         providerTotals:
           follower-total: 6
-        features: {}
+        features: { }
         geo: US
     Profile:
       title: Profile
@@ -19984,7 +19988,7 @@ components:
         provider: twitch
         suspended: false
         nullChannel: false
-        providerEmails: []
+        providerEmails: [ ]
         lastJWTToken: null
         _id: 5b2e2007760aeb7729487dab
         email: email@streamelements.com
@@ -20002,7 +20006,7 @@ components:
           - user: 5b2e2007760aeb6677487daa
             providerId: '85827806'
             role: owner
-        ab: []
+        ab: [ ]
         createdAt: '2018-06-23T10:25:11.733Z'
         updatedAt: '2018-12-07T10:43:42.282Z'
         lastLogin: '2018-12-07T10:43:42.281Z'
@@ -27459,7 +27463,7 @@ components:
             totalUsers: 0
             botResponses: false
             _id: 5c0a6c00de9a4c3a70a14da6
-            winners: []
+            winners: [ ]
             channel: 5b2e2007760aeb7729487dab
             createdAt: '2018-12-07T12:48:00.133Z'
             updatedAt: '2018-12-07T12:48:00.133Z'
@@ -27469,7 +27473,7 @@ components:
             totalUsers: 0
             botResponses: false
             _id: 5c0a6bdfde9a4c6faaa14da2
-            winners: []
+            winners: [ ]
             channel: 5b2e2007760aeb7729487dab
             createdAt: '2018-12-07T12:47:27.369Z'
             updatedAt: '2018-12-07T12:49:10.109Z'
@@ -27530,7 +27534,7 @@ components:
         totalUsers: 0
         botResponses: false
         _id: 5c0a6c00de9a4c3a70a14da6
-        winners: []
+        winners: [ ]
         channel: 5b2e2007760aeb7729487dab
         createdAt: '2018-12-07T12:48:00.133Z'
         updatedAt: '2018-12-07T12:48:00.133Z'
@@ -27603,7 +27607,7 @@ components:
           description: ''
       example:
         active: null
-        giveaways: []
+        giveaways: [ ]
     Success40:
       title: Success40
       required:
@@ -28403,7 +28407,7 @@ components:
         animation:
           in: fadeInDown
           out: fadeOutUp
-        variations: []
+        variations: [ ]
     Text1:
       title: Text1
       required:
@@ -28829,7 +28833,7 @@ components:
         animation:
           in: fadeInDown
           out: fadeOutUp
-        variations: []
+        variations: [ ]
         tts:
           enabled: false
           voice: Brian
@@ -28909,7 +28913,7 @@ components:
         animation:
           in: fadeInDown
           out: fadeOutUp
-        variations: []
+        variations: [ ]
         minAmount: 1
     Raid1:
       title: Raid1
@@ -28981,7 +28985,7 @@ components:
         animation:
           in: fadeInDown
           out: fadeOutUp
-        variations: []
+        variations: [ ]
     Cheer1:
       title: Cheer1
       required:
@@ -32334,7 +32338,7 @@ components:
             - name: Max Jakubowski
               amount: 11
               createdAt: '2018-12-06T15:54:40.061Z'
-          raid-recent: []
+          raid-recent: [ ]
           cheer-recent:
             - name: Glenda Carter
               amount: 39
@@ -32487,7 +32491,7 @@ components:
             - name: Lamar Hills
               amount: 4
               createdAt: '2018-12-06T15:54:41.584Z'
-          merch-recent: []
+          merch-recent: [ ]
         settings:
           autoReset: true
           calendar: false
@@ -32585,13 +32589,13 @@ components:
         youtube:
           securityLevel: 0
           musicOnly: false
-          bannedTags: []
-          bannedVideos: []
+          bannedTags: [ ]
+          bannedVideos: [ ]
         enabled: false
         mode: combined
         moderation: false
         _id: 5b2e2007760aeb82e8487dc4
-        bannedUsers: []
+        bannedUsers: [ ]
     Player:
       title: Player
       required:
@@ -32741,8 +32745,8 @@ components:
       example:
         securityLevel: 0
         musicOnly: false
-        bannedTags: []
-        bannedVideos: []
+        bannedTags: [ ]
+        bannedVideos: [ ]
     Success48:
       title: Success48
       required:
@@ -33002,8 +33006,8 @@ components:
           likeCount: 3387160
           dislikeCount: 154477
         duration: 213
-        tags: []
-        voteskips: []
+        tags: [ ]
+        voteskips: [ ]
         _id: 5c0f9d54bd1e47cf2d3d6cac
         videoId: dQw4w9WgXcQ
         title: Rick Astley - Never Gonna Give You Up (Video)
@@ -33161,7 +33165,7 @@ components:
         quantity:
           total: -1
         accessCodes:
-          keys: []
+          keys: [ ]
           mode: multi
           random: false
         alert:
@@ -33172,7 +33176,7 @@ components:
             src: null
           enabled: true
         subscriberOnly: false
-        userInput: []
+        userInput: [ ]
         _id: 5c0bb2aede9a4c4402a15056
         enabled: true
         featured: false
@@ -33213,7 +33217,7 @@ components:
         random:
           type: boolean
       example:
-        keys: []
+        keys: [ ]
         mode: multi
         random: false
     ThemesList:
@@ -33459,7 +33463,7 @@ components:
             createdAt: '2018-12-07T17:19:01.957Z'
             approved: allowed
             updatedAt: '2018-12-07T17:19:01.957Z'
-        pending: []
+        pending: [ ]
     Recent:
       title: Recent
       required:
@@ -33661,7 +33665,7 @@ components:
           type: string
       example:
         suspended: false
-        teams: []
+        teams: [ ]
         channels:
           - profile:
               headerImage: 'https://cdn.streamelements.com/static/user/profile_header_default.png'
@@ -33669,7 +33673,7 @@ components:
             provider: twitch
             suspended: false
             nullChannel: false
-            providerEmails: []
+            providerEmails: [ ]
             lastJWTToken: null
             _id: 5b2e2007760aeb7729487dab
             email: email@streamelements.com
@@ -33681,7 +33685,7 @@ components:
             providerId: '85827806'
             isPartner: false
             broadcasterType: ''
-            ab: []
+            ab: [ ]
             createdAt: '2018-06-23T10:25:11.733Z'
             updatedAt: '2018-12-07T17:26:23.792Z'
             lastLogin: '2018-12-07T17:26:23.79Z'
@@ -33695,7 +33699,7 @@ components:
                 role: administrator
         _id: 5b2e2007760aeb6677487daa
         lastLogin: '2018-06-23T10:25:11.728Z'
-        ab: {}
+        ab: { }
         primaryChannel: 5b2e2007760aeb7729487dab
         username: leeeeex
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/b21a7fa5-4f3f-4402-b68f-3545dcc68b90-profile_image-300x300.jpg'
@@ -33792,7 +33796,7 @@ components:
         provider: twitch
         suspended: false
         nullChannel: false
-        providerEmails: []
+        providerEmails: [ ]
         lastJWTToken: null
         _id: 5b2e2007760aeb7729487dab
         email: email@streamelements.com
@@ -33804,7 +33808,7 @@ components:
         providerId: '85827806'
         isPartner: false
         broadcasterType: ''
-        ab: []
+        ab: [ ]
         createdAt: '2018-06-23T10:25:11.733Z'
         updatedAt: '2018-12-07T17:26:23.792Z'
         lastLogin: '2018-12-07T17:26:23.79Z'
@@ -33878,11 +33882,42 @@ components:
         provider: twitch
         role: owner
   securitySchemes:
-    httpBearer:
+    JWTBearer:
       type: http
       scheme: bearer
+      bearerFormat: JWT
+    ApiKeyBearer:
+      type: http
+      scheme: bearer
+      name: apiKey
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.streamelements.com/oauth2/authorize
+          tokenUrl: https://api.streamelements.com/oauth2/token
+          scopes:
+            'tips:read': Ability read of tips
+            'tips:write': Grants create/modify/delete tips
+            'activities:read': Grants read of activities
+            'activities:write': Grants create activities
+            'loyalty:read': Grants read of loyalty settings and the leaderboard
+            'loyalty:write': Grants update of loyalty settings and update the leaderboard
+            'overlays:read': Grants read overlays
+            'overlays:write': Grants creation, update, deletion of overlays
+            'store:read': Grants read redemptions and items
+            'store:write': Grants create new store items and complete redemptions
+            'bot:read': Grants read timers, commands, spam filters and modules
+            'bot:write': Grants create and update timers, commands, spam filters and modules
+            'session:read': Grants read of session data
+            'contest:read': Grants read of contests
+            'contest:write': Grants create and update contests
+            'giveaway:read': Grants read of giveaways
+            'giveaway:write': Grants create and update giveaways
 security:
-  - httpBearer: []
+  - JWTBearer: [ ]
+  - OAuth2: []
+  - ApiKeyBearer: []
 tags:
   - name: activities
     description: Endpoints to interract with activities collected by StreamElements
