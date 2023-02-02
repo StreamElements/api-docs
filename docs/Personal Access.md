@@ -13,7 +13,7 @@ If you intend to use the API for your own stream or to any single use case, you 
 
 ## Accessing the API with JWT Token
 
-This is very straight forward, you can do it with any or the API methods, just use the toke as your Authorisation token:
+This is very straight forward. You can do it with any of the API methods, just use it as your Authorisation token:
 
 ```javascript
 const options = {
