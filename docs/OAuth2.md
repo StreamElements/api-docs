@@ -8,12 +8,14 @@ OAuth2 enables developers to build applications that utilize data from the Strea
 | URL                                                | Description               |
 |----------------------------------------------------|---------------------------|
 | https://api.streamelements.com/oauth2/authorize    | Authorization endpoint    |
-| https://api.streamelements.com/oauth2/token        | Token endpoint            |
-| https://api.streamelements.com/oauth2/token/revoke | Token Revocation endpoint |
+| https://api.streamelements.com/oauth2/token        | Token / refresh endpoint  |
+| https://api.streamelements.com/oauth2/revoke       | Token Revocation endpoint |
 
 ## Authorization Code Grant
 
 Description:
+
+Once you receive the ```client_id``` and ```client_secret``` you will be able to make requests on behalf of the user who authorizes your application. Create a URL with the following parameters:
 
 | Parameter         | Type   | Required | Description                                                                             |
 |-------------------|--------|----------|-----------------------------------------------------------------------------------------|
@@ -29,8 +31,12 @@ Authorization URL Example
 https://api.streamelements.com/oauth2/authorize?client_id=9d5422b8ff529d420&redirect_uri=https%3A%2F%2Foauth.it-really.rocks%2Fcallback&response_type=code&scope=channel%3Aread
 ```
 
+![image](https://user-images.githubusercontent.com/75918726/226506102-731911c3-9fdf-4f24-86fe-de22dfc3da38.png)
+
 When someone navigates to this URL, they will be authorized for the requested scopes. Once accepted they will be
 redirected to your *redirect_uri*, which will contain a code and state if specified.
+
+*In case the user does not authorize the application, they will be send to your *redirect_uri* with ```error=true```.
 
 Redirect URL Example
 
@@ -38,7 +44,7 @@ Redirect URL Example
 https://oauth.it-really.rocks?code=hjqkweSNDSDQ2___12&state=ejlkqwj2u31u31i1
 ```
 
-The code is now exchanged for a user access token by making a POST request to the token URL with the following payload.
+The code is now exchanged for a user access token by making a POST request with `x-www-form-urlencoded` parameters to the token URL with the following payload.
 
 | Parameter     | Description                       |
 |---------------|-----------------------------------|
@@ -48,7 +54,24 @@ The code is now exchanged for a user access token by making a POST request to th
 | code          | The code from the OAuth callback. |
 | redirect_uri  | Your registered redirect URI.     |
 
-Access token response
+<!--
+type: tab
+title: Request using curl
+-->
+
+```text
+curl -X POST "https://api.streamelements.com/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "grant_type=authorization_code" \
+-d "client_id=9d5422b8ff529d420" \
+-d "client_secret=1234567890abcdef" \
+-d "code=a1b2c3d4e5f6g7h8i9j0k" \
+-d "redirect_uri=https://oauth.it-really.rocks"
+```
+<!--
+type: tab
+title: Access token response
+-->
 
 ```json
 {
@@ -56,9 +79,53 @@ Access token response
   "token_type": "Bearer",
   "expires_in": 604800,
   "refresh_token": "ed7a57c4cfbb540e5a30c9621f6386000",
-  "scope": ""
+  "scope": "channel:read"
 }
 ```
+<!-- type: tab-end -->
+
+You need to store that information on your server to be able to refresh the access token once it expires. Refresh tokens are also updated sometimes, so make sure you update the refresh token information once you get a new access token.
+
+## Refreshing access token
+
+Once your token expires, you need to request a new access token, which can be done with a POST request with `x-www-form-urlencoded` parameters to the token/refresh URL with the following payload.
+
+| Parameter     | Description                       |
+|---------------|-----------------------------------|
+| client_id     | Your registered client ID         |
+| client_secret | Your registered client Secret     |
+| grant_type    | This must be *refresh_token*      |
+| refresh_token | Your current refresh token.       |
+
+<!--
+type: tab
+title: Request using curl
+-->
+
+```text
+curl -X POST "https://api.streamelements.com/oauth2/token" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "grant_type=refresh_token" \
+-d "client_id=9d5422b8ff529d420" \
+-d "client_secret=1234567890abcdef" \
+-d "refresh_token=ed7a57c4cfbb540e5a30c9621f6386000"
+```
+
+<!--
+type: tab
+title: Refresh token response
+-->
+
+```json
+{
+  "access_token":"6200af6081f635a304986123c01",
+  "expires_in":2592000,
+  "refresh_token":"8600fbb1ed7a50540e57ca30c94c3f662",
+  "scope":"",
+  "token_type":"Bearer"
+}
+```
+<!-- type: tab-end -->
 
 ## OAuth2 Scopes
 
@@ -110,3 +177,15 @@ title: Sample response
 ```
 <!-- type: tab-end -->
 
+## Revoking tokens
+
+If you want to revoke a token, send a POST with ```x-www-form-urlencoded```parameters to the revoke URL with the following payload. 
+
+*No body is sent if the revokation is succeeded. Header returns with status code 200 (OK)
+
+```text
+curl -X POST "https://api.streamelements.com/oauth2/revoke" \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "client_id=9d5422b8ff529d420" \
+-d "token=<access token>"
+```
