@@ -184,8 +184,6 @@ If you want to revoke a token, send a POST with ```x-www-form-urlencoded```param
 *No body is sent if the revokation is succeeded. Header returns with status code 200 (OK)
 
 ```text
-curl -X POST "https://api.streamelements.com/oauth2/revoke" \
--H "Content-Type: application/x-www-form-urlencoded" \
--d "client_id=9d5422b8ff529d420" \
--d "token=<access token>"
+curl -X POST "https://api.streamelements.com/oauth2/revoke?client_id=9d5422b8ff529d420&token=<access token>" \
+-H "Content-Type: application/x-www-form-urlencoded"
 ```
