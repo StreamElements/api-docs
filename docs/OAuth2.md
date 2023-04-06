@@ -179,11 +179,15 @@ title: Sample response
 
 ## Revoking tokens
 
-If you want to revoke a token, send a POST with ```x-www-form-urlencoded```parameters to the revoke URL with the following payload. 
+If you want to revoke a token, send a POST request to the revoke URL with the following parameters in the URL. 
+
+| Parameter         | Type   | Required | Description                                                                             |
+|-------------------|--------|----------|-----------------------------------------------------------------------------------------|
+| **client_id**     | string | true     | Your registered client ID                                                               |
+| **token**         | string | true     | Access token to be revoked                                                              |
 
 *No body is sent if the revokation is succeeded. Header returns with status code 200 (OK)
 
 ```text
-curl -X POST "https://api.streamelements.com/oauth2/revoke?client_id=9d5422b8ff529d420&token=<access token>" \
--H "Content-Type: application/x-www-form-urlencoded"
+curl -X POST "https://api.streamelements.com/oauth2/revoke?client_id=9d5422b8ff529d420&token=<access token>"
 ```
