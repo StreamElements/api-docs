@@ -362,32 +362,32 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["merch-goal-items"]["amount"]` - Merch items goal progress
 * `data["merch-goal-orders"]["amount"]` - Merch orders goal progress
 * `data["merch-goal-total"]["amount"]` - Merch total goal progress
-* `data["tip-latest"]`    - An array containing latest Tip event
+* `data["tip-latest"]`    - Object containing latest Tip event
     * `data["tip-latest"]["name"]`    - Latest tipper username
     * `data["tip-latest"]["amount"]`  - Latest tip amount
     * `data["tip-latest"]["message"]` - Latest tip message
-* `data["tip-session-top-donation"]` - Aan array of top tip since session start
+* `data["tip-session-top-donation"]` - Object of top tip since session start
     * `data["tip-session-top-donation"]["name"]` - Username
     * `data["tip-session-top-donation"]["amount"]` - Tip amount
-* `data["tip-weekly-top-donation"]` - An array of top tip in past week
+* `data["tip-weekly-top-donation"]` - Object of top tip in past week
     * `data["tip-weekly-top-donation"]["name"]` - Username
     * `data["tip-weekly-top-donation"]["amount"]` - Tip amount
-* `data["tip-monthly-top-donation"]` - An array of top tip in past month
+* `data["tip-monthly-top-donation"]` - Object of top tip in past month
     * `data["tip-monthly-top-donation"]["name"]` - Tip amount
     * `data["tip-monthly-top-donation"]["amount"]` - Username
-* `data["tip-alltime-top-donation"]`  - An array of top tip all time
+* `data["tip-alltime-top-donation"]`  - Object of top tip all time
     * `data["tip-alltime-top-donation"]["name"]` - Username
     * `data["tip-alltime-top-donation"]["amount"]` - Tip amount
-* `data["tip-session-top-donator"]` - An array of top tipper since session start
+* `data["tip-session-top-donator"]` - Object of top tipper since session start
     * `data["tip-session-top-donator"]["name"]` - Username
     * `data["tip-session-top-donator"]["amount"]` - Sum of the tip amounts
-* `data["tip-weekly-top-donator"]` - An array of top tip in past week
+* `data["tip-weekly-top-donator"]` - Object of top tip in past week
     * `data["tip-weekly-top-donator"]["name"]` - Username
     * `data["tip-weekly-top-donator"]["amount"]` - Sum of the tip amounts
-* `data["tip-monthly-top-donator"]` - An array of top tip in past month
+* `data["tip-monthly-top-donator"]` - Object of top tip in past month
     * `data["tip-monthly-top-donator"]["name"]` - Tipper username
     * `data["tip-monthly-top-donator"]["amount"]` - Sum of the tip amounts
-* `data["tip-alltime-top-donator"]`  - An array of top tip all time
+* `data["tip-alltime-top-donator"]`  - Object of top tip all time
     * `data["tip-alltime-top-donator"]["name"]` - Tipper username
     * `data["tip-alltime-top-donator"]["amount"]` - Sum of the tip amounts
 * `data["tip-session"]["amount"]` - Sum of all donations since session start
@@ -404,26 +404,26 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["follower-month"]["count"]` - Followers this month
 * `data["follower-goal"]["amount"]` - Followers goal
 * `data["follower-total"]["count"]` - Total count of followers
-* `data["subscriber-alltime-gifter"]` an array of
+* `data["subscriber-alltime-gifter"]` Object of
     * `data["subscriber-alltime-gifter"]["name"]` - Name of latest gifter
     * `data["subscriber-alltime-gifter"]["amount"]` - Number of gifted subs
-* `data["subscriber-gifted-latest"]` an array of
+* `data["subscriber-gifted-latest"]` Object of
     * `data["subscriber-gifted-latest"]["name"]` - Name of latest gifter
     * `data["subscriber-gifted-latest"]["amount"]` - Number of gifted subs
 * `data["subscriber-gifted-session"]["count"]` - Number of gifted subs during session
-* `data["subscriber-latest"]` - an array of
+* `data["subscriber-latest"]` - Object of
     * `data["subscriber-latest"]["name"]` - Name of the latest sub
     * `data["subscriber-latest"]["amount"]` - Duration in months
     * `data["subscriber-latest"]["tier"]` - Tier of sub (1-3)
     * `data["subscriber-latest"]["message"]` - Message attached to sub action
     * `data["subscriber-latest"]["sender"]` - If it was a gift, here’s a gifter
     * `data["subscriber-latest"]["gifted"]` - If it was a gift, here’s a gifted
-* `data["subscriber-new-latest"]` an array of
+* `data["subscriber-new-latest"]` Object of
     * `data["subscriber-new-latest"]["name"]` - Name of the latest new sub
     * `data["subscriber-new-latest"]["amount"]` - Number of months (1)
     * `data["subscriber-new-latest"]["message"]` - user message
 * `data["subscriber-new-session"]["count"]` - Number of new subs during session
-* `data["subscriber-resub-latest"]` an array of
+* `data["subscriber-resub-latest"]` Object of
     * `data["subscriber-resub-latest"]["name"]` - Name of latest resub
     * `data["subscriber-resub-latest"]["amount"]` - Number of months
     * `data["subscriber-resub-latest"]["message"]` - user message
@@ -443,32 +443,32 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["cheer-total"]["amount"]`   - Total amount of cheers
 * `data["cheer-count"]["count"]`    - Number of cheer events
 * `data["cheer-goal"]["amount"]`    - Cheer goal
-* `data["cheer-latest"]`    - An array containing the latest Cheer event
+* `data["cheer-latest"]`    - Object containing the latest Cheer event
     * `data["cheer-latest"]["name"]`    - Latest cheerer
     * `data["cheer-latest"]["amount"]`  - Latest cheer amount
     * `data["cheer-latest"]["message"]` - Latest cheer message
-* `data["cheer-session-top-donation"]` - Aan array of top cheerer since session start
+* `data["cheer-session-top-donation"]` - Object of top cheerer since session start
     * `data["cheer-session-top-donation"]["name"]` - Username
     * `data["cheer-session-top-donation"]["amount"]` - Cheer amount
-* `data["cheer-weekly-top-donation"]` - An array of top cheer in past week
+* `data["cheer-weekly-top-donation"]` - Object of top cheer in past week
     * `data["cheer-weekly-top-donation"]["name"]` - Username
     * `data["cheer-weekly-top-donation"]["amount"]` - Cheer amount
-* `data["cheer-monthly-top-donation"]` - An array of top cheer in past month
+* `data["cheer-monthly-top-donation"]` - Object of top cheer in past month
     * `data["cheer-monthly-top-donation"]["name"]` - Username
     * `data["cheer-monthly-top-donation"]["amount"]` - Cheer amount
-* `data["cheer-alltime-top-donation"]`  - An array of top cheer all time
+* `data["cheer-alltime-top-donation"]`  - Object of top cheer all time
     * `data["cheer-alltime-top-donation"]["name"]` - Username
     * `data["cheer-alltime-top-donation"]["amount"]` - Cheer amount
-* `data["cheer-session-top-donator"]` - Aan array of top cheerer since session start
+* `data["cheer-session-top-donator"]` - Object of top cheerer since session start
     * `data["cheer-session-top-donator"]["name"]` - Username
     * `data["cheer-session-top-donator"]["amount"]` - Sum of the cheer amounts
-* `data["cheer-weekly-top-donator"]` - An array of top cheerer in past week
+* `data["cheer-weekly-top-donator"]` - Object of top cheerer in past week
     * `data["cheer-weekly-top-donator"]["name"]` - Username
     * `data["cheer-weekly-top-donator"]["amount"]` - Sum of the cheer amounts
-* `data["cheer-monthly-top-donator"]` - An array of top cheerer in past month
+* `data["cheer-monthly-top-donator"]` - Object of top cheerer in past month
     * `data["cheer-monthly-top-donator"]["name"]` - Username
     * `data["cheer-monthly-top-donator"]["amount"]` - Sum of the cheer amounts
-* `data["cheer-alltime-top-donator"]`  - An array of top cheer all time
+* `data["cheer-alltime-top-donator"]`  - Object of top cheer all time
     * `data["cheer-alltime-top-donator"]["name"]` - Username
     * `data["cheer-alltime-top-donator"]["amount"]` - Sum of the cheer amounts
 
@@ -478,7 +478,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["fan-week"]["count"]` - Fans this week
 * `data["fan-month"]["count"]` - Fans this month
 * `data["fan-total"]["count"]` - Total count of fans
-* `data["fan-latest"]`    - An array containing latest fan event
+* `data["fan-latest"]`    - Object containing latest fan event
 * `data["follower-latest"]["name"]` - Name of the latest follower
 * `data["follower-session"]["count"]` - Followers since session start
 * `data["follower-week"]["count"]` - Followers this week
@@ -490,7 +490,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["share-week"]["count"]` - Shares this week
 * `data["share-month"]["count"]` - Shares this month
 * `data["share-total"]["count"]` - Total count of shares
-* `data["share-latest"]`    - An array containing the latest share event
+* `data["share-latest"]`    - Object containing the latest share event
     * `data["share-latest"]["name"]` - Username
     * `data["share-latest"]["amount"]` - amount
 * `data["share-recent"]`    - An array of the latest share events with each element structure as in `share-latest`
@@ -499,7 +499,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["stars-week"]["count"]` - Stars this week
 * `data["stars-month"]["count"]` - Stars this month
 * `data["stars-total"]["count"]` - Total count of stars
-* `data["stars-latest"]`    - An array containing the latest stars event
+* `data["stars-latest"]`    - Object containing the latest stars event
     * `data["stars-latest"]["name"]` - Username
     * `data["stars-latest"]["amount"]` - amount
 * `data["stars-recent"]`    - An array of latest stars events with each element structure as in `stars-latest`
@@ -508,7 +508,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["supporter-week"]["count"]` - Supporters this week
 * `data["supporter-month"]["count"]` - Supporters this month
 * `data["supporter-total"]["count"]` - Total count of supporters
-* `data["supporter-latest"]`    - An array containing latest supporter event
+* `data["supporter-latest"]`    - Object containing latest supporter event
     * `data["supporter-latest"]["name"]` - Username
     * `data["supporter-latest"]["amount"]` - Amount
 * `data["supporter-recent"]`    - An array of the latest supporter events with each element structure as in `supporter-latest`
@@ -517,7 +517,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["videolike-week"]["count"]` - Videolikes this week
 * `data["videolike-month"]["count"]` - Videolikes this month
 * `data["videolike-total"]["count"]` - Total count of videolikes
-* `data["videolike-latest"]`    - An array containing the latest videolike event
+* `data["videolike-latest"]`    - Object containing the latest videolike event
     * `data["videolike-latest"]["name"]` - Username
     * `data["videolike-latest"]["amount"]` - Amount
 * `data["videolike-recent"]`    - An array of the latest videolike events with each element structure as in `videolike-latest`
@@ -528,7 +528,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["sponsor-week"]["count"]` - Sponsors this week
 * `data["sponsor-month"]["count"]` - Sponsors this month
 * `data["sponsor-total"]["count"]` - Total count of sponsors
-* `data["sponsor-latest"]`    - An array containing the latest sponsor event
+* `data["sponsor-latest"]`    - Object containing the latest sponsor event
     * `data["sponsor-latest"]["name"]` - Username
     * `data["sponsor-latest"]["amount"]` - amount
 * `data["sponsor-recent"]`    - An array of the latest sponsor events with each element structure as in `sponsor-latest`
@@ -543,7 +543,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 * `data["superchat-week"]["count"]` - Superchats this week
 * `data["superchat-month"]["count"]` - Superchats this month
 * `data["superchat-total"]["count"]` - Total count of superchats
-* `data["superchat-latest"]`    - An array containing latest superchat event
+* `data["superchat-latest"]`    - Object containing latest superchat event
     * `data["superchat-latest"]["name"]` - Username
     * `data["superchat-latest"]["amount"]` - amount
 * `data["superchat-recent"]`    - An array of latest superchat events with each element structure as in `superchat-latest`
