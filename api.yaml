@@ -14,8 +14,10 @@ info:
   version: '1.0'
 servers:
   - url: 'https://api.streamelements.com/kappa/v2'
+    description: 'V2'
     variables: { }
   - url: 'https://api.streamelements.com/kappa/v3'
+    description: 'V3'
     variables: { }
 paths:
   '/activities/{channel}':
@@ -10226,7 +10228,7 @@ paths:
         - giveaways
       summary: '/:channel/:giveawayId'
       description: >-
-        Get giveaway details
+        Get giveaway details.
         This endpoint is available only in the API version 3.
         Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId'
