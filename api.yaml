@@ -10225,7 +10225,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId'
-      description: Get giveaway details
+      description: >-
+        Get giveaway details
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId'
       parameters:
         - name: entrants
@@ -10334,7 +10337,10 @@ paths:
       tags:
         - single giveaway
       summary: '/:channel/:giveawayId'
-      description: Create new giveaway
+      description: >-
+        Create a new Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: 'Post/:channel/:giveawayId'
       parameters:
         - name: channel
@@ -10422,7 +10428,10 @@ paths:
       tags:
         - single giveaway
       summary: '/:channel/:giveawayId1'
-      description: Update giveaway details
+      description: >-
+        Update giveaway details
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId1'
       parameters:
         - name: channel
@@ -10510,7 +10519,10 @@ paths:
       tags:
         - single giveaway
       summary: '/:channel/:giveawayId'
-      description: Delete giveaway
+      description: >-
+        Delete Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: 'Delete/:channel/:giveawayId'
       parameters:
         - name: channel
@@ -10557,7 +10569,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/joined'
-      description: List giveaways
+      description: >-
+        List joined users in giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/joined'
       parameters:
         - name: channel
@@ -10629,7 +10644,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/start'
-      description: Start a giveaway
+      description: >-
+        Start a Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/start'
       parameters:
         - name: channel
@@ -10710,7 +10728,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/winner'
-      description: Draw a giveaway winner
+      description: >-
+        Draw a Giveaway winner
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/winner'
       parameters:
         - name: channel
@@ -10761,7 +10782,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/complete'
-      description: Mark giveaway as complete
+      description: >-
+        Mark Giveaway as complete
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/complete'
       parameters:
         - name: channel
@@ -10830,7 +10854,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/reopen'
-      description: Reopen giveaway
+      description: >-
+        Reopen Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/reopen'
       parameters:
         - name: channel
@@ -10899,7 +10926,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/refund'
-      description: Start a giveaway
+      description: >-
+        Refund Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/refund'
       parameters:
         - name: channel
@@ -10968,7 +10998,10 @@ paths:
         - single giveaway
         - giveaways
       summary: '/:channel/:giveawayId/close'
-      description: Close current giveaway
+      description: >-
+        Close Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: '/:channel/:giveawayId/close'
       parameters:
         - name: channel
@@ -11083,7 +11116,10 @@ paths:
       tags:
         - giveaways
       summary: '/:channel'
-      description: Create new giveaway
+      description: >- 
+        Create a new Giveaway
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: 'Post/:channel123'
       parameters:
         - name: channel
@@ -11155,7 +11191,10 @@ paths:
       tags:
         - giveaways
       summary: '/:channel/history'
-      description: List previous giveaways
+      description: >-
+        List previous giveaways
+        This endpoint is available only in the API version 3.
+        Make sure to use the v3 base URL: https://api.streamelements.com/kappa/v3.
       operationId: 'Get/:channel/history'
       parameters:
         - name: channel
