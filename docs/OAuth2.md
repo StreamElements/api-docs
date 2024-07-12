@@ -141,8 +141,6 @@ More scopes will be added in the future.
 | loyalty:write    | Ability to update loyalty settings and update the leaderboard           |
 | overlays:read    | Ability to read overlays                                                |
 | overlays:write   | Ability to update and create overlays                                   |
-| store:read       | Ability to read redemptions and items                                   |
-| store:write      | Ability to create new store items and complete redemptions              |
 | bot:read         | Ability to read timers, commands, spam filters and modules              |
 | bot:write        | Ability to create and update timers, commands, spam filters and modules |
 | session:read     | Ability to read your session values                                     |
