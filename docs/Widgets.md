@@ -373,8 +373,8 @@ window.addEventListener('onWidgetLoad', function (obj) {
     * `data["tip-weekly-top-donation"]["name"]` - Username
     * `data["tip-weekly-top-donation"]["amount"]` - Tip amount
 * `data["tip-monthly-top-donation"]` - Object of top tip in past month
-    * `data["tip-monthly-top-donation"]["name"]` - Tip amount
-    * `data["tip-monthly-top-donation"]["amount"]` - Username
+    * `data["tip-monthly-top-donation"]["name"]` - Username
+    * `data["tip-monthly-top-donation"]["amount"]` - Tip amount
 * `data["tip-alltime-top-donation"]`  - Object of top tip all time
     * `data["tip-alltime-top-donation"]["name"]` - Username
     * `data["tip-alltime-top-donation"]["amount"]` - Tip amount
