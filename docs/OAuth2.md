@@ -86,6 +86,48 @@ title: Access token response
 
 You need to store that information on your server to be able to refresh the access token once it expires. Refresh tokens are also updated sometimes, so make sure you update the refresh token information once you get a new access token.
 
+## Example request
+
+oAuth requests should use `oAuth <access_token>` as authorizatin header.
+
+<!--
+type: tab
+title: Example request
+-->
+
+```text
+curl -X GET "https://api.streamelements.com/kappa/v2/channels/me" \
+-H "Accept: application/json" \
+-H "Authorization: oAuth 5a30c9621f638600014af608123" 
+```
+
+<!--
+type: tab
+title: Example response
+-->
+```json
+{
+  "profile": {
+    "title": "example's profile",
+    "headerImage": "https://cdn.streamelements.com/uploads/cc9f302f-44e6-4527-9db5-f461678ec643.png"
+  },
+  "_id": "0123456789abcdefghijkl",
+  "provider": "twitch",
+  "broadcasterType": "affiliate",
+  "suspended": false,
+  "providerId": "28057703",
+  "email": "example@example.com",
+  "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/01234567-0123-abcd-efgh-9876543210ab-profile_image-300x300.png",
+  "type": "streamer",
+  "apiToken": "abcdefghijklmnopqrstuvwxyz",
+  "username": "example",
+  "alias": "example",
+  "displayName": "Example",
+  "[...]"
+}
+```
+<!-- type: tab-end -->
+
 ## Refreshing access token
 
 Once your token expires, you need to request a new access token, which can be done with a POST request with `x-www-form-urlencoded` parameters to the token/refresh URL with the following payload.
@@ -133,6 +175,7 @@ More scopes will be added in the future.
 
 | Scope            | Description                                                             |
 |------------------|-------------------------------------------------------------------------|
+| channel:read     | Ability to read the channel information (default)                       |
 | tips:read        | Ability to read your tips                                               |
 | tips:write       | Ability to create/modify/delete tips                                    |
 | activities:read  | Ability to read your activities                                         |
@@ -143,11 +186,6 @@ More scopes will be added in the future.
 | overlays:write   | Ability to update and create overlays                                   |
 | bot:read         | Ability to read timers, commands, spam filters and modules              |
 | bot:write        | Ability to create and update timers, commands, spam filters and modules |
-| session:read     | Ability to read your session values                                     |
-| contest:read     | Ability to read contests                                                |
-| contest:write    | Ability to create and update contests                                   |
-| giveaway:read    | Ability to read giveaways                                               |
-| giveaway:write   | Ability to create and update giveaways                                  |
 
 ## Validating Requests
 
