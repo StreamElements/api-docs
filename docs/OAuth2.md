@@ -175,6 +175,7 @@ More scopes will be added in the future.
 
 | Scope            | Description                                                             |
 |------------------|-------------------------------------------------------------------------|
+| channel:read     | Ability to read the channel information (default)                       |
 | tips:read        | Ability to read your tips                                               |
 | tips:write       | Ability to create/modify/delete tips                                    |
 | activities:read  | Ability to read your activities                                         |
