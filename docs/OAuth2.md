@@ -2,7 +2,6 @@
 
 OAuth2 enables developers to build applications that utilize data from the StreamElements API.
 
-*Apply for OAuth2 credentials [here.](https://strms.net/oauth2_request)*
 *Code samples are available [here.](https://github.com/StreamElements/authentication-samples)*
 
 | URL                                                | Description               |
